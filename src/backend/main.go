@@ -8,10 +8,16 @@ import (
 )
 
 func main() {
+	ScrapeElement()
+
+	err := LoadGraph("elements_graph.json")
+	if err != nil {
+		log.Fatal("Failed to load graph:", err)
+	}
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/search", SearchHandler)
 
-	// CORS middleware biar bisa diakses dari React
 	handler := cors.Default().Handler(mux)
 
 	log.Println("Server started at :8080")

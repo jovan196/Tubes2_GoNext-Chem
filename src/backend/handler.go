@@ -7,9 +7,9 @@ import (
 
 type SearchRequest struct {
 	Target    string `json:"target"`
-	Algorithm string `json:"algorithm"` // BFS / DFS
-	Mode      string `json:"mode"`      // single / multiple
-	Max       int    `json:"max"`       // only used in multiple
+	Algorithm string `json:"algorithm"`
+	Mode      string `json:"mode"`
+	Max       int    `json:"max"`
 }
 
 type SearchResponse struct {
@@ -30,17 +30,27 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Dummy logic, nanti ganti dengan BFS/DFS
-	response := []SearchResponse{
-		{
-			Result: req.Target,
-			Steps: [][]string{
-				{"Mud", "Fire"},
-				{"Clay", "Stone"},
-			},
-		},
-	}
+	if req.Algorithm == "bfs" {
+		path, found := BFS(req.Target)
+		if !found {
+			http.Error(w, "Element not reachable", http.StatusNotFound)
+			return
+		}
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(response)
+		steps := [][]string{}
+		for _, pair := range path {
+			steps = append(steps, []string{pair[0], pair[1]})
+		}
+
+		response := []SearchResponse{
+			{
+				Result: req.Target,
+				Steps:  steps,
+			},
+		}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+	} else {
+		http.Error(w, "Only BFS is implemented", http.StatusNotImplemented)
+	}
 }
