@@ -12,11 +12,6 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-type Recipe struct {
-	Result       string      `json:"result"`
-	Combinations [][2]string `json:"combinations"` // pasangan resep
-}
-
 func ScrapeElement() {
 	url := "https://little-alchemy.fandom.com/wiki/Element_Combinations"
 	res, err := http.Get(url)
@@ -56,12 +51,10 @@ func ScrapeElement() {
 		})
 	})
 
-	// Simpan ke JSON
 	jsonFile, _ := os.Create("elements_graph.json")
 	defer jsonFile.Close()
 	json.NewEncoder(jsonFile).Encode(graph)
 
-	// Simpan ke CSV
 	csvFile, _ := os.Create("elements_graph.csv")
 	defer csvFile.Close()
 	writer := csv.NewWriter(csvFile)
