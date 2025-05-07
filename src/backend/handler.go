@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"net/http"
+	"strings"
 )
 
 type SearchRequest struct {
@@ -30,7 +31,26 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if req.Algorithm == "bfs" {
+	algo := strings.ToLower(req.Algorithm)
+	if req.Mode == "multiple" {
+		results := MultiBFS(req.Target, req.Max)
+		var responses []SearchResponse
+		for _, path := range results {
+			steps := [][]string{}
+			for _, pair := range path {
+				steps = append(steps, []string{pair[0], pair[1]})
+			}
+			responses = append(responses, SearchResponse{
+				Result: req.Target,
+				Steps:  steps,
+			})
+		}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(responses)
+		return
+	}
+
+	if algo == "bfs" {
 		path, found := BFS(req.Target)
 		if !found {
 			http.Error(w, "Element not reachable", http.StatusNotFound)

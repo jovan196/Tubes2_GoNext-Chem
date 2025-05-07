@@ -5,57 +5,65 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"net/http"
 	"os"
 	"strings"
 
-	"github.com/PuerkitoBio/goquery"
+	"github.com/gocolly/colly"
 )
 
 func ScrapeElement() {
-	url := "https://little-alchemy.fandom.com/wiki/Element_Combinations"
-	res, err := http.Get(url)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer res.Body.Close()
-
-	if res.StatusCode != 200 {
-		log.Fatalf("status code error: %d %s", res.StatusCode, res.Status)
-	}
-
-	doc, err := goquery.NewDocumentFromReader(res.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-
+	url := "https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2)"
 	graph := map[string][][2]string{}
 
-	doc.Find("table.wikitable").Each(func(i int, table *goquery.Selection) {
-		table.Find("tr").Each(func(j int, row *goquery.Selection) {
-			cells := row.Find("td")
-			if cells.Length() >= 2 {
-				product := strings.TrimSpace(cells.Eq(0).Text())
-				rawCombo := strings.TrimSpace(cells.Eq(1).Text())
+	c := colly.NewCollector(colly.AllowedDomains("little-alchemy.fandom.com"))
+	tableIndex := 0
 
-				combos := strings.Split(rawCombo, "\n")
-				for _, combo := range combos {
-					parts := strings.Split(combo, "+")
-					if len(parts) == 2 {
-						a := strings.TrimSpace(parts[0])
-						b := strings.TrimSpace(parts[1])
-						graph[product] = append(graph[product], [2]string{a, b})
-					}
-				}
+	c.OnHTML("table.list-table", func(table *colly.HTMLElement) {
+		tableIndex++
+
+		table.ForEach("tbody tr", func(_ int, h *colly.HTMLElement) {
+			product := strings.TrimSpace(h.ChildText("td:first-of-type a"))
+			if product == "" || product == "Time" || product == "Ruins" || product == "Archeologist" {
+				return
 			}
+
+			h.ForEach("td:nth-of-type(2) li", func(_ int, li *colly.HTMLElement) {
+				aTags := li.DOM.Find("a")
+				if aTags.Length() < 4 {
+					return
+				}
+
+				ingredient1 := strings.TrimSpace(aTags.Eq(1).Text())
+				ingredient2 := strings.TrimSpace(aTags.Eq(3).Text())
+
+				if ingredient1 == "" || ingredient2 == "" || ingredient1 == "Time" || ingredient2 == "Time" ||
+					ingredient1 == "Ruins" || ingredient2 == "Ruins" || ingredient1 == "Archeologist" || ingredient2 == "Archeologist" {
+					return
+				}
+
+				graph[product] = append(graph[product], [2]string{ingredient1, ingredient2})
+			})
 		})
 	})
 
-	jsonFile, _ := os.Create("elements_graph.json")
+	err := c.Visit(url)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Simpan ke JSON
+	jsonFile, err := os.Create("elements_graph.json")
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer jsonFile.Close()
 	json.NewEncoder(jsonFile).Encode(graph)
 
-	csvFile, _ := os.Create("elements_graph.csv")
+	// Simpan ke CSV
+	csvFile, err := os.Create("elements_graph.csv")
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer csvFile.Close()
 	writer := csv.NewWriter(csvFile)
 	defer writer.Flush()
