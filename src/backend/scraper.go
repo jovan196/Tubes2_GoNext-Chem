@@ -56,7 +56,7 @@ func main() {
 		})
 	})
 
-	// 5) Write JSON
+	// Write JSON
 	jf, _ := os.Create("elements_graph.json")
 	defer jf.Close()
 	json.NewEncoder(jf).Encode(graph)
