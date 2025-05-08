@@ -1,22 +1,30 @@
 package main
 
-import "sync"
+import (
+	"sync"
+)
 
-func BFS(target string) ([][2]string, bool) {
-	type Node struct {
-		Element string
-		Path    [][2]string
+type TraceNode struct {
+	Product string
+	From    [2]string
+	Parent  [2]*TraceNode
+}
+
+func BFS(target string) *TraceNode {
+	// Inisialisasi node dasar
+	basicElements := []string{"Air", "Water", "Earth", "Fire", "Time"}
+	allNodes := map[string]*TraceNode{}
+	queue := []*TraceNode{}
+
+	for _, elem := range basicElements {
+		node := &TraceNode{Product: elem}
+		allNodes[elem] = node
+		queue = append(queue, node)
 	}
 
-	queue := []Node{
-		{Element: "Air", Path: nil},
-		{Element: "Water", Path: nil},
-		{Element: "Earth", Path: nil},
-		{Element: "Fire", Path: nil},
-	}
-
-	visited := map[string]bool{
-		"Air": true, "Water": true, "Earth": true, "Fire": true,
+	visited := map[string]bool{}
+	for _, elem := range basicElements {
+		visited[elem] = true
 	}
 
 	for len(queue) > 0 {
@@ -24,43 +32,48 @@ func BFS(target string) ([][2]string, bool) {
 		queue = queue[1:]
 
 		for product, recipes := range Graph {
+			if visited[product] {
+				continue
+			}
 			for _, pair := range recipes {
-				if (curr.Element == pair[0] && visited[pair[1]]) || (curr.Element == pair[1] && visited[pair[0]]) {
+				a, b := pair[0], pair[1]
+				if (curr.Product == a && visited[b]) || (curr.Product == b && visited[a]) {
+					// Cek apakah bahan-bahan sudah pernah dibuat
+					left := allNodes[a]
+					right := allNodes[b]
+					if left == nil || right == nil {
+						continue
+					}
+
+					node := &TraceNode{
+						Product: product,
+						From:    [2]string{a, b},
+						Parent:  [2]*TraceNode{left, right},
+					}
+
+					allNodes[product] = node
 					if product == target {
-						return append(curr.Path, pair), true
+						return node
 					}
-					if !visited[product] {
-						visited[product] = true
-						queue = append(queue, Node{
-							Element: product,
-							Path:    append(curr.Path, pair),
-						})
-					}
+
+					visited[product] = true
+					queue = append(queue, node)
 				}
 			}
 		}
 	}
 
-	return nil, false
+	return nil
 }
 
-func MultiBFS(target string, max int) [][][2]string {
-	type Node struct {
-		Element string
-		Path    [][2]string
-	}
-
-	type Result struct {
-		Path [][2]string
-	}
-
-	var results [][][2]string
-	resultChan := make(chan [][2]string, max)
-	var wg sync.WaitGroup
+func MultiBFS_Trace(target string, max int) []*TraceNode {
+	var results []*TraceNode
 	var mu sync.Mutex
+	var wg sync.WaitGroup
+	resultChan := make(chan *TraceNode, max)
 
 	visitedGlobal := map[string]bool{
-		"Air": true, "Water": true, "Earth": true, "Fire": true,
+		"Air": true, "Water": true, "Earth": true, "Fire": true, "Time": true,
 	}
 
 	for product, recipes := range Graph {
@@ -70,16 +83,15 @@ func MultiBFS(target string, max int) [][][2]string {
 				go func(pair [2]string) {
 					defer wg.Done()
 
-					queue := []Node{
-						{Element: pair[0], Path: [][2]string{}},
-						{Element: pair[1], Path: [][2]string{}},
+					queue := []*TraceNode{
+						{Product: pair[0]},
+						{Product: pair[1]},
 					}
 
-					visited := map[string]bool{}
+					visited := make(map[string]bool)
 					for k, v := range visitedGlobal {
 						visited[k] = v
 					}
-
 					visited[pair[0]] = true
 					visited[pair[1]] = true
 
@@ -89,23 +101,25 @@ func MultiBFS(target string, max int) [][][2]string {
 
 						for prod, recs := range Graph {
 							for _, rec := range recs {
-								if (curr.Element == rec[0] && visited[rec[1]]) || (curr.Element == rec[1] && visited[rec[0]]) {
+								if (curr.Product == rec[0] && visited[rec[1]]) || (curr.Product == rec[1] && visited[rec[0]]) {
+									node := &TraceNode{
+										Product: product,
+										From:    [2]string{pair[0], pair[1]},
+										Parent:  [2]*TraceNode{findNode(queue, pair[0]), findNode(queue, pair[1])},
+									}
+
 									if prod == target {
-										result := append(curr.Path, rec)
 										mu.Lock()
 										if len(results) < max {
-											results = append(results, result)
-											resultChan <- result
+											results = append(results, node)
+											resultChan <- node
 										}
 										mu.Unlock()
 										return
 									}
 									if !visited[prod] {
 										visited[prod] = true
-										queue = append(queue, Node{
-											Element: prod,
-											Path:    append(curr.Path, rec),
-										})
+										queue = append(queue, node)
 									}
 								}
 							}
@@ -116,20 +130,26 @@ func MultiBFS(target string, max int) [][][2]string {
 		}
 	}
 
-	// Tunggu semua goroutine selesai
 	go func() {
 		wg.Wait()
 		close(resultChan)
 	}()
 
-	// Kumpulkan hasil dari channel
-	finalResults := [][][2]string{}
-	for path := range resultChan {
-		finalResults = append(finalResults, path)
-		if len(finalResults) >= max {
+	for node := range resultChan {
+		results = append(results, node)
+		if len(results) >= max {
 			break
 		}
 	}
 
-	return finalResults
+	return results
+}
+
+func findNode(queue []*TraceNode, name string) *TraceNode {
+	for i := len(queue) - 1; i >= 0; i-- {
+		if queue[i].Product == name {
+			return queue[i]
+		}
+	}
+	return nil
 }
