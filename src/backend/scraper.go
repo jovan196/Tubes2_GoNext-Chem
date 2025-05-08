@@ -47,7 +47,7 @@ func main() {
 			product := strings.TrimSpace(cells.Eq(0).Text())
 			rawCombo := strings.TrimSpace(cells.Eq(1).Text())
 
-			// 4) Use regex to extract all matches of "X + Y"
+			
 			for _, match := range re.FindAllStringSubmatch(rawCombo, -1) {
 				a := strings.TrimSpace(match[1])
 				b := strings.TrimSpace(match[2])
