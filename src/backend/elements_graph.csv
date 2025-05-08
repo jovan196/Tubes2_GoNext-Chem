@@ -1,21 +1,748 @@
 Product,Ingredient1,Ingredient2
-Coconut milk,Coconut,Milk
-Coconut milk,Coconut,Tool
-Coconut milk,Coconut,Hammer
-Coconut milk,Coconut,Sword
-Coconut milk,Coconut,Blade
-Coconut milk,Coconut,Axe
-Log cabin,Wood,House
-Chocolate,Sugar,Milk
-Chocolate,Sugar,Oil
-Chocolate,Sugar,Coconut milk
-Chocolate,Sugar,Seed
-Web,Spider,Thread
-Web,Spider,Cotton
-Web,Spider,Fabric
-Web,Spider,Net
-Galaxy cluster,Galaxy,Galaxy
-Galaxy cluster,Galaxy,Container
+Wizard,Human,Magic
+Wizard,Human,Unicorn
+Wizard,Human,Rainbow
+Wizard,Human,Double rainbow!
+Cable car,Mountain,Car
+Cable car,Mountain,Wire
+Cable car,Mountain,Rope
+Cable car,Mountain range,Car
+Cable car,Mountain range,Wire
+Cable car,Mountain range,Rope
+Painter,Human,Canvas
+Painter,Human,Paint
+Painter,Human,Painting
+Seed,Pollen,Plant
+Seed,Pollen,Bee
+Snowmobile,Snow,Motorcycle
+Snowmobile,Snow,Car
+Snowmobile,Glacier,Motorcycle
+Snowmobile,Glacier,Car
+Snowmobile,Ice,Motorcycle
+Snowmobile,Ice,Car
+Donut,Dough,Oil
+Donut,Dough,Wheel
+Donut,Cookie dough,Oil
+Donut,Cookie dough,Wheel
+Sandstone,Sand,Stone
+Sandstone,Sand,Rock
+Sandstone,Sand,Earth
+Tsunami,Sea,Earthquake
+Tsunami,Sea,Explosion
+Tsunami,Sea,Meteor
+Tsunami,Ocean,Earthquake
+Tsunami,Ocean,Explosion
+Tsunami,Ocean,Meteor
+Garden,Plant,Grass
+Garden,Plant,House
+Garden,Plant,Lawn
+Garden,Flower,Flower
+Garden,Flower,Grass
+Garden,Flower,Plant
+Garden,Flower,House
+Garden,Flower,Lawn
+Garden,Flower,Container
+Coral,Tree,Sea
+Coral,Tree,Ocean
+Coral,Fossil,Sea
+Coral,Fossil,Ocean
+Coral,Bone,Sea
+Coral,Bone,Ocean
+Potato,Earth,Vegetable
+Blender,Blade,Glass
+Blender,Blade,Electricity
+Blender,Blade,Windmill
+Blender,Blade,Wind turbine
+Blender,Blade,Motion
+Excalibur,Sword,Stone
+Excalibur,Sword,Legend
+Excalibur,Sword,Story
+Excalibur,Sword,Monarch
+Excalibur,Sword,Lake
+Excalibur,Sword,Fairy tale
+Constellation,Star,Star
+Bacon,Pig,Fire
+Bacon,Pig,Campfire
+Bacon,Ham,Fire
+Bacon,Ham,Campfire
+Piggy bank,Pig,Money
+Piggy bank,Pig,Pottery
+Piggy bank,Pig,Gold
+Milk shake,Ice cream,Milk
+Milk shake,Ice cream,Yogurt
+Milk shake,Ice cream,Water
+Steam,Water,Heat
+Steam,Water,Fire
+Steam,Water,Lava
+Steam,Water,Gas
+Light,Electricity,Light bulb
+Light,Electricity,Flashlight
+Parachute,Pilot,Fabric
+Parachute,Pilot,Umbrella
+Parachute,Airplane,Fabric
+Parachute,Airplane,Umbrella
+Parachute,Umbrella,Sky
+Parachute,Umbrella,Atmosphere
+Titanic,Boat,Iceberg
+Titanic,Steamboat,Iceberg
+Titanic,Iceberg,Legend
+Titanic,Steamboat,Legend
+Glass,Sand,Fire
+Glass,Sand,Heat
+Glass,Sand,Lightning
+Glass,Sand,Electricity
+Lighthouse,Light,House
+Lighthouse,Light,Ocean
+Lighthouse,Light,Sea
+Lighthouse,Light,Beach
+Lighthouse,Spotlight,House
+Lighthouse,Spotlight,Ocean
+Lighthouse,Spotlight,Sea
+Lighthouse,Spotlight,Beach
+Umbrella,Rain,Tool
+Umbrella,Rain,Fabric
+Umbrella,Storm,Tool
+Umbrella,Storm,Fabric
+Minotaur,Human,Cow
+Minotaur,Cow,Werewolf
+Minotaur,Cow,Story
+Minotaur,Cow,Legend
+Minotaur,Cow,Monster
+Pitchfork,Hay,Tool
+Pitchfork,Hay,Metal
+Pitchfork,Hay,Steel
+Pitchfork,Tool,Demon
+Orchard,Fruit tree,Fruit tree
+Orchard,Fruit tree,Field
+Orchard,Fruit tree,Tree
+Orchard,Fruit tree,Farmer
+Orchard,Fruit tree,Farm
+Orchard,Fruit tree,Forest
+Orchard,Fruit tree,Container
+Treasure,Treasure map,Pirate
+Treasure,Treasure map,Pirate ship
+Treasure,Treasure map,Island
+Treasure,Treasure map,Sailor
+Steak,Meat,Bbq
+Steak,Meat,Fire
+Steak,Cow,Bbq
+Steak,Cow,Fire
+Lawn mower,Grass,Tool
+Lawn mower,Grass,Machine
+Lawn mower,Scythe,Electricity
+Lawn mower,Scythe,Helicopter
+Lawn mower,Scythe,Windmill
+Lawn mower,Scythe,Tool
+Lawn mower,Scythe,Machine
+Lawn mower,Scythe,Motion
+Lawn mower,Helicopter,Field
+Sand castle,Castle,Sand
+Sand castle,Castle,Beach
+Sand castle,Castle,Desert
+Sand castle,Castle,Dune
+Bandage,Fabric,Blood
+Bandage,Fabric,Sword
+Bandage,Fabric,Blade
+Canvas,Fabric,Paint
+Picnic,Sandwich,Grass
+Picnic,Sandwich,Beach
+Picnic,Sandwich,Lawn
+Picnic,Sandwich,Garden
+Picnic,Sandwich,Fabric
+Cuckoo,Bird,Clock
+Cuckoo,Bird,Alarm clock
+Cuckoo,Owl,Clock
+Cuckoo,Owl,Alarm clock
+Cuckoo,Hummingbird,Clock
+Cuckoo,Hummingbird,Alarm clock
+Mineral,Organic matter,Stone
+Mineral,Organic matter,Rock
+Mineral,Organic matter,Earth
+Mineral,Organic matter,Boulder
+Mineral,Organic matter,Hill
+Mineral,Organic matter,Mountain
+Seal,Dog,Sea
+Seal,Dog,Ocean
+Seal,Dog,Arctic
+Seal,Dog,Water
+Seal,Dog,Lake
+Water gun,Gun,Water
+Water gun,Gun,Stream
+Water gun,Gun,Puddle
+Tent,Fabric,Wood
+Tent,Fabric,House
+Tent,Fabric,Village
+Tent,Fabric,Wall
+String phone,Paper cup,Wire
+String phone,Paper cup,Thread
+String phone,Cup,Wire
+String phone,Cup,Thread
+Plasma,Science,Star
+Plasma,Science,Sun
+Plasma,Heat,Heat
+Plasma,Heat,Pressure
+Atomic bomb,Explosion,Energy
+Atomic bomb,Explosion,Explosion
+Atomic bomb,Explosion,Big
+Meteoroid,Space,Stone
+Meteoroid,Space,Rock
+Meteoroid,Space,Boulder
+Meteoroid,Solar system,Stone
+Meteoroid,Solar system,Rock
+Meteoroid,Solar system,Boulder
+Meteoroid,Sun,Stone
+Meteoroid,Sun,Rock
+Meteoroid,Sun,Boulder
+Farmer,Human,Plant
+Farmer,Human,Grass
+Farmer,Human,Pitchfork
+Farmer,Human,Field
+Farmer,Human,Barn
+Farmer,Human,Plow
+Farmer,Human,Orchard
+Plant,Tree,Small
+Plant,Seed,Water
+Plant,Seed,Soil
+Plant,Seed,Land
+Plant,Seed,Earth
+Plant,Grass,Big
+Plant,Algae,Land
+Plant,Algae,Earth
+Plant,Life,Soil
+Plant,Rain,Soil
+Duck,Bird,Water
+Duck,Bird,Pond
+Duck,Bird,Lake
+Duck,Duckling,Big
+Duck,Owl,Water
+Duck,Owl,Pond
+Duck,Owl,Lake
+Duck,Pigeon,Water
+Duck,Pigeon,Pond
+Duck,Pigeon,Lake
+Duck,Chicken,Water
+Duck,Chicken,Pond
+Duck,Chicken,Lake
+Alpaca,Sheep,Mountain
+Alpaca,Sheep,Mountain range
+Alpaca,Sheep,Mountain goat
+Mold,Bread,Bacteria
+Mold,Fruit,Bacteria
+Mold,Vegetable,Bacteria
+Air,Fire,Mist
+Binoculars,Telescope,Telescope
+Binoculars,Glasses,Glasses
+Windsurfer,Wind,Surfer
+Pterodactyl,Dinosaur,Air
+Pterodactyl,Dinosaur,Sky
+Pterodactyl,Dinosaur,Bird
+Pterodactyl,Dinosaur,Eagle
+Pterodactyl,Dinosaur,Vulture
+Pterodactyl,Dinosaur,Airplane
+Sap,Tree,Blade
+Swamp,Mud,Grass
+Swamp,Mud,Tree
+Swamp,Tree,Lake
+Swamp,Algae,Lake
+Swamp,Algae,Pond
+Swamp,Reed,Lake
+Swamp,Reed,Pond
+Swamp,Reed,Mud
+Water lily,Flower,Pond
+Water lily,Flower,Puddle
+Water lily,Flower,Lake
+Water lily,Flower,Stream
+Ambulance,Car,Hospital
+Ambulance,Car,Doctor
+Waterfall,River,Mountain
+Waterfall,River,Mountain range
+Waterfall,River,Hill
+Waterfall,Lake,Mountain
+Waterfall,Lake,Mountain range
+Waterfall,Lake,Hill
+Ski goggles,Snow,Glasses
+Ski goggles,Snow,Sunglasses
+Ski goggles,Cold,Glasses
+Ski goggles,Cold,Sunglasses
+Ski goggles,Glacier,Glasses
+Ski goggles,Glacier,Sunglasses
+Ski goggles,Skier,Glasses
+Ski goggles,Skier,Sunglasses
+Grass,Plant,Earth
+Grass,Plant,Land
+Ice sculpture,Ice,Statue
+Tailor,Human,Sewing machine
+Tailor,Human,Needle
+Tailor,Human,Thread
+Paper airplane,Airplane,Paper
+Gun,Bullet,Metal
+Gun,Bullet,Steel
+Gun,Bullet,Bow
+Gun,Bullet,Container
+Gun,Bow,Metal
+Gun,Bow,Steel
+Gun,Bow,Gunpowder
+Phoenix,Fire,Bird
+Phoenix,Fire,Life
+Phoenix,Fire,Death
+Phoenix,Fire,Egg
+Ivy,Plant,Wall
+Ivy,Grass,Wall
+Lumberjack,Human,Axe
+Lumberjack,Human,Chainsaw
+Lumberjack,Human,Wood
+Lumberjack,Human,Tree
+Paleontologist,Human,Dinosaur
+Paleontologist,Human,Fossil
+Paleontologist,Science,Dinosaur
+Paleontologist,Science,Fossil
+Pipe,Tobacco,Wood
+Pipe,Tobacco,Tool
+Sushi,Fish,Seaweed
+Sushi,Caviar,Seaweed
+Maple syrup,Sap,Heat
+Maple syrup,Sap,Sugar
+Moon,Sky,Cheese
+Moon,Sky,Planet
+Moon,Sky,Stone
+Moon,Stone,Planet
+Moon,Night,Planet
+Moon,Night,Stone
+Moon,Night,Earth
+Moon,Night,Cheese
+Katana,Blade,Heat
+Katana,Blade,Shuriken
+Katana,Blade,Ninja
+Katana,Sword,Shuriken
+Katana,Sword,Ninja
+Scalpel,Blade,Doctor
+Scalpel,Blade,Hospital
+Scalpel,Blade,Ambulance
+Scalpel,Sword,Doctor
+Scalpel,Sword,Hospital
+Scalpel,Sword,Ambulance
+Origami,Paper,Bird
+Origami,Paper,Animal
+Origami,Paper,Eagle
+Origami,Paper,Seagull
+Origami,Paper,Owl
+Origami,Paper,Pigeon
+Origami,Paper,Cow
+Origami,Paper,Horse
+Origami,Paper,Dog
+Origami,Paper,Cat
+Origami,Paper,Lion
+Origami,Paper,Hummingbird
+Origami,Paper,Chicken
+Origami,Paper,Penguin
+Origami,Paper,Duck
+Origami,Paper,Vulture
+House,Wall,Wall
+House,Wall,Human
+House,Wall,Tool
+House,Fireplace,Container
+House,Family,Container
+Venus,Planet,Acid rain
+Venus,Planet,Smog
+Venus,Planet,Volcano
+Flood,Rain,Rain
+Flood,Rain,River
+Flood,Rain,Lake
+Flood,Rain,Big
+Flood,House,River
+Flood,House,Tsunami
+Flood,River,City
+Flood,Tsunami,City
+Hangar,Airplane,Container
+Hangar,Airplane,House
+Hangar,Airplane,Wall
+Hangar,Airplane,Barn
+Hangar,Seaplane,Container
+Hangar,Seaplane,House
+Hangar,Seaplane,Wall
+Hangar,Seaplane,Barn
+Hangar,Helicopter,Container
+Hangar,Helicopter,House
+Hangar,Helicopter,Wall
+Hangar,Helicopter,Barn
+Hangar,Rocket,Container
+Hangar,Rocket,House
+Hangar,Rocket,Wall
+Hangar,Rocket,Barn
+Hangar,Spaceship,Container
+Hangar,Spaceship,House
+Hangar,Spaceship,Wall
+Hangar,Spaceship,Barn
+Legend,Story,Story
+Legend,Story,Big
+Legend,Story,Fairy tale
+Legend,Fairy tale,Big
+Monkey,Animal,Tree
+Hamburger,Meat,Bread
+Hamburger,Meat,Cheese
+Ruler,Wood,Pencil
+Syringe,Doctor,Needle
+Syringe,Tool,Needle
+Night,Sky,Moon
+Woodpecker,Bird,Wood
+Woodpecker,Bird,Tree
+Woodpecker,Bird,Forest
+Shovel,Tool,Gardener
+Email,Letter,Computer
+Email,Letter,Computer mouse
+Email,Letter,Internet
+Email,Letter,Electricity
+Cookie,Cookie dough,Heat
+Cookie,Cookie dough,Fire
+Cookie,Cookie dough,Baker
+Cookie,Cookie dough,Cookie cutter
+Cookie,Dough,Cookie cutter
+Mirror,Glass,Metal
+Mirror,Glass,Steel
+Mirror,Glass,Wood
+Ash,Fire,Mineral
+Ash,Fire,Plant
+Ash,Fire,Tree
+Ash,Fire,Grass
+Ash,Fire,Paper
+Ash,Campfire,Water
+Ash,Campfire,Rain
+Ash,Campfire,Paper
+Ash,Vampire,Sun
+Ash,Vampire,Dawn
+Ash,Vampire,Holy grail
+Ash,Vampire,Holy water
+Optical fiber,Wire,Light
+Optical fiber,Rope,Light
+Optical fiber,Light,Internet
+Treehouse,Tree,House
+Treehouse,Tree,Wood
+Anthill,Ant,House
+Anthill,Ant,Container
+Anthill,Ant,Hill
+Anthill,Ant,Earth
+Anthill,Ant,Land
+Anthill,Ant,Soil
+Wire,Metal,Electricity
+Wire,Metal,Rope
+Wire,Steel,Electricity
+Wire,Steel,Rope
+Wire,Electricity,Rope
+Surfer,Human,Wave
+Surfer,Human,Beach
+Hospital,House,Sickness
+Hospital,House,Ambulance
+Hospital,House,Doctor
+Hospital,Wall,Sickness
+Hospital,Wall,Ambulance
+Hospital,Wall,Doctor
+Hospital,Doctor,Container
+Computer mouse,Computer,Mouse
+Computer mouse,Computer,Animal
+Pan flute,Flute,Flute
+Rocket,Atmosphere,Airplane
+Rocket,Atmosphere,Metal
+Rocket,Atmosphere,Steel
+Rocket,Atmosphere,Train
+Rocket,Atmosphere,Machine
+Rocket,Atmosphere,Car
+Rocket,Atmosphere,Boat
+Rocket,Atmosphere,Steamboat
+Rocket,Atmosphere,Pirate ship
+Spaceship,Space,Airplane
+Spaceship,Space,Metal
+Spaceship,Space,Steel
+Spaceship,Space,Pirate ship
+Spaceship,Space,Boat
+Spaceship,Space,Steamboat
+Spaceship,Space,Car
+Spaceship,Astronaut,Container
+Small,Philosophy,Bacteria
+Small,Philosophy,Oxygen
+Small,Philosophy,Carbon dioxide
+Small,Philosophy,Ozone
+Small,Philosophy,Pebble
+Small,Philosophy,Rivulet
+Small,Philosophy,Ant
+Small,Philosophy,Spider
+Small,Philosophy,Bee
+Small,Philosophy,Scorpion
+Small,Philosophy,Confetti
+Small,Philosophy,Seahorse
+Mouse,Animal,Cheese
+Mouse,Cheese,Barn
+Mouse,Cheese,House
+Mouse,Cheese,Farm
+Mouse,Cheese,Wall
+Hot chocolate,Chocolate milk,Heat
+Hot chocolate,Chocolate,Heat
+Energy,Fire,Fire
+Energy,Fire,Science
+Energy,Fire,Atmosphere
+Energy,Heat,Science
+Field,Farmer,Earth
+Field,Farmer,Land
+Field,Farmer,Soil
+Field,Tool,Earth
+Field,Tool,Land
+Field,Tool,Soil
+Field,Plow,Earth
+Field,Plow,Land
+Field,Plow,Soil
+Internet,Computer,Computer
+Internet,Computer,Wire
+Internet,Computer,Web
+Internet,Computer,Net
+Oil,Sunflower,Pressure
+Oil,Sunflower,Stone
+Oil,Sunflower,Wheel
+Oil,Sunflower,Windmill
+Rainforest,Rain,Forest
+Bat,Mouse,Sky
+Bat,Mouse,Air
+Bat,Mouse,Bird
+Bat,Mouse,Hummingbird
+Bat,Mouse,Atmosphere
+Net,Angler,Rope
+Net,Fishing rod,Rope
+Net,Fish,Rope
+Net,Swordfish,Rope
+Net,Flying fish,Rope
+Smoke,Earth,Gas
+Smoke,Campfire,Water
+Smoke,Campfire,Storm
+Smoke,Fire,Plant
+Smoke,Fire,Grass
+Smoke,Fire,Tree
+Smoke,Fire,Wood
+Smoke,Fire,Air
+Gunpowder,Charcoal,Mineral
+Gunpowder,Energy,Mineral
+Gunpowder,Energy,Charcoal
+Gunpowder,Fire,Dust
+Gunpowder,Energy,Dust
+Mountain range,Mountain,Mountain
+Mountain range,Mountain,Continent
+River,Lake,Motion
+River,Stream,Big
+River,Water,Mountain
+River,Rain,Mountain
+River,Rain,Hill
+Wave,Ocean,Wind
+Wave,Ocean,Storm
+Wave,Ocean,Hurricane
+Wave,Sea,Wind
+Wave,Sea,Storm
+Wave,Sea,Hurricane
+Wave,Lake,Wind
+Wave,Lake,Storm
+Wave,Lake,Hurricane
+City,Village,Village
+City,Village,Skyscraper
+City,Village,Big
+City,Skyscraper,Skyscraper
+City,Skyscraper,Container
+City,Skyscraper,Bank
+City,Skyscraper,Post office
+City,Bank,Container
+City,Bank,Post office
+Fog,Cloud,Earth
+Fog,Cloud,Hill
+Fog,Cloud,Mountain
+Fog,Cloud,City
+Fog,Cloud,Field
+Fog,Cloud,Forest
+Glasses,Glass,Glass
+Glasses,Glass,Metal
+Glasses,Glass,Steel
+Glasses,Glass,Human
+Glasses,Human,Lens
+Glasses,Lens,Lens
+Life,Primordial soup,Electricity
+Life,Primordial soup,Storm
+Life,Primordial soup,Volcano
+Life,Primordial soup,Lightning
+Life,Primordial soup,Energy
+Life,Electricity,Ocean
+Life,Electricity,Sea
+Life,Electricity,Lake
+Life,Lightning,Ocean
+Life,Lightning,Sea
+Life,Lightning,Lake
+Egg timer,Egg,Clock
+Egg timer,Egg,Alarm clock
+Egg timer,Egg,Watch
+Rope,Thread,Thread
+Rope,Thread,Wire
+Rope,Wire,Tool
+Rope,Tool,Boat
+Rope,Tool,Sailboat
+Rope,Tool,Pirate ship
+Mountain goat,Goat,Mountain
+Mountain goat,Goat,Mountain range
+Snowboard,Snow,Wood
+Snowboard,Snow,Surfer
+Snowboard,Ice,Wood
+Snowboard,Ice,Surfer
+Snowboard,Surfer,Mountain
+Snowboard,Surfer,Mountain range
+Campfire,Fire,Wood
+Cheeseburger,Cheese,Hamburger
+Cheeseburger,Cheese,Sandwich
+Corpse,Human,Bullet
+Corpse,Human,Blade
+Corpse,Human,Death
+Corpse,Human,Grim reaper
+Corpse,Human,Explosion
+Corpse,Human,Arrow
+Corpse,Jiangshi,Mirror
+Corpse,Jiangshi,Peach of immortality
+Alcohol,Wheat,Fruit
+Alcohol,Wheat,Juice
+Alcohol,Fruit,Sun
+Flour,Wheat,Wheat
+Flour,Wheat,Stone
+Flour,Wheat,Windmill
+Flour,Wheat,Wheel
+Flour,Wheat,Rock
+Sweater,Wool,Tool
+Sweater,Wool,Human
+Pie,Dough,Fruit
+Pie,Cookie dough,Fruit
+Pie,Dough,Meat
+Pie,Fruit,Baker
+Pie,Fruit,Bakery
+Star,Night,Sky
+Star,Night,Telescope
+Star,Space,Telescope
+Star,Sky,Space
+Star,Night,Space
+Star,Sun,Space
+Twilight,Day,Night
+Swordfish,Fish,Sword
+Swordfish,Fish,Blade
+Swordfish,Shark,Sword
+Swordfish,Shark,Blade
+Pumpkin,Vegetable,Field
+Pumpkin,Vegetable,Farmer
+Pumpkin,Vegetable,Jack-o'-lantern
+Pumpkin,Plant,Jack-o'-lantern
+Baker,Human,Bakery
+Baker,Human,Bread
+Baker,Human,Banana bread
+Baker,Human,Pizza
+Baker,Human,Toast
+Baker,Human,Batter
+Baker,Human,Pie
+Baker,Human,Donut
+Baker,Human,Cookie
+Baker,Human,Cookie dough
+Baker,Human,Dough
+Post office,Mailman,House
+Post office,Mailman,Wall
+Post office,Mailman,Container
+Post office,Mailman,Letter
+Post office,Letter,Letter
+Post office,Letter,House
+Post office,Letter,Wall
+Grilled cheese,Cheese,Toast
+Potter,Human,Clay
+Potter,Human,Pottery
+Sickness,Human,Bacteria
+Sickness,Human,Swamp
+Sickness,Human,Sickness
+Flute,Wood,Wind
+Flute,Wood,Air
+Pinocchio,Wood,Life
+Pinocchio,Wood,Story
+Pinocchio,Golem,Story
+Armadillo,Armor,Animal
+Armadillo,Armor,Dog
+Armadillo,Armor,Cat
+Motion,Wind,Science
+Motion,Wind,Idea
+Motion,Wind,Philosophy
+Motion,Tornado,Science
+Motion,Tornado,Philosophy
+Motion,Stream,Science
+Motion,Stream,Philosophy
+Motion,River,Science
+Motion,River,Philosophy
+Thread,Cotton,Cotton
+Thread,Cotton,Tool
+Thread,Cotton,Wheel
+Thread,Cotton,Machine
+Grave,Earth,Coffin
+Grave,Earth,Corpse
+Grave,Field,Coffin
+Grave,Field,Corpse
+Grave,Forest,Corpse
+Grave,Forest,Coffin
+Grave,Gravestone,Grave
+Grave,Gravestone,Coffin
+Grave,Coffin,Container
+Statue,Stone,Hammer
+Statue,Boulder,Hammer
+Statue,Medusa,Human
+Statue,Medusa,Hacker
+Statue,Medusa,Engineer
+Statue,Medusa,Lumberjack
+Statue,Medusa,Pilot
+Statue,Medusa,Sailor
+Statue,Medusa,Farmer
+Statue,Medusa,Firefighter
+Statue,Medusa,Surfer
+Statue,Medusa,Astronaut
+Statue,Medusa,Butcher
+Statue,Medusa,Doctor
+Statue,Medusa,Baker
+Statue,Medusa,Drunk
+Statue,Medusa,Mirror
+Statue,Troll,Sun
+Statue,Troll,Dawn
+Statue,Cockatrice,Human
+Statue,Cockatrice,Hacker
+Statue,Cockatrice,Engineer
+Statue,Cockatrice,Lumberjack
+Statue,Cockatrice,Pilot
+Statue,Cockatrice,Sailor
+Statue,Cockatrice,Farmer
+Statue,Cockatrice,Firefighter
+Statue,Cockatrice,Surfer
+Statue,Cockatrice,Astronaut
+Statue,Cockatrice,Butcher
+Statue,Cockatrice,Doctor
+Statue,Cockatrice,Baker
+Statue,Cockatrice,Drunk
+Statue,Cockatrice,Mirror
+Darkness,Sky,Night
+Darkness,Sky,Twilight
+Bicycle,Wheel,Wheel
+Bicycle,Wheel,Chain
+Bicycle,Wheel,Machine
+Mailman,Human,Letter
+Mailman,Human,Newspaper
+Mailman,Letter,Mailbox
+Sunglasses,Glasses,Sun
+Sunglasses,Glasses,Beach
+Sunglasses,Glasses,Day
+Sunglasses,Glasses,Sky
+Sunglasses,Glasses,Light
+Catnip,Cat,Plant
+Catnip,Cat,Grass
+Catnip,Cat,Flower
+Catnip,Baast,Plant
+Bbq,Campfire,Metal
+Bbq,Campfire,Steel
+Bbq,Campfire,Garden
+Bbq,Campfire,House
+Bbq,Campfire,Meat
+Wax,Beehive,Bee
+Wax,Beehive,Wall
+Wax,Beehive,Blade
+Wax,Beehive,Sword
+Wax,Beehive,Tool
+Wax,Beehive,Beekeeper
 Camel,Desert,Horse
 Camel,Desert,Animal
 Camel,Desert,Livestock
@@ -29,53 +756,963 @@ Camel,Dune,Animal
 Camel,Dune,Horse
 Camel,Dune,Livestock
 Camel,Dune,Cow
-Net,Angler,Rope
-Net,Fishing rod,Rope
-Net,Fish,Rope
-Net,Swordfish,Rope
-Net,Flying fish,Rope
-Ice sculpture,Ice,Statue
-Mail truck,Car,Letter
-Mail truck,Car,Mailman
-Mail truck,Car,Post office
-Magma,Lava,Science
-Magma,Volcano,Science
-Umbrella,Rain,Tool
-Umbrella,Rain,Fabric
-Umbrella,Storm,Tool
-Umbrella,Storm,Fabric
-Plankton,Water,Life
-Plankton,Ocean,Life
-Plankton,Sea,Life
-Plankton,Bacteria,Water
-Plankton,Bacteria,Ocean
-Plankton,Bacteria,Sea
-Robot,Life,Armor
-Robot,Life,Metal
-Robot,Life,Steel
-Robot,Golem,Armor
-Robot,Golem,Metal
-Robot,Golem,Steel
-Bacon,Pig,Fire
-Bacon,Pig,Campfire
-Bacon,Ham,Fire
-Bacon,Ham,Campfire
 Birdhouse,Bird,House
 Birdhouse,Bird,Wall
 Birdhouse,Egg,Container
-Dog,Wolf,Domestication
-Dog,Wolf,Farmer
-Dog,Wolf,Farm
-Dog,Wolf,Barn
-Dog,Wolf,Field
-Dog,Wolf,Bone
-Dog,Wolf,Campfire
-Big,Universe,Philosophy
-Big,Galaxy,Philosophy
-Big,Galaxy cluster,Philosophy
-Big,Solar system,Philosophy
-Big,Sun,Philosophy
-Big,Planet,Philosophy
+Dinosaur,Lizard,Big
+Knight,Human,Armor
+Knight,Warrior,Armor
+Knight,Warrior,Hero
+Knight,Warrior,Horse
+Salt,Sea,Sun
+Salt,Sea,Fire
+Salt,Sea,Mineral
+Salt,Ocean,Sun
+Salt,Ocean,Fire
+Salt,Ocean,Mineral
+Sword,Blade,Metal
+Sword,Blade,Steel
+Sword,Blade,Wood
+Chameleon,Lizard,Rainbow
+Chameleon,Lizard,Double rainbow!
+Chameleon,Snake,Rainbow
+Chameleon,Snake,Double rainbow!
+Chameleon,Turtle,Rainbow
+Chameleon,Turtle,Double rainbow!
+Ice,Water,Cold
+Ice,Water,Solid
+Ice,Puddle,Cold
+Ice,Puddle,Solid
+Nest,Bird,Tree
+Nest,Bird,Hay
+Nest,Bird,Grass
+Nest,Bird,House
+Nest,Egg,Hay
+Nest,Egg,Tree
+Nest,Egg,Grass
+Nest,Egg,Container
+Cook,Human,Fruit
+Cook,Human,Vegetable
+Cook,Human,Campfire
+Cook,Human,Nuts
+Book,Newspaper,Newspaper
+Book,Paper,Legend
+Book,Paper,Wood
+Book,Container,Story
+Book,Container,Fairy tale
+Book,Container,Legend
+Book,Container,Idea
+Peanut butter,Nuts,Butter
+Peanut butter,Nuts,Pressure
+Volcano,Lava,Earth
+Volcano,Lava,Mountain
+Volcano,Lava,Hill
+Volcano,Lava,Container
+Volcano,Fire,Mountain
+Volcano,Fire,Hill
+Volcano,Pressure,Mountain
+Volcano,Pressure,Hill
+Geyser,Steam,Earth
+Geyser,Steam,Hill
+Geyser,Steam,Mountain
+Geyser,Steam,Pressure
+Paint,Water,Rainbow
+Paint,Water,Double rainbow!
+Paint,Water,Pencil
+Paint,Pottery,Rainbow
+Paint,Pottery,Double rainbow!
+Paint,Tool,Rainbow
+Paint,Tool,Double rainbow!
+Paint,Liquid,Rainbow
+Paint,Liquid,Double rainbow!
+Paint,Liquid,Pencil
+Bird,Animal,Sky
+Bird,Animal,Air
+Bird,Animal,Airplane
+Bird,Egg,Sky
+Bird,Egg,Air
+Bird,Egg,Airplane
+Fish,Animal,Water
+Fish,Animal,Sea
+Fish,Animal,Ocean
+Fish,Animal,Lake
+Fish,Egg,Water
+Fish,Egg,Sea
+Fish,Egg,Ocean
+Fish,Egg,Lake
+Arctic,Cold,Sea
+Arctic,Cold,Ocean
+Horseshoe,Horse,Metal
+Horseshoe,Horse,Steel
+Machine,Tool,Wheel
+Machine,Tool,Tool
+Machine,Tool,Chain
+Machine,Tool,Engineer
+Machine,Boiler,Wheel
+Machine,Boiler,Tool
+Machine,Boiler,Chain
+Moth,Butterfly,Moon
+Moth,Butterfly,Night
+Moth,Butterfly,Candle
+Moth,Butterfly,Light
+Moth,Butterfly,Lamp
+Moth,Butterfly,Flashlight
+Doge,Dog,Internet
+Doge,Dog,Computer
+Thermometer,Quicksilver,Glass
+Thermometer,Quicksilver,Tool
+Thermometer,Quicksilver,Engineer
+Bread,Dough,Fire
+Bread,Dough,Energy
+Music,Musician,Flute
+Music,Musician,Sheet music
+Music,Musician,Drum
+Music,Musician,Pan flute
+Paper cup,Cup,Paper
+Hail,Ice,Rain
+Hail,Ice,Cloud
+Hail,Ice,Storm
+Hail,Ice,Wind
+Hail,Ice,Steam
+Hail,Ice,Sky
+Puddle,Water,Water
+Puddle,Pond,Small
+Duckling,Egg,Duck
+Butter,Milk,Pressure
+Butter,Milk,Energy
+Butter,Milk,Motion
+Butter,Milk,Tool
+Sewing machine,Needle,Machine
+Sewing machine,Needle,Electricity
+Sewing machine,Needle,Robot
+Sewing machine,Thread,Machine
+Sewing machine,Thread,Electricity
+Sewing machine,Thread,Robot
+Sheet music,Music,Paper
+Sheet music,Music,Book
+Chicken,Bird,Domestication
+Chicken,Bird,Livestock
+Chicken,Bird,Farmer
+Chicken,Bird,Farm
+Chicken,Bird,Barn
+Chicken,Egg,Domestication
+Chicken,Egg,Livestock
+Chicken,Egg,Farmer
+Chicken,Egg,Barn
+Chicken,Egg,Farm
+Story,Human,Campfire
+Story,Human,Hero
+Helicopter,Airplane,Blade
+Helicopter,Airplane,Windmill
+Helicopter,Airplane,Wind turbine
+Helicopter,Seaplane,Blade
+Helicopter,Seaplane,Windmill
+Helicopter,Seaplane,Wind turbine
+Mars,Planet,Rust
+Mars,Planet,Desert
+Horse,Animal,Field
+Horse,Animal,Horseshoe
+Horse,Animal,Saddle
+Horse,Animal,Land
+Horse,Livestock,Hay
+Horse,Livestock,Barn
+Horse,Livestock,Horseshoe
+Horse,Livestock,Saddle
+Wheel,Motion,Tool
+Wheel,Motion,Stone
+Wheel,Motion,Metal
+Wheel,Motion,Steel
+Wheel,Tool,Water
+Wheel,Tool,Stream
+Wheel,Tool,River
+Hamster,Mouse,Wheel
+Hamster,Mouse,Domestication
+Hamster,Rat,Wheel
+Hamster,Rat,Domestication
+Kite,Paper,Wind
+Kite,Paper,Sky
+Kite,Paper,Air
+Bulletproof vest,Bullet,Armor
+Bulletproof vest,Gun,Armor
+Wild boar,Pig,Animal
+Wild boar,Pig,Forest
+Wild boar,Pig,Hill
+Dry ice,Carbon dioxide,Cold
+Dry ice,Carbon dioxide,Ice
+Lizard,Stone,Animal
+Lizard,Rock,Animal
+Lizard,Swamp,Animal
+Lizard,Heat,Animal
+Lizard,Egg,Stone
+Lizard,Egg,Rock
+Lizard,Egg,Swamp
+Lizard,Dinosaur,Small
+Lizard,Blood,Cold
+Butcher,Human,Meat
+Butcher,Human,Ham
+Tyrannosaurus rex,Dinosaur,Meat
+Tyrannosaurus rex,Dinosaur,Blood
+Tyrannosaurus rex,Dinosaur,Monarch
+Boat,Wood,Water
+Boat,Wood,Sea
+Boat,Wood,Ocean
+Boat,Wood,Lake
+Boat,Wood,River
+Cyborg,Robot,Human
+Cyborg,Robot,Engineer
+Cyborg,Robot,Lumberjack
+Cyborg,Robot,Sailor
+Cyborg,Robot,Baker
+Cyborg,Robot,Cook
+Cyborg,Robot,Doctor
+Cyborg,Robot,Farmer
+Cyborg,Robot,Firefighter
+Cyborg,Robot,Pilot
+Cyborg,Robot,Astronaut
+Cyborg,Robot,Electrician
+Saddle,Horse,Leather
+Saddle,Horse,Tool
+Saddle,Horse,Fabric
+Little alchemy (element),Small,Alchemist
+Skyscraper,House,Sky
+Skyscraper,House,Big
+Skyscraper,House,Cloud
+Skyscraper,Village,Sky
+Shark,Wolf,Sea
+Shark,Wolf,Ocean
+Shark,Wolf,Fish
+Shark,Blood,Sea
+Shark,Blood,Ocean
+Shark,Blood,Fish
+Solid,Earth,Idea
+Solid,Earth,Science
+Needle,Thread,Metal
+Needle,Thread,Steel
+Needle,Thread,Tool
+Tractor,Car,Farmer
+Tractor,Car,Field
+Tractor,Car,Cow
+Tractor,Wagon,Farmer
+Tractor,Wagon,Field
+Tractor,Wagon,Cow
+Candy cane,Sugar,Christmas tree
+Candy cane,Sugar,Christmas stocking
+Candy cane,Sugar,Santa
+Candy cane,Sugar,Reindeer
+Desert,Sand,Sand
+Desert,Sand,Land
+Desert,Sand,Cactus
+Desert,Sand,Lizard
+Desert,Sand,Vulture
+Crow,Bird,Scarecrow
+Crow,Bird,Field
+Crow,Pigeon,Scarecrow
+Crow,Pigeon,Field
+Crow,Owl,Scarecrow
+Crow,Owl,Field
+Crow,Hummingbird,Scarecrow
+Crow,Hummingbird,Field
+Pigeon,Bird,City
+Pigeon,Bird,Letter
+Pigeon,Bird,Statue
+Pigeon,Bird,Skyscraper
+Pigeon,Bird,Village
+Unicorn,Horse,Legend
+Unicorn,Horse,Story
+Unicorn,Horse,Magic
+Unicorn,Horse,Rainbow
+Unicorn,Horse,Double rainbow!
+Saturn,Ring,Planet
+Saturn,Jupiter,Small
+Broom,Wood,Hay
+Broom,Tool,Baba yaga
+Train,Steam engine,Metal
+Train,Steam engine,Steel
+Train,Steam engine,Wheel
+Train,Steam engine,Wagon
+Bone,Vulture,Corpse
+Bone,Vulture,Meat
+Bone,Wolf,Corpse
+Bone,Wolf,Meat
+Peacock,Bird,Leaf
+Peacock,Bird,Rainbow
+Peacock,Bird,Double rainbow!
+Lawn,Grass,House
+Lawn,Grass,Container
+Lawn,Grass,Lawn mower
+Lawn,Field,Lawn mower
+Scythe,Blade,Grass
+Scythe,Blade,Wheat
+Scythe,Sword,Grass
+Scythe,Sword,Wheat
+Scythe,Axe,Grass
+Scythe,Axe,Wheat
+Jam,Juice,Sugar
+Jam,Juice,Fruit
+Jam,Juice,Machine
+Jam,Fruit,Machine
+Jam,Fruit,Heat
+Moon rover,Moon,Car
+Moon rover,Moon,Electric car
+Roller coaster,Park,Train
+Roller coaster,Park,Car
+Roller coaster,Park,Cart
+Roller coaster,Park,Wagon
+Gingerbread house,House,Gingerbread man
+Gingerbread house,House,Dough
+Gingerbread house,House,Cookie dough
+Gingerbread house,House,Cookie
+Gingerbread house,House,Donut
+Gingerbread house,House,Cake
+Warmth,Heat,Air
+Warmth,Heat,Human
+Gold,Metal,Sun
+Gold,Steel,Sun
+Gold,Metal,Rainbow
+Gold,Steel,Rainbow
+Gold,Metal,Butter
+Gold,Steel,Butter
+Gold,Metal,Sand
+Gold,Steel,Sand
+Gold,Metal,Light
+Gold,Steel,Light
+Gold,Metal,Alchemist
+Gold,Steel,Alchemist
+Gold,Metal,Philosopher's stone
+Gold,Steel,Philosopher's stone
+Gold,Quicksilver,Philosopher's stone
+Frog,Animal,Pond
+Frog,Animal,Puddle
+Frog,Egg,Pond
+Frog,Egg,Puddle
+Sloth,Tree,Manatee
+Stethoscope,Doctor,Tool
+Stethoscope,Doctor,Drum
+Stethoscope,Doctor,Sound
+Stethoscope,Tool,Sound
+Stethoscope,Tool,Hospital
+Mailbox,Letter,Box
+Mailbox,Letter,Metal
+Mailbox,Letter,Steel
+Mailbox,Letter,Wood
+Mailbox,Mailman,Box
+Mailbox,Mailman,Metal
+Mailbox,Mailman,Steel
+Mailbox,Mailman,Wood
+Stone,Earth,Pressure
+Stone,Earth,Solid
+Stone,Air,Lava
+Wind turbine,Windmill,Electricity
+Wind turbine,Windmill,Machine
+Wind turbine,Windmill,Electrician
+Wind turbine,Wind,Electricity
+Snowman,Snow,Human
+Snowman,Snow,Carrot
+Snowman,Snow,Coal
+Snowman,Snowball,Carrot
+Snowman,Snowball,Coal
+Snowman,Snowball,Snowball
+Nuts,Tree,Farmer
+Nuts,Tree,Field
+Nuts,Tree,Domestication
+Palm,Tree,Beach
+Palm,Tree,Island
+Palm,Tree,Sand
+Perfume,Flower,Water
+Perfume,Flower,Steam
+Perfume,Flower,Alcohol
+Perfume,Rose,Water
+Perfume,Rose,Steam
+Perfume,Rose,Alcohol
+Perfume,Sunflower,Water
+Perfume,Sunflower,Steam
+Perfume,Sunflower,Alcohol
+Wool,Sheep,Tool
+Wool,Sheep,Scissors
+Wool,Sheep,Blade
+Cart,Wheel,Wood
+Liquid,Water,Science
+Liquid,Water,Idea
+Liquid,Energy,Solid
+Pirate,Sailor,Sword
+Pirate,Sailor,Bayonet
+Pirate,Sailor,Pirate ship
+Pirate,Sailor,Gun
+Cheese,Milk,Tool
+Cheese,Milk,Cook
+Cheese,Milk,Bacteria
+Garage,Car,House
+Garage,Car,Container
+Garage,Car,Wall
+Garage,Car,Barn
+Garage,Ambulance,House
+Garage,Ambulance,Container
+Garage,Ambulance,Wall
+Garage,Ambulance,Barn
+Garage,Motorcycle,House
+Garage,Motorcycle,Container
+Garage,Motorcycle,Wall
+Garage,Motorcycle,Barn
+Garage,Bus,House
+Garage,Bus,Container
+Garage,Bus,Wall
+Garage,Bus,Barn
+Garage,Sleigh,House
+Garage,Sleigh,Container
+Garage,Sleigh,Wall
+Garage,Sleigh,Barn
+Garage,Electric car,House
+Garage,Electric car,Container
+Garage,Electric car,Wall
+Garage,Electric car,Barn
+Garage,Snowmobile,House
+Garage,Snowmobile,Container
+Garage,Snowmobile,Wall
+Garage,Snowmobile,Barn
+Garage,Tractor,House
+Garage,Tractor,Container
+Garage,Tractor,Wall
+Garage,Tractor,Barn
+Garage,Rv,House
+Garage,Rv,Container
+Garage,Rv,Wall
+Garage,Rv,Barn
+Garage,Ice cream truck,House
+Garage,Ice cream truck,Container
+Garage,Ice cream truck,Wall
+Garage,Ice cream truck,Barn
+Banana bread,Bread,Banana
+Banana bread,Dough,Banana
+Sandstorm,Sand,Storm
+Sandstorm,Sand,Tornado
+Sandstorm,Sand,Motion
+Sandstorm,Desert,Storm
+Sandstorm,Desert,Tornado
+Sandstorm,Desert,Motion
+Sandstorm,Desert,Wind
+Prism,Glass,Rainbow
+Prism,Glass,Double rainbow!
+Prism,Crystal ball,Rainbow
+Prism,Crystal ball,Double rainbow!
+Computer,Hacker,Tool
+Computer,Hacker,Electricity
+Computer,Hacker,Wire
+Computer,Hacker,Machine
+Computer,Email,Container
+Skateboard,Wheel,Snowboard
+Skateboard,Wheel,Skier
+Skateboard,Wheel,Ski goggles
+Box,Container,Pizza
+Box,Container,Pencil
+Box,Container,Cereal
+Box,Container,Cookie
+Box,Container,Donut
+Box,Container,Cake
+Box,Container,Crayon
+Trainyard,Train,Container
+Trainyard,Train,House
+Trainyard,Train,Wall
+Trainyard,Train,Garage
+Wand,Wizard,Wood
+Wand,Wizard,Sword
+Wand,Wizard,Tool
+Wand,Wizard,Pencil
+Ore,Hammer,Boulder
+Ore,Hammer,Earth
+Ore,Hammer,Rock
+Ore,Hammer,Stone
+Ore,Hammer,Hill
+Ore,Hammer,Mountain
+Steel,Metal,Coal
+Steel,Metal,Charcoal
+Steel,Metal,Mineral
+Steel,Metal,Ash
+Reindeer,Animal,Santa
+Reindeer,Livestock,Santa
+Reindeer,Animal,Christmas tree
+Reindeer,Livestock,Christmas tree
+Reindeer,Animal,Christmas stocking
+Wine,Alcohol,Fruit
+Wine,Alcohol,Juice
+Wine,Tool,Dionysus
+Gingerbread man,Dough,Life
+Gingerbread man,Dough,Magic
+Gingerbread man,Dough,Story
+Gingerbread man,Cookie,Life
+Gingerbread man,Cookie,Magic
+Gingerbread man,Cookie,Story
+Gingerbread man,Cookie dough,Life
+Gingerbread man,Cookie dough,Magic
+Gingerbread man,Cookie dough,Story
+Lake,Pond,Water
+Lake,Pond,Big
+Lake,Pond,Pond
+Lake,Sea,Small
+Death,Corpse,Philosophy
+Death,Skeleton,Philosophy
+Death,Grave,Philosophy
+Death,Graveyard,Philosophy
+Tunnel,Engineer,Mountain
+Tunnel,Engineer,Mountain range
+Tunnel,Engineer,Hill
+Tunnel,Train,Mountain
+Tunnel,Train,Mountain range
+Tunnel,Train,Hill
+Tunnel,Cave,Mountain
+Tunnel,Cave,Mountain range
+Tunnel,Cave,Hill
+Marshmallows,Sugar,Campfire
+Roe,Egg,Fish
+Roe,Egg,Water
+Roe,Egg,Ocean
+Roe,Egg,Sea
+Roe,Egg,Lake
+Roe,Egg,Flying fish
+Cyclist,Human,Wheel
+Cyclist,Human,Bicycle
+Parrot,Bird,Pirate
+Parrot,Bird,Pirate ship
+Parrot,Pigeon,Pirate
+Parrot,Pigeon,Pirate ship
+Wood,Tree,Tool
+Wood,Tree,Axe
+Wood,Tree,Chainsaw
+Wood,Tree,Sword
+Wood,Tree,Lumberjack
+Wood,Forest,Tool
+Wood,Forest,Axe
+Wood,Forest,Chainsaw
+Wood,Forest,Sword
+Wood,Forest,Lumberjack
+Wood,Tree,Paul bunyan
+Wood,Forest,Paul bunyan
+Cookie dough,Dough,Cookie
+Cookie dough,Dough,Sugar
+Cookie dough,Dough,Chocolate
+Safe,Metal,Money
+Safe,Metal,Gold
+Safe,Steel,Money
+Safe,Steel,Gold
+Safe,Container,Gun
+Safe,Container,Gold
+Space station,Space,House
+Space station,Space,Wall
+Space station,Space,Village
+Space station,Atmosphere,House
+Space station,Atmosphere,Wall
+Space station,Atmosphere,Village
+Supernova,Explosion,Star
+Supernova,Explosion,Sun
+Supernova,Explosion,Galaxy
+Supernova,Explosion,Space
+Egg,Life,Container
+Egg,Bird,Bird
+Egg,Turtle,Turtle
+Egg,Lizard,Lizard
+Egg,Vulture,Vulture
+Egg,Phoenix,Phoenix
+Egg,Chicken,Chicken
+Egg,Dragon,Dragon
+Egg,Penguin,Penguin
+Egg,Owl,Owl
+Egg,Dinosaur,Dinosaur
+Egg,Duck,Duck
+Egg,Seagull,Seagull
+Egg,Eagle,Eagle
+Egg,Scorpion,Scorpion
+Egg,Spider,Spider
+Egg,Pigeon,Pigeon
+Egg,Fish,Fish
+Egg,Piranha,Piranha
+Egg,Parrot,Parrot
+Egg,Peacock,Peacock
+Egg,Hummingbird,Hummingbird
+Egg,Chameleon,Chameleon
+Egg,Ostrich,Ostrich
+Egg,Woodpecker,Woodpecker
+Egg,Bee,Bee
+Egg,Crow,Crow
+Egg,Frog,Frog
+Egg,Pterodactyl,Pterodactyl
+Egg,Ant,Ant
+Egg,Moth,Moth
+Egg,Butterfly,Butterfly
+Egg,Snake,Snake
+Egg,Flying fish,Flying fish
+Egg,Tyrannosaurus rex,Tyrannosaurus rex
+Pegasus,Horse,Bird
+Pegasus,Horse,Sky
+Pegasus,Unicorn,Bird
+Pegasus,Unicorn,Sky
+Golem,Clay,Story
+Golem,Clay,Legend
+Golem,Story,Statue
+Golem,Statue,Life
+Golem,Statue,Legend
+Peat,Swamp,Plant
+Peat,Swamp,Pressure
+Beekeeper,Human,Beehive
+Beekeeper,Human,Bee
+Beekeeper,Farmer,Beehive
+Beekeeper,Farmer,Bee
+Pond,Puddle,Puddle
+Pond,Puddle,Water
+Pond,Puddle,Big
+Pond,Lake,Small
+Hurricane,Ocean,Tornado
+Hurricane,Sea,Tornado
+Hurricane,Ocean,Storm
+Hurricane,Sea,Storm
+Microscope,Bacteria,Glass
+Microscope,Bacteria,Glasses
+Microscope,Bacteria,Safety glasses
+Microscope,Bacteria,Lens
+Microscope,Tool,Lens
+Soap,Oil,Ash
+Soap,Oil,Wax
+Soap,Oil,Clay
+Soap,Wax,Ash
+Soap,Wax,Clay
+Ice cream truck,Ice cream,Car
+Ice cream truck,Ice cream,Bus
+Ice cream truck,Ice cream,Wagon
+Sandpaper,Sand,Paper
+Sandpaper,Sand,Fabric
+Fortune cookie,Paper,Cookie
+Fortune cookie,Paper,Cookie dough
+Fortune cookie,Paper,Gingerbread man
+Algae,Water,Plant
+Algae,Water,Grass
+Algae,Grass,Pond
+Algae,Grass,Lake
+Vegetable,Farmer,Field
+Vegetable,Farmer,Forest
+Vegetable,Farmer,Plant
+Vegetable,Plant,Field
+Vegetable,Plant,Domestication
+Closet,Container,Broom
+Closet,Container,Toolbox
+Closet,Container,Umbrella
+Closet,Container,Robot vacuum
+Closet,Container,Vacuum cleaner
+Fabric,Thread,Machine
+Fabric,Thread,Tool
+Fabric,Thread,Wheel
+Map,Paper,Land
+Map,Paper,Hill
+Map,Paper,Mountain
+Map,Paper,Mountain range
+Map,Paper,Continent
+Map,Paper,Ocean
+Map,Paper,Sea
+Map,Paper,Lake
+Map,Paper,River
+Map,Paper,City
+Map,Paper,Village
+Dam,River,Beaver
+Dam,River,Wall
+Dam,Water,Wall
+Dam,Stream,Wall
+Dam,Beaver,Tree
+Dam,Beaver,Stream
+Dam,Beaver,House
+Dam,Beaver,Lake
+Dam,Beaver,Water
+Astronaut,Human,Space
+Astronaut,Human,Spaceship
+Astronaut,Human,Space station
+Astronaut,Human,Rocket
+Astronaut,Human,Moon
+Astronaut,Human,Mars
+Astronaut,Human,Solar system
+Astronaut,Human,Mercury
+Astronaut,Human,Jupiter
+Astronaut,Human,Saturn
+Astronaut,Human,Venus
+Astronaut,Human,Moon rover
+Flower,Plant,Garden
+Flower,Plant,Rainbow
+Flower,Plant,Double rainbow!
+Flower,Grass,Garden
+Flower,Grass,Seed
+Flower,Grass,Rainbow
+Flower,Grass,Double rainbow!
+Flower,Garden,Seed
+Lens,Glass,Tool
+Lens,Glass,Engineer
+Magma,Lava,Science
+Magma,Volcano,Science
+Coconut milk,Coconut,Milk
+Coconut milk,Coconut,Tool
+Coconut milk,Coconut,Hammer
+Coconut milk,Coconut,Sword
+Coconut milk,Coconut,Blade
+Coconut milk,Coconut,Axe
+Flying squirrel,Squirrel,Bird
+Flying squirrel,Squirrel,Hummingbird
+Flying squirrel,Squirrel,Seagull
+Flying squirrel,Squirrel,Pigeon
+Flying squirrel,Squirrel,Air
+Flying squirrel,Squirrel,Airplane
+Flying squirrel,Squirrel,Seaplane
+Flying squirrel,Squirrel,Helicopter
+Letter,Paper,Pencil
+Glacier,Mountain,Ice
+Glacier,Mountain,Snow
+Glacier,Mountain range,Ice
+Glacier,Mountain range,Snow
+Battery,Container,Electricity
+Battery,Container,Energy
+Battery,Electricity,Mineral
+Battery,Electricity,Ore
+Doctor,Human,Hospital
+Doctor,Human,Stethoscope
+Armor,Metal,Fabric
+Armor,Steel,Fabric
+Obsidian,Lava,Water
+Obsidian,Lava,Cold
+Obsidian,Lava,Glass
+Frozen yogurt,Yogurt,Cold
+Frozen yogurt,Yogurt,Ice
+Stun gun,Gun,Electricity
+Stun gun,Gun,Wire
+Stun gun,Gun,Energy
+Stun gun,Bow,Electricity
+Stun gun,Bow,Energy
+Lion,Cat,Animal
+Lion,Cat,Blood
+Lion,Cat,Big
+Lion,Cat,Monarch
+Skeleton,Bone,Bone
+Skeleton,Bone,Corpse
+Vine,Rainforest,Rope
+Vine,Rainforest,Thread
+Vine,Rainforest,Wire
+Candle,Wax,Thread
+Candle,Wax,Fire
+Candle,Wax,Light
+Candle,Wax,Flashlight
+Candle,Wax,Lamp
+Granite,Pressure,Lava
+Granite,Pressure,Stone
+Granite,Pressure,Rock
+Carbon dioxide,Human,Oxygen
+Carbon dioxide,Animal,Oxygen
+Carbon dioxide,Fish,Oxygen
+Carbon dioxide,Bird,Oxygen
+Carbon dioxide,Plant,Night
+Carbon dioxide,Tree,Night
+Carbon dioxide,Grass,Night
+Spoon,Shovel,Small
+Bayonet,Gun,Blade
+Bayonet,Gun,Sword
+Bayonet,Gun,Axe
+Rain,Cloud,Heat
+Rain,Cloud,Pressure
+Rain,Cloud,Water
+Space,Star,Sky
+Space,Star,Sun
+Space,Star,Moon
+Space,Solar system,Night
+Space,Solar system,Sky
+Alligator,Lizard,Swamp
+Alligator,Lizard,River
+Alligator,Lizard,Lake
+Cashmere,Mountain goat,Thread
+Cashmere,Mountain goat,Fabric
+Cashmere,Mountain goat,Tool
+Cashmere,Mountain goat,Scissors
+Cashmere,Mountain goat,Wool
+Hay bale,Hay,Hay
+Hay bale,Hay,Barn
+Hay bale,Hay,Tractor
+Hay bale,Hay,Machine
+Laptop,Computer,Small
+Treasure map,Map,Pirate
+Treasure map,Map,Pirate ship
+Treasure map,Map,Treasure
+Treasure map,Map,Island
+Heat,Fire,Idea
+Heat,Fire,Science
+Heat,Lava,Philosophy
+Heat,Air,Energy
+Primordial soup,Lava,Ocean
+Primordial soup,Lava,Sea
+Primordial soup,Planet,Ocean
+Primordial soup,Planet,Sea
+Primordial soup,Earth,Ocean
+Primordial soup,Earth,Sea
+Electricity,Metal,Lightning
+Electricity,Steel,Lightning
+Electricity,Storm,Science
+Electricity,Wind turbine,Wind
+Electricity,Wind turbine,Motion
+Electricity,Wind turbine,Storm
+Electricity,Wind turbine,Sandstorm
+Electricity,Solar cell,Sun
+Electricity,Solar cell,Light
+Electricity,Solar cell,Star
+Flamethrower,Gun,Fire
+Flamethrower,Gun,Campfire
+Flamethrower,Gun,Volcano
+Galaxy cluster,Galaxy,Galaxy
+Galaxy cluster,Galaxy,Container
+Fossil,Dinosaur,Earth
+Fossil,Dinosaur,Stone
+Fossil,Dinosaur,Rock
+Fossil,Bone,Earth
+Fossil,Bone,Stone
+Fossil,Bone,Rock
+Fossil,Corpse,Stone
+Fossil,Corpse,Rock
+Fossil,Skeleton,Earth
+Fossil,Skeleton,Stone
+Fossil,Skeleton,Rock
+French fries,Oil,Vegetable
+French fries,Oil,Potato
+French fries,Fire,Potato
+Silo,Wheat,Container
+Silo,Wheat,House
+Silo,Wheat,Barn
+Silo,Wheat,Wall
+Silo,Wheat,Farm
+Silo,Wheat,Safe
+Silo,Wheat,Bank
+Cow,Livestock,Barn
+Cow,Livestock,Field
+Cow,Livestock,Farmer
+Cow,Livestock,Grass
+Caviar,Roe,Salt
+Caviar,Roe,Cook
+Narwhal,Unicorn,Fish
+Narwhal,Unicorn,Sea
+Narwhal,Unicorn,Ocean
+Narwhal,Unicorn,Water
+Narwhal,Unicorn,Shark
+Narwhal,Unicorn,Swordfish
+Narwhal,Unicorn,Flying fish
+Knife,Blade,Cook
+Knife,Sword,Cook
+Cake,Dough,Candle
+Cake,Donut,Candle
+Cake,Bread,Sugar
+Lava,Earth,Fire
+Lava,Earth,Heat
+Lava,Earth,Liquid
+Mercury,Planet,Small
+Mercury,Planet,Heat
+Swim goggles,Glasses,Water
+Swim goggles,Glasses,Lake
+Swim goggles,Glasses,Sea
+Swim goggles,Glasses,Ocean
+Swim goggles,Glasses,River
+Swim goggles,Sunglasses,Water
+Swim goggles,Sunglasses,Lake
+Swim goggles,Sunglasses,Sea
+Swim goggles,Sunglasses,Ocean
+Swim goggles,Sunglasses,River
+Farm,Farmer,House
+Farm,Farmer,Barn
+Farm,Farmer,Container
+Farm,House,Barn
+Farm,House,Tractor
+Rabbit,Animal,Carrot
+Rabbit,Rabbit,Rabbit
+Yeti,Mountain,Story
+Yeti,Mountain,Legend
+Yeti,Mountain range,Story
+Yeti,Mountain range,Legend
+Yeti,Glacier,Story
+Yeti,Glacier,Legend
+Yeti,Antarctica,Story
+Yeti,Antarctica,Legend
+Yeti,Monster,Mountain
+Yeti,Monster,Mountain range
+Yeti,Monster,Glacier
+Yeti,Monster,Antarctica
+Brick,Mud,Fire
+Brick,Mud,Sun
+Brick,Clay,Fire
+Brick,Clay,Sun
+Brick,Clay,Stone
+Telescope,Glass,Sky
+Telescope,Glass,Star
+Telescope,Glass,Space
+Telescope,Glass,Moon
+Telescope,Glass,Planet
+Telescope,Glass,Mars
+Telescope,Glass,Mercury
+Telescope,Glass,Venus
+Telescope,Glass,Saturn
+Telescope,Glass,Jupiter
+Telescope,Glass,Galaxy
+Telescope,Glass,Galaxy cluster
+Telescope,Glass,Universe
+Telescope,Glass,Supernova
+Coal,Pressure,Organic matter
+Coal,Earth,Peat
+Coal,Stone,Peat
+Coal,Rock,Peat
+Coal,Pressure,Peat
+Reed,Plant,Pond
+Reed,Plant,Puddle
+Reed,Plant,Swamp
+Reed,Plant,River
+Reed,Grass,Pond
+Reed,Grass,Puddle
+Reed,Grass,Swamp
+Reed,Grass,River
+Sunflower,Sun,Plant
+Sunflower,Sun,Flower
+Barrel,Wine,Container
+Barrel,Wine,Wood
+Igloo,House,Ice
+Igloo,House,Cold
+Igloo,House,Snow
+Igloo,House,Snowman
+Combustion engine,Petroleum,Machine
+Combustion engine,Petroleum,Wheel
+Combustion engine,Petroleum,Steam engine
+Combustion engine,Explosion,Machine
+Combustion engine,Explosion,Steam engine
+Rivulet,Stream,Small
+Rivulet,Puddle,Motion
+Fireplace,Campfire,House
+Fireplace,Campfire,Brick
+Fireplace,Campfire,Wall
+Fireplace,Campfire,Container
+Fireplace,Wood,Container
+Newspaper,Paper,Paper
+Newspaper,Paper,Story
+Newspaper,Letter,Letter
+Wagon,Cart,Horse
+Wagon,Cart,Fabric
+Wagon,Cart,House
+Wagon,Cart,Wall
+Wagon,Cart,Cow
+Metal,Stone,Fire
+Metal,Stone,Heat
+Metal,Ore,Fire
+Metal,Ore,Heat
+Metal,Ore,Tool
+Aquarium,Glass,Water
+Aquarium,Glass,Fish
+Aquarium,Glass,Puddle
+Aquarium,Glass,Pond
+Aquarium,Fish,Container
+Aquarium,Small,Swimming pool
+Sound,Wave,Air
+Sound,Wave,Human
+Sound,Wave,Animal
+Sound,Wave,Wolf
+Fence,Wood,Wall
+Fence,Wood,Field
+Fence,Wood,Garden
+Fence,Field,Wall
+Fence,Grass,Wall
+Fence,Garden,Wall
+Piranha,Fish,Blood
+Piranha,Fish,Wolf
 Vase,Pottery,Plant
 Vase,Pottery,Flower
 Vase,Pottery,Rose
@@ -84,62 +1721,396 @@ Vase,Container,Rose
 Vase,Bottle,Plant
 Vase,Bottle,Flower
 Vase,Bottle,Rose
-Chimney,House,Fireplace
-Chimney,House,Smoke
-Chimney,Smoke,Brick
-Chimney,Smoke,Fireplace
-Chimney,Smoke,Stone
-Chimney,Fireplace,Brick
-Chimney,Fireplace,Stone
-Gun,Bullet,Metal
-Gun,Bullet,Steel
-Gun,Bullet,Bow
-Gun,Bullet,Container
-Gun,Bow,Metal
-Gun,Bow,Steel
-Gun,Bow,Gunpowder
+Firetruck,Firefighter,Car
+Firetruck,Firefighter,Wagon
+Firetruck,Fire,Car
+Firetruck,Fire,Wagon
+Firetruck,Fire extinguisher,Car
+Firetruck,Fire extinguisher,Wagon
+Rv,House,Car
+Rv,House,Bus
+Clay,Mud,Sand
+Clay,Mud,Stone
+Clay,Mineral,Sand
+Clay,Mineral,Stone
+Clay,Mineral,Rock
+Clay,Stone,Liquid
+Clay,Rock,Liquid
+Rainbow,Rain,Sun
+Rainbow,Rain,Light
+Rainbow,Water,Light
+Rainbow,Water,Sun
+Rainbow,Cloud,Light
+Rainbow,Prism,Sun
+Rainbow,Prism,Light
+Sailor,Human,Boat
+Sailor,Human,Sailboat
+Sailor,Human,Steamboat
+Sailor,Human,Sea
+Sailor,Human,Ocean
+Sailor,Human,Lake
+Ninja,Human,Shuriken
+Nessie,Lake,Legend
+Nessie,Lake,Story
+Nessie,Dinosaur,Legend
+Nessie,Dinosaur,Story
+Bottle,Container,Milk
+Bottle,Container,Water
+Bottle,Container,Coconut milk
+Bottle,Container,Juice
+Bottle,Container,Oil
+Bottle,Container,Alcohol
+Bottle,Container,Wine
+Bottle,Container,Beer
+Bottle,Container,Chocolate milk
+Bottle,Container,Soda
+Bottle,Container,Perfume
+Bottle,Container,Liquid
+Sugar,Fruit,Fire
+Sugar,Fruit,Energy
+Sugar,Juice,Fire
+Sugar,Juice,Energy
+Sugar,Alcohol,Fire
+Sugar,Alcohol,Energy
+Sugar,Beer,Fire
+Sugar,Beer,Energy
+Sugar,Wine,Fire
+Sugar,Wine,Energy
+Rock,Pebble,Pebble
+Rock,Pebble,Big
+Rock,Boulder,Small
+Tornado,Storm,Storm
+Tornado,Storm,Wind
+Tornado,Storm,Motion
+Tornado,Wind,Big
+Tornado,Wind,Wind
+Tornado,Wind,Motion
+Blood,Human,Blade
+Blood,Warrior,Sword
+Harp,Angel,Music
+Harp,Angel,Musician
+Harp,Angel,Wire
+Harp,Wire,Music
+Firestation,House,Firefighter
+Firestation,House,Firetruck
+Firestation,Firefighter,Land
+Firestation,Firefighter,Village
+Firestation,Firefighter,City
+Greenhouse,Glass,Plant
+Greenhouse,Glass,Grass
+Greenhouse,Glass,Tree
+Greenhouse,Glass,Garden
+Greenhouse,Aquarium,Plant
+Greenhouse,Aquarium,Tree
+Greenhouse,Aquarium,Grass
+Greenhouse,Plant,Container
+Vampire,Human,Blood
+Vampire,Human,Vampire
+Vampire,Human,Bat
+Leaf,Tree,Wind
+Leaf,Flower,Wind
+Leaf,Orchard,Wind
+Leaf,Forest,Wind
+Ant farm,Farm,Ant
+Ant farm,Ant,Jar
+Ant farm,Ant,Glass
+Ant farm,Anthill,Farm
+Ant farm,Anthill,Jar
+Christmas stocking,Fireplace,Wool
+Christmas stocking,Christmas tree,Wool
+Christmas stocking,Reindeer,Wool
+Christmas stocking,Santa,Wool
+Cookbook,Recipe,Recipe
+Cookbook,Book,Cook
+Hedge,Plant,Fence
+Hedge,Leaf,Fence
+Hedge,Garden,Fence
+Hedge,Plant,Wall
+Hedge,Leaf,Wall
+Hedge,Garden,Wall
+Snowboarder,Human,Snowboard
+Mail truck,Car,Letter
+Mail truck,Car,Mailman
+Mail truck,Car,Post office
+Gravestone,Grave,Stone
+Gravestone,Grave,Rock
+Gravestone,Death,Stone
+Gravestone,Death,Rock
+Gravestone,Graveyard,Stone
+Gravestone,Graveyard,Rock
+Faun,Human,Goat
+Faun,Human,Mountain goat
+Faun,Legend,Goat
+Faun,Legend,Mountain goat
+Faun,Wizard,Goat
+Faun,Wizard,Mountain goat
+Faun,Magic,Goat
+Faun,Magic,Mountain goat
+Arrow,Wood,Bullet
+Arrow,Wood,Bow
+Eclipse,Sun,Moon
+Butterfly,Animal,Flower
+Butterfly,Animal,Garden
+Butterfly,Animal,Rainbow
+Butterfly,Animal,Double rainbow!
+Boulder,Big,Rock
+Boulder,Big,Stone
+Boulder,Small,Hill
+Boulder,Rock,Stone
+Boulder,Rock,Rock
+Boulder,Rock,Earth
+Fork,Pitchfork,Small
+Mud,Water,Earth
+Mud,Water,Soil
+Antarctica,Desert,Snow
+Antarctica,Desert,Ice
+Antarctica,Continent,Snow
+Antarctica,Continent,Ice
+Warrior,Human,Sword
+Warrior,Human,Bow
+Electric eel,Fish,Electricity
+Drunk,Human,Alcohol
+Drunk,Human,Beer
+Drunk,Human,Wine
+Drone,Robot,Airplane
+Drone,Robot,Helicopter
+Drone,Robot,Paper airplane
+Drone,Robot,Seaplane
+Web,Spider,Thread
+Web,Spider,Cotton
+Web,Spider,Fabric
+Web,Spider,Net
+Chain,Rope,Metal
+Chain,Rope,Steel
+Chain,Wire,Metal
+Chain,Wire,Steel
+Cereal,Wheat,Milk
+Cereal,Wheat,Chocolate milk
+Cereal,Wheat,Coconut milk
+Excavator,Shovel,Big
+Excavator,Shovel,Car
+Light sword,Sword,Light
+Light sword,Sword,Electricity
+Light sword,Sword,Energy
+Light sword,Sword,Space
+Light sword,Sword,Force knight
+Magic,Life,Rainbow
+Magic,Life,Double rainbow!
+Magic,Energy,Witch
+Magic,Energy,Wizard
+Centaur,Horse,Human
+Centaur,Horse,Story
+Hummingbird,Bird,Flower
+Hummingbird,Bird,Garden
+Hummingbird,Bird,Small
+Hummingbird,Bird,Bee
+Hummingbird,Bird,Butterfly
+Hummingbird,Flower,Owl
+Hummingbird,Flower,Pigeon
+Hummingbird,Flower,Seagull
+Hummingbird,Garden,Owl
+Hummingbird,Garden,Pigeon
+Hummingbird,Garden,Seagull
+Fairy tale,Story,Monarch
+Fairy tale,Story,Castle
+Fairy tale,Story,Knight
+Fairy tale,Story,Dragon
+Fairy tale,Story,Unicorn
+Fairy tale,Story,Faerie
+Fairy tale,Story,Elf
+Tank,Car,Armor
+Tank,Car,Gun
+Tank,Car,Metal
+Tank,Car,Steel
+Cookie cutter,Blade,Dough
+Cookie cutter,Blade,Cookie dough
+Planet,Continent,Continent
+Planet,Continent,Ocean
+Planet,Earth,Space
+Planet,Earth,Solar system
+Planet,Earth,Sky
+Car,Wheel,Metal
+Car,Wheel,Steel
+Car,Wheel,Bicycle
+Car,Wheel,Motorcycle
+Car,Bicycle,Bicycle
+Car,Motorcycle,Motorcycle
+Car,Motorcycle,Machine
+Car,Wagon,Combustion engine
+Car,Cart,Combustion engine
+Universe,Space,Container
+Universe,Galaxy cluster,Galaxy cluster
+Universe,Galaxy cluster,Container
+Universe,Primordial soup,Cosmic egg
+Angel,Human,Bird
+Angel,Human,Light
+Angel,Human,Heaven
+Angel,Human,Good
+Angel,Good,Demon
+Angel,Good,Deity
+Frankenstein's monster,Corpse,Legend
+Frankenstein's monster,Corpse,Lightning
+Frankenstein's monster,Corpse,Electricity
+Frankenstein's monster,Corpse,Story
+Frankenstein's monster,Zombie,Electricity
+Frankenstein's monster,Zombie,Lightning
+Frankenstein's monster,Monster,Story
+Frankenstein's monster,Monster,Corpse
+Chocolate,Sugar,Milk
+Chocolate,Sugar,Oil
+Chocolate,Sugar,Coconut milk
+Chocolate,Sugar,Seed
+Money,Paper,Gold
+Money,Paper,Diamond
+Money,Paper,Bank
+Charcoal,Fire,Wood
+Charcoal,Fire,Tree
+Charcoal,Fire,Corpse
+Charcoal,Fire,Organic matter
+Seagull,Bird,Sea
+Seagull,Bird,Ocean
+Seagull,Bird,Beach
+Seagull,Pigeon,Sea
+Seagull,Pigeon,Ocean
+Seagull,Pigeon,Beach
+Seagull,Rat,Sea
+Seagull,Rat,Ocean
+Seagull,Rat,Beach
+Seaplane,Airplane,Water
+Seaplane,Airplane,Sea
+Seaplane,Airplane,Ocean
+Seaplane,Airplane,Lake
+Trojan horse,Horse,Wood
+Trojan horse,Horse,Machine
+Trojan horse,Horse,Statue
+Robot vacuum,Robot,Vacuum cleaner
+Robot vacuum,Robot,Broom
+Robot vacuum,Computer,Vacuum cleaner
+Robot vacuum,Computer,Broom
+Explosion,Fire,Gunpowder
+Explosion,Fire,Petroleum
+Explosion,Gunpowder,Electricity
+Explosion,Gunpowder,Lightning
+Explosion,Pressure,Volcano
+Explosion,Pressure,Petroleum
+Explosion,Explosion,Petroleum
+Explosion,Heat,Petroleum
+Explosion,Lava,Petroleum
+Explosion,Volcano,Petroleum
+Lightning,Electricity,Cloud
+Lightning,Electricity,Storm
+Lightning,Electricity,Rain
+Lightning,Energy,Cloud
+Lightning,Energy,Storm
+Lightning,Energy,Rain
+Lightning,Land,Storm
+Lightning,Zeus,Tool
+Lightning,Cyclops,Tool
+Yogurt,Bacteria,Milk
+Yogurt,Bacteria,Ice cream
+Musician,Human,Flute
+Musician,Human,Music
+Musician,Human,Sheet music
+Musician,Human,Drum
+Musician,Human,Pan flute
+Smoke signal,Fabric,Campfire
+Smoke signal,Fabric,Smoke
+Smoke signal,Smoke,Letter
+Solar cell,Sun,Tool
+Solar cell,Sun,Machine
+Solar cell,Sun,Electricity
+Solar cell,Sun,Energy
+Solar cell,Tool,Light
+Doghouse,Dog,House
+Doghouse,Dog,Wall
+Doghouse,Dog,Container
+Doghouse,Husky,House
+Doghouse,Husky,Wall
+Doghouse,Husky,Container
+Sack,Container,Flour
+Sack,Container,Salt
+Sack,Container,Letter
+Sprinkles,Sugar,Confetti
+Sprinkles,Sugar,Paint
+Sprinkles,Sugar,Rainbow
+Sprinkles,Sugar,Double rainbow!
+Sand,Stone,Air
+Sand,Stone,Wind
+Sand,Air,Rock
+Sand,Wind,Rock
+Sand,Pebble,Air
+Sand,Pebble,Wind
+Sand,Pebble,Small
+Jupiter,Planet,Cloud
+Jupiter,Planet,Storm
+Jupiter,Planet,Big
+Jupiter,Planet,Gas
+Jupiter,Planet,Zeus
+Jupiter,Saturn,Big
+Domestication,Animal,Human
+Domestication,Animal,Farmer
+Domestication,Animal,Science
+Domestication,Farmer,Science
+Science,Human,Telescope
+Science,Human,Microscope
+Science,Human,Universe
+Jack-o'-lantern,Pumpkin,Fire
+Jack-o'-lantern,Pumpkin,Candle
+Jack-o'-lantern,Pumpkin,Light
+Jack-o'-lantern,Pumpkin,Night
+Jack-o'-lantern,Pumpkin,Ghost
+Jack-o'-lantern,Pumpkin,Skeleton
+Jack-o'-lantern,Vegetable,Ghost
+Jack-o'-lantern,Vegetable,Skeleton
+Jack-o'-lantern,Vegetable,Night
+Smoothie,Fruit,Blender
+Smoothie,Fruit,Ice
+Smoothie,Fruit,Cold
+Hourglass,Sand,Glass
+Hourglass,Sand,Container
+Day,Sun,Sky
+Day,Sun,Night
+Animal,Life,Land
+Animal,Life,Forest
+Animal,Life,Mountain
+Animal,Life,Mountain range
+Animal,Life,Beach
+Animal,Life,Desert
+Pasta,Flour,Egg
+Sleigh,Cart,Snow
+Sleigh,Cart,Ice
+Sleigh,Cart,Arctic
+Sleigh,Cart,Antarctica
+Sleigh,Wagon,Snow
+Sleigh,Wagon,Ice
+Sleigh,Wagon,Arctic
+Sleigh,Wagon,Antarctica
+Barn,House,Cow
+Barn,House,Livestock
+Barn,House,Hay
+Barn,House,Farm
+Barn,House,Field
+Barn,House,Sheep
+Barn,House,Goat
+Barn,House,Babe the blue ox
+Barn,Container,Livestock
+Barn,Container,Cow
+Barn,Container,Horse
+Barn,Container,Pig
+Barn,Container,Hay
+Barn,Container,Sheep
+Barn,Container,Hay bale
+Barn,Container,Goat
+Barn,Container,Babe the blue ox
 Human,Clay,Life
 Human,Tool,Animal
 Human,Tool,Monkey
-Castle,Knight,Stone
-Castle,Knight,Wall
-Castle,Knight,House
-Castle,Knight,Container
-Castle,Warrior,Stone
-Castle,Warrior,Wall
-Castle,Warrior,House
-Castle,Vampire,House
-Castle,Vampire,Wall
-Castle,Monarch,Container
-Castle,Monarch,House
-Castle,Monarch,Wall
-Castle,Paladin,Stone
-Castle,Paladin,Wall
-Castle,Paladin,House
-Castle,Paladin,Container
-Motorcycle,Bicycle,Machine
-Motorcycle,Bicycle,Metal
-Motorcycle,Bicycle,Steel
-Motorcycle,Bicycle,Steam engine
-Motorcycle,Bicycle,Combustion engine
-Ski goggles,Snow,Glasses
-Ski goggles,Snow,Sunglasses
-Ski goggles,Cold,Glasses
-Ski goggles,Cold,Sunglasses
-Ski goggles,Glacier,Glasses
-Ski goggles,Glacier,Sunglasses
-Ski goggles,Skier,Glasses
-Ski goggles,Skier,Sunglasses
-Kaiju,Dinosaur,City
-Kaiju,Dinosaur,Skyscraper
-Kaiju,Dinosaur,Legend
-Kaiju,Dinosaur,Story
-Kaiju,Monster,City
-Kaiju,Monster,Skyscraper
-Fountain,Statue,Water
-Fountain,Statue,Stream
-Moon rover,Moon,Car
-Moon rover,Moon,Electric car
+Mummy,Pyramid,Corpse
+Mummy,Pyramid,Fabric
+Mummy,Pyramid,Human
+Mummy,Corpse,Fabric
+Mummy,Corpse,Book of the dead
+Mummy,Human,Book of the dead
 Moss,Stone,Plant
 Moss,Stone,Grass
 Moss,Stone,Algae
@@ -149,109 +2120,565 @@ Moss,Rock,Algae
 Moss,Boulder,Plant
 Moss,Boulder,Grass
 Moss,Boulder,Algae
-Paper,Wood,Pressure
-Paper,Wood,Water
-Paper,Wood,Blender
-Paper,Wood,Machine
-Snowmobile,Snow,Motorcycle
-Snowmobile,Snow,Car
-Snowmobile,Glacier,Motorcycle
-Snowmobile,Glacier,Car
-Snowmobile,Ice,Motorcycle
-Snowmobile,Ice,Car
-Writer,Human,Book
-Writer,Human,Pencil
-Bakery,House,Bread
-Bakery,House,Baker
-Bakery,House,Donut
-Bakery,House,Cake
-Bakery,City,Bread
-Bakery,City,Baker
-Bakery,City,Donut
-Bakery,City,Cake
-Bakery,Village,Bread
-Bakery,Village,Baker
-Bakery,Village,Donut
-Bakery,Village,Cake
-Bakery,Baker,Container
-Air,Fire,Mist
-Frog,Animal,Pond
-Frog,Animal,Puddle
-Frog,Egg,Pond
-Frog,Egg,Puddle
+Crayon,Rainbow,Pencil
+Crayon,Rainbow,Wax
+Crayon,Double rainbow!,Pencil
+Crayon,Double rainbow!,Wax
+Crayon,Pencil,Paint
+Crayon,Wax,Paint
+Snow,Rain,Cold
+Snow,Rain,Mountain
+Snow,Rain,Mountain range
+Snow,Steam,Cold
+Cage,Wolf,Metal
+Cage,Wolf,Steel
+Cage,Wolf,Wall
+Cage,Fox,Metal
+Cage,Fox,Steel
+Cage,Fox,Wall
+Cage,Lion,Metal
+Cage,Lion,Steel
+Cage,Lion,Wall
+Cage,Hamster,Container
+Cage,Hamster,House
+Cage,Hamster,Wall
+Omelette,Egg,Fire
+Omelette,Egg,Heat
+Omelette,Egg,Tool
+Banana,Fruit,Monkey
+Wind,Motion,Air
+Wind,Motion,Atmosphere
+Wind,Air,Pressure
+Crystal ball,Glass,Witch
+Crystal ball,Glass,Wizard
+Crystal ball,Glass,Magic
+Crystal ball,Snow globe,Witch
+Crystal ball,Snow globe,Wizard
+Crystal ball,Snow globe,Magic
+Tree,Plant,Big
+Tree,Plant,Wood
+Tree,Nest,Container
+Beach,Sand,Ocean
+Beach,Sand,Sea
+Beach,Sand,Lake
+Beach,Sand,Water
+Beach,Sand,Wave
+Bank,Gold,House
+Bank,Gold,Skyscraper
+Bank,Gold,City
+Bank,Safe,House
+Bank,Safe,Skyscraper
+Bank,Safe,City
+Bank,Money,House
+Bank,Money,Skyscraper
+Bank,Money,City
+Bank,Money,Container
+Bank,House,Vault
+Scorpion,Animal,Sand
+Scorpion,Animal,Dune
+Scorpion,Spider,Sand
+Scorpion,Spider,Dune
+Scorpion,Spider,Desert
+Mermaid,Fish,Human
+Mermaid,Fish,Legend
+Mermaid,Fish,Magic
+Mermaid,Fish,Swimmer
+Mermaid,Fish,Selkie
+Mermaid,Swimmer,Magic
+Pollen,Plant,Dust
+Pollen,Plant,Wind
+Pollen,Flower,Dust
+Pollen,Flower,Wind
+Gnome,Garden,Statue
+Gnome,Garden,Legend
+Gnome,Garden,Story
+Gnome,Garden,Fairy tale
+Log cabin,Wood,House
+Spider,Animal,Thread
+Spider,Animal,Web
+Spider,Animal,Net
+Cloud,Atmosphere,Mist
+Cloud,Atmosphere,Water
+Cloud,Sky,Mist
+Cloud,Sky,Water
+Pyramid,Desert,Stone
+Pyramid,Desert,Grave
+Pyramid,Desert,Graveyard
+Pyramid,Desert,Gravestone
+Pyramid,Desert,Mountain
+Pyramid,Desert,Hill
+Pyramid,Mummy,Container
+Pyramid,Container,Book of the dead
+Fridge,Cold,Metal
+Fridge,Cold,Steel
+Fridge,Cold,Machine
+Fridge,Cold,Electricity
+Fridge,Cold,Container
+Fridge,Ice,Metal
+Fridge,Ice,Steel
+Fridge,Ice,Container
+Fridge,Ice cream,Container
+Lava lamp,Lamp,Lava
+Lava lamp,Lamp,Fire
+Lava lamp,Lamp,Volcano
+Werewolf,Human,Wolf
+Werewolf,Human,Werewolf
+Werewolf,Wolf,Monster
+Bonsai tree,Tree,Pottery
+Bonsai tree,Tree,Scissors
+Bonsai tree,Tree,Wire
+Bonsai tree,Tree,Small
+Cauldron,Witch,Metal
+Cauldron,Witch,Steel
+Cauldron,Witch,Fireplace
+Cauldron,Witch,Campfire
+Cauldron,Pottery,Metal
+Cauldron,Pottery,Steel
+Chicken coop,Chicken,House
+Chicken coop,Chicken,Wall
+Chicken coop,Chicken,Barn
+Chicken coop,Chicken,Container
+Chicken coop,Cockatrice,House
+Chicken coop,Cockatrice,Barn
+Chicken coop,Cockatrice,Container
+Livestock,Animal,Field
+Livestock,Animal,Farmer
+Livestock,Animal,Barn
+Livestock,Animal,Domestication
+Sundial,Sun,Wheel
+Sundial,Sun,Tool
+Sundial,Sun,Clock
+Sundial,Sun,Watch
+Sundial,Light,Wheel
+Sundial,Light,Tool
+Sundial,Light,Clock
+Sundial,Light,Watch
+Sundial,Day,Wheel
+Sundial,Day,Tool
+Stream,Pond,Motion
+Stream,Rivulet,Big
+Stream,River,Small
+Wheat,Grass,Farmer
+Wheat,Grass,Domestication
+Wheat,Grass,Field
+Cutting board,Wood,Cook
+Fountain,Statue,Water
+Fountain,Statue,Stream
+Pebble,Small,Earth
+Pebble,Small,Stone
+Pebble,Small,Rock
+Tea,Leaf,Water
+Tea,Leaf,Human
+Tea,Leaf,Heat
+Firewall,Fire,Wall
+Sea,Lake,Lake
+Sea,Lake,Water
+Sea,Lake,Big
+Sea,Ocean,Small
 Monarch,Human,Castle
 Monarch,Human,Excalibur
-Firestation,House,Firefighter
-Firestation,House,Firetruck
-Firestation,Firefighter,Land
-Firestation,Firefighter,Village
-Firestation,Firefighter,City
-Drum,Wood,Leather
-Drum,Wood,Fabric
-Drum,Wood,Music
-Mirror,Glass,Metal
-Mirror,Glass,Steel
-Mirror,Glass,Wood
-Corpse,Human,Bullet
-Corpse,Human,Blade
-Corpse,Human,Death
-Corpse,Human,Grim reaper
-Corpse,Human,Explosion
-Corpse,Human,Arrow
-Corpse,Jiangshi,Mirror
-Corpse,Jiangshi,Peach of immortality
-Caviar,Roe,Salt
-Caviar,Roe,Cook
-Katana,Blade,Heat
-Katana,Blade,Shuriken
-Katana,Blade,Ninja
-Katana,Sword,Shuriken
-Katana,Sword,Ninja
-Plant,Tree,Small
-Plant,Seed,Water
-Plant,Seed,Soil
-Plant,Seed,Land
-Plant,Seed,Earth
-Plant,Grass,Big
-Plant,Algae,Land
-Plant,Algae,Earth
-Plant,Life,Soil
-Plant,Rain,Soil
-Oxygen,Sun,Plant
-Oxygen,Sun,Tree
-Oxygen,Sun,Grass
-Oxygen,Sun,Algae
-Oxygen,Carbon dioxide,Plant
-Oxygen,Carbon dioxide,Tree
-Oxygen,Carbon dioxide,Grass
-Oxygen,Carbon dioxide,Algae
-Paleontologist,Human,Dinosaur
-Paleontologist,Human,Fossil
-Paleontologist,Science,Dinosaur
-Paleontologist,Science,Fossil
-Polar bear,Animal,Ice
-Polar bear,Animal,Arctic
-Potato,Earth,Vegetable
-Honey,Bee,Flower
-Honey,Bee,Beehive
-Honey,Bee,Bee
-Honey,Beehive,Beekeeper
-Reindeer,Animal,Santa
-Reindeer,Livestock,Santa
-Reindeer,Animal,Christmas tree
-Reindeer,Livestock,Christmas tree
-Reindeer,Animal,Christmas stocking
-Primordial soup,Lava,Ocean
-Primordial soup,Lava,Sea
-Primordial soup,Planet,Ocean
-Primordial soup,Planet,Sea
-Primordial soup,Earth,Ocean
-Primordial soup,Earth,Sea
+Kaiju,Dinosaur,City
+Kaiju,Dinosaur,Skyscraper
+Kaiju,Dinosaur,Legend
+Kaiju,Dinosaur,Story
+Kaiju,Monster,City
+Kaiju,Monster,Skyscraper
+Petroleum,Fossil,Pressure
+Petroleum,Fossil,Liquid
+Petroleum,Fossil,Water
+Popsicle,Juice,Ice
+Popsicle,Juice,Cold
+Popsicle,Juice,Snow
+Popsicle,Juice,Wood
+Gift,Christmas tree,Santa
+Gift,Christmas tree,Wrapping paper
+Gift,Santa,Christmas stocking
+Gift,Santa,Chimney
+Gift,Santa,Fireplace
+Gift,Santa,Cookie
+Gift,Santa,Milk
+Gift,Santa,Wrapping paper
+Gift,Christmas stocking,Wrapping paper
+Gift,Fireplace,Wrapping paper
+Tablet,Laptop,Small
+Organic matter,Life,Death
+Organic matter,Life,Science
+Organic matter,Bacteria,Death
+Organic matter,Corpse,Science
+Skier,Human,Ski goggles
+Skier,Human,Mountain
+Skier,Human,Mountain range
+Ham,Smoke,Meat
+Ham,Smoke,Pig
+Electric car,Electricity,Car
+Electric car,Electricity,Wagon
+Electric car,Car,Wind turbine
+Electric car,Wagon,Wind turbine
+Electric car,Solar cell,Car
+Electric car,Solar cell,Wagon
+Vinegar,Wine,Air
+Vinegar,Wine,Oxygen
+Turtle,Egg,Sand
+Turtle,Egg,Beach
+Turtle,Animal,Beach
+Cave,House,Wolf
+Cave,House,Lion
+Cave,House,Fox
+Cave,House,Bat
+Cave,Container,Wolf
+Cave,Container,Lion
+Cave,Container,Fox
+Cave,Container,Bat
+Angler,Human,Fishing rod
+Angler,Sailor,Fishing rod
+Engineer,Human,Machine
+Engineer,Human,Steam engine
+Ice cream,Milk,Cold
+Ice cream,Milk,Ice
+Ice cream,Milk,Snow
+Printer,Computer,Paper
+Printer,Computer,Newspaper
+Paraglider,Kite,Big
+Dune,Wind,Desert
+Dune,Wind,Sand
+Dune,Wind,Beach
+Dune,Sand,Desert
+Dune,Sandstorm,Desert
+Bridge,Wood,River
+Bridge,Metal,River
+Bridge,Steel,River
+Bridge,Stream,Wood
+Bridge,Stream,Metal
+Bridge,Stream,Steel
+Dawn,Day,Night
+Toolbox,Tool,Container
+Toolbox,Tool,Safe
+Toolbox,Tool,Box
+Toolbox,Hammer,Container
+Toolbox,Hammer,Box
+Toolbox,Ruler,Container
+Toolbox,Ruler,Box
+Toolbox,Steel wool,Container
+Toolbox,Steel wool,Box
+Toolbox,Chain,Box
+Toolbox,Chain,Container
+Vulture,Corpse,Bird
+Vulture,Corpse,Eagle
+Vulture,Corpse,Owl
+Vulture,Corpse,Hummingbird
+Vulture,Corpse,Pigeon
+Vulture,Corpse,Penguin
+Vulture,Corpse,Chicken
+Vulture,Corpse,Duck
+Vulture,Desert,Bird
+Vulture,Desert,Eagle
+Vulture,Desert,Owl
+Vulture,Desert,Hummingbird
+Vulture,Desert,Pigeon
+Vulture,Desert,Penguin
+Vulture,Desert,Duck
+Scarecrow,Hay,Human
+Scarecrow,Hay,Statue
+Scarecrow,Hay,Golem
+Scarecrow,Hay,Sack
+Scarecrow,Farm,Statue
+Scarecrow,Barn,Statue
+Scarecrow,Pumpkin,Sack
+Scarecrow,Jack-o'-lantern,Sack
+Apron,Fabric,Cook
+Apron,Fabric,Baker
+Confetti,Paper,Scissors
+Confetti,Paper,Blade
+Ozone,Oxygen,Oxygen
+Ozone,Electricity,Oxygen
+Ozone,Electricity,Atmosphere
+Ozone,Electricity,Air
+Snowball,Snow,Human
+Snowball,Snow,Stone
+Snowball,Snow,Rock
+Snowball,Snow,Earth
+Fruit,Flower,Rain
+Fruit,Flower,Water
+Fruit,Flower,Tree
+Fruit,Tree,Farmer
+Fruit,Farmer,Orchard
+Pencil sharpener,Pencil,Blade
+Pencil sharpener,Pencil,Blender
+Pencil sharpener,Pencil,Sword
+Sailboat,Boat,Wind
+Sailboat,Boat,Fabric
+Sailboat,Steamboat,Wind
+Sailboat,Steamboat,Fabric
+Circus,Tent,Big
+Circus,Tent,Animal
+Painting,Canvas,Paint
+Painting,Canvas,Painter
+Steel wool,Wool,Steel
+Steel wool,Wool,Metal
+Steel wool,Wool,Wire
+Caramel,Sugar,Heat
+Firefighter,Human,Fire
+Firefighter,Human,Firetruck
+Firefighter,Human,Fire extinguisher
+Hacker,Human,Computer
+Hacker,Human,Computer mouse
+Hacker,Human,Glasses
+Hacker,Human,Internet
+Restaurant,House,Cook
+Spaghetti,Pasta,Thread
+Spaghetti,Pasta,Wire
+Spaghetti,Pasta,Rope
+Oasis,Desert,Water
+Oasis,Desert,Puddle
+Oasis,Desert,Pond
+Oasis,Desert,River
+Oasis,Desert,Lake
+Oasis,Desert,Stream
+Oasis,Desert,Tree
+Oasis,Desert,Palm
+Robot,Life,Armor
+Robot,Life,Metal
+Robot,Life,Steel
+Robot,Golem,Armor
+Robot,Golem,Metal
+Robot,Golem,Steel
+Beaver,Animal,Wood
+Beaver,Animal,Dam
+Beaver,Animal,River
+Beaver,Animal,Stream
+Blood bag,Blood,Container
+Blood bag,Blood,Sack
+Blood bag,Blood,Bottle
+Sheep,Livestock,Wool
+Sheep,Livestock,Hill
+Sheep,Livestock,Land
+Sheep,Livestock,Cloud
+Sheep,Goat,Domestication
+Sheep,Mountain goat,Domestication
+Water,Heat,Ice
+Water,Heat,Snow
+Bell,Sound,Metal
+Bell,Sound,Steel
+Bell,Sound,Wood
+Bell,Metal,Hammer
+Bell,Steel,Hammer
+Horizon,Earth,Sky
+Horizon,Continent,Sky
+Horizon,Land,Sky
+Horizon,Lake,Sky
+Horizon,Ocean,Sky
+Horizon,Sea,Sky
+Force knight,Human,Light sword
+Force knight,Warrior,Light sword
+Force knight,Knight,Light sword
+Seaweed,Plant,Sea
+Seaweed,Plant,Ocean
+Seaweed,Plant,Lake
+Seaweed,Grass,Sea
+Seaweed,Grass,Ocean
+Sphinx,Statue,Lion
+Sphinx,Statue,Desert
+Sphinx,Statue,Pyramid
+Sphinx,Lion,Stone
+Cigarette,Tobacco,Paper
+Fire,Fire,Alcohol
+Fire,Fire,Coal
+Love,Human,Human
+Love,Cupid,Bow
+Love,Cupid,Arrow
+Flashlight,Tool,Light
+Flashlight,Tool,Light bulb
+Flashlight,Tool,Lamp
+Flashlight,Human,Lamp
+Iceberg,Sea,Ice
+Iceberg,Sea,Antarctica
+Iceberg,Sea,Arctic
+Iceberg,Ocean,Ice
+Iceberg,Ocean,Antarctica
+Iceberg,Ocean,Arctic
+Motorcycle,Bicycle,Machine
+Motorcycle,Bicycle,Metal
+Motorcycle,Bicycle,Steel
+Motorcycle,Bicycle,Steam engine
+Motorcycle,Bicycle,Combustion engine
+Rat,Animal,Pirate ship
+Rat,Animal,Sailboat
+Rat,Mouse,Pirate ship
+Rat,Mouse,Sailboat
+Rat,Mouse,City
+Rat,Mouse,Skyscraper
+Rat,Mouse,Village
+Rat,Mouse,Big
+Mac and cheese,Cheese,Pasta
+Tide,Ocean,Moon
+Tide,Sea,Moon
+Windmill,Wind,House
+Windmill,Wind,Wheel
+Windmill,Wind,Wheat
+Windmill,Wind,Flour
+Windmill,Wheel,Wall
 Safety glasses,Glasses,Tool
 Safety glasses,Glasses,Explosion
 Safety glasses,Glasses,Engineer
 Safety glasses,Glasses,Bulletproof vest
 Safety glasses,Glasses,Armor
+Allergy,Human,Dust
+Allergy,Human,Pollen
+Snow globe,Crystal ball,Ice
+Snow globe,Crystal ball,Cold
+Snow globe,Crystal ball,Snow
+Snow globe,Crystal ball,Snowman
+Snow globe,Crystal ball,Snowball
+Snow globe,Crystal ball,Snowmobile
+Snow globe,Crystal ball,Santa
+Snow globe,Crystal ball,Christmas tree
+Snow globe,Crystal ball,Christmas stocking
+Snow globe,Crystal ball,Blizzard
+Snow globe,Glass,Snow
+Snow globe,Glass,Snowman
+Snow globe,Glass,Snowball
+Snow globe,Glass,Snowmobile
+Snow globe,Glass,Santa
+Snow globe,Glass,Christmas tree
+Snow globe,Glass,Christmas stocking
+Snow globe,Glass,Blizzard
+Fire extinguisher,Carbon dioxide,Fire
+Fire extinguisher,Carbon dioxide,Pressure
+Fire extinguisher,Carbon dioxide,Metal
+Fire extinguisher,Carbon dioxide,Steel
+Fire extinguisher,Carbon dioxide,Boiler
+Quicksilver,Metal,Liquid
+Water pipe,Water,Pipe
+Milk,Cow,Farmer
+Milk,Cow,Tool
+Milk,Cow,Water
+Milk,Cow,Liquid
+Milk,Goat,Farmer
+Milk,Goat,Tool
+Milk,Goat,Water
+Milk,Goat,Liquid
+Village,House,House
+Village,Family,Family
+Village,House,Container
+Village,House,Bakery
+Village,Bakery,Container
+Earthquake,Earth,Motion
+Earthquake,Earth,Energy
+Earthquake,Continent,Motion
+Plow,Earth,Metal
+Plow,Earth,Steel
+Plow,Earth,Wood
+Plow,Field,Metal
+Plow,Field,Steel
+Plow,Field,Wood
+Plow,Field,Tool
+Black hole,Pressure,Star
+Black hole,Pressure,Sun
+Black hole,Darkness,Star
+Black hole,Darkness,Sun
+Archipelago,Island,Island
+Archipelago,Island,Sea
+Archipelago,Island,Ocean
+Alien,Life,Space
+Alien,Life,Galaxy
+Alien,Life,Galaxy cluster
+Alien,Life,Solar system
+Alien,Life,Mars
+Alien,Life,Venus
+Alien,Life,Mercury
+Alien,Life,Saturn
+Alien,Life,Jupiter
+Light bulb,Glass,Electricity
+Light bulb,Glass,Light
+Light bulb,Light,Container
+Juice,Fruit,Pressure
+Juice,Fruit,Earth
+Juice,Fruit,Stone
+Juice,Fruit,Rock
+Juice,Fruit,Explosion
+Juice,Fruit,Water
+Juice,Vegetable,Pressure
+Juice,Vegetable,Stone
+Juice,Vegetable,Rock
+Juice,Vegetable,Explosion
+Juice,Vegetable,Water
+Galaxy,Star,Star
+Galaxy,Star,Solar system
+Galaxy,Star,Space
+Galaxy,Star,Container
+Galaxy,Solar system,Solar system
+Galaxy,Solar system,Space
+Galaxy,Solar system,Container
+Galaxy,Space,Space
+Galaxy,Supernova,Container
+Gas,Air,Idea
+Gas,Air,Science
+Gas,Energy,Liquid
+Spotlight,Light,Machine
+Spotlight,Light,Metal
+Spotlight,Light,Steel
+Bee,Animal,Flower
+Bee,Animal,Garden
+Coconut,Palm,Fruit
+Coconut,Palm,Nuts
+Coconut,Palm,Vegetable
+Coconut,Palm,Meat
+Coconut,Beach,Fruit
+Coconut,Beach,Vegetable
+Pirate ship,Sailboat,Pirate
+Pirate ship,Boat,Pirate
+Pirate ship,Steam engine,Pirate
+Pirate ship,Pirate,Container
+Pirate ship,Pirate,House
+Mousetrap,Cheese,Wood
+Mousetrap,Cheese,Metal
+Mousetrap,Cheese,Steel
+Mousetrap,Mouse,Blade
+Double rainbow!,Rainbow,Rainbow
+Alarm clock,Clock,Sound
+Alarm clock,Clock,Dawn
+Alarm clock,Clock,Bell
+Alarm clock,Watch,Sound
+Alarm clock,Watch,Dawn
+Alarm clock,Watch,Bell
+Astronomer,Human,Telescope
+Lamp,Light bulb,Metal
+Lamp,Light bulb,Steel
+Family tree,Tree,Family
+Family tree,Tree,Village
+Hammer,Tool,Metal
+Hammer,Tool,Steel
+Hammer,Tool,Stone
+Hammer,Tool,Rock
+Hammer,Tool,Woodpecker
+Seahorse,Horse,Water
+Seahorse,Horse,Sea
+Seahorse,Horse,Ocean
+Seahorse,Horse,Lake
+Seahorse,Horse,Fish
+Big,Universe,Philosophy
+Big,Galaxy,Philosophy
+Big,Galaxy cluster,Philosophy
+Big,Solar system,Philosophy
+Big,Sun,Philosophy
+Big,Planet,Philosophy
+Mountain,Big,Hill
+Mountain,Earth,Earthquake
+Mountain,Earth,Hill
+Mountain,Hill,Hill
+Mountain,Hill,Earthquake
+Mountain,Earth,Big
+Boiler,Pressure,Metal
+Boiler,Pressure,Tool
+Boiler,Pressure,Container
+Boiler,Steam,Metal
+Boiler,Steam,Tool
+Plankton,Water,Life
+Plankton,Ocean,Life
+Plankton,Sea,Life
+Plankton,Bacteria,Water
+Plankton,Bacteria,Ocean
+Plankton,Bacteria,Sea
 Airplane,Bird,Metal
 Airplane,Bird,Steel
 Airplane,Bird,Machine
@@ -290,1001 +2717,46 @@ Airplane,Crow,Metal
 Airplane,Crow,Steel
 Airplane,Crow,Machine
 Airplane,Pilot,Container
-Bone,Vulture,Corpse
-Bone,Vulture,Meat
-Bone,Wolf,Corpse
-Bone,Wolf,Meat
-Windsurfer,Wind,Surfer
-Hay,Grass,Scythe
-Hay,Grass,Farmer
-Hay,Grass,Sun
-Hay,Grass,Grass
-Hay,Grass,Barn
-Hay,Grass,Farm
-Hay,Grass,Pitchfork
-Hay,Pitchfork,Barn
-Hay,Pitchfork,Farm
-Hay,Pitchfork,Farmer
-Letter,Paper,Pencil
-Pencil sharpener,Pencil,Blade
-Pencil sharpener,Pencil,Blender
-Pencil sharpener,Pencil,Sword
-Space station,Space,House
-Space station,Space,Wall
-Space station,Space,Village
-Space station,Atmosphere,House
-Space station,Atmosphere,Wall
-Space station,Atmosphere,Village
-Nest,Bird,Tree
-Nest,Bird,Hay
-Nest,Bird,Grass
-Nest,Bird,House
-Nest,Egg,Hay
-Nest,Egg,Tree
-Nest,Egg,Grass
-Nest,Egg,Container
-Palm,Tree,Beach
-Palm,Tree,Island
-Palm,Tree,Sand
-Water pipe,Water,Pipe
-Doge,Dog,Internet
-Doge,Dog,Computer
-Knife,Blade,Cook
-Knife,Sword,Cook
-Ruler,Wood,Pencil
-Wind,Motion,Air
-Wind,Motion,Atmosphere
-Wind,Air,Pressure
-Penguin,Bird,Antarctica
-Penguin,Bird,Snow
-Penguin,Bird,Ice
-Penguin,Bird,Cold
-Penguin,Animal,Antarctica
-Bee,Animal,Flower
-Bee,Animal,Garden
-Chicken coop,Chicken,House
-Chicken coop,Chicken,Wall
-Chicken coop,Chicken,Barn
-Chicken coop,Chicken,Container
-Chicken coop,Cockatrice,House
-Chicken coop,Cockatrice,Barn
-Chicken coop,Cockatrice,Container
-Mold,Bread,Bacteria
-Mold,Fruit,Bacteria
-Mold,Vegetable,Bacteria
-Aviary,Big,Birdcage
-Kite,Paper,Wind
-Kite,Paper,Sky
-Kite,Paper,Air
-Wild boar,Pig,Animal
-Wild boar,Pig,Forest
-Wild boar,Pig,Hill
-Gardener,Human,Garden
-Gardener,Farmer,Garden
-Granite,Pressure,Lava
-Granite,Pressure,Stone
-Granite,Pressure,Rock
-Stun gun,Gun,Electricity
-Stun gun,Gun,Wire
-Stun gun,Gun,Energy
-Stun gun,Bow,Electricity
-Stun gun,Bow,Energy
-Sloth,Tree,Manatee
-Swimmer,Human,Water
-Swimmer,Human,Swim goggles
-Swimmer,Human,Pond
-Swimmer,Human,Swimming pool
-Flower,Plant,Garden
-Flower,Plant,Rainbow
-Flower,Plant,Double rainbow!
-Flower,Grass,Garden
-Flower,Grass,Seed
-Flower,Grass,Rainbow
-Flower,Grass,Double rainbow!
-Flower,Garden,Seed
-Tyrannosaurus rex,Dinosaur,Meat
-Tyrannosaurus rex,Dinosaur,Blood
-Tyrannosaurus rex,Dinosaur,Monarch
-Hedgehog,Animal,Needle
-Hedgehog,Mouse,Needle
-Hedgehog,Rat,Needle
-Cookie cutter,Blade,Dough
-Cookie cutter,Blade,Cookie dough
-Gunpowder,Charcoal,Mineral
-Gunpowder,Energy,Mineral
-Gunpowder,Energy,Charcoal
-Gunpowder,Fire,Dust
-Gunpowder,Energy,Dust
-Planet,Continent,Continent
-Planet,Continent,Ocean
-Planet,Earth,Space
-Planet,Earth,Solar system
-Planet,Earth,Sky
-Ice cream,Milk,Cold
-Ice cream,Milk,Ice
-Ice cream,Milk,Snow
-Astronomer,Human,Telescope
-Carbon dioxide,Human,Oxygen
-Carbon dioxide,Animal,Oxygen
-Carbon dioxide,Fish,Oxygen
-Carbon dioxide,Bird,Oxygen
-Carbon dioxide,Plant,Night
-Carbon dioxide,Tree,Night
-Carbon dioxide,Grass,Night
-Cyclist,Human,Wheel
-Cyclist,Human,Bicycle
-Pilot,Human,Airplane
-Pilot,Human,Seaplane
-Alcohol,Wheat,Fruit
-Alcohol,Wheat,Juice
-Alcohol,Fruit,Sun
-Cloud,Atmosphere,Mist
-Cloud,Atmosphere,Water
-Cloud,Sky,Mist
-Cloud,Sky,Water
-Light bulb,Glass,Electricity
-Light bulb,Glass,Light
-Light bulb,Light,Container
-Warrior,Human,Sword
-Warrior,Human,Bow
-Optical fiber,Wire,Light
-Optical fiber,Rope,Light
-Optical fiber,Light,Internet
-Seaweed,Plant,Sea
-Seaweed,Plant,Ocean
-Seaweed,Plant,Lake
-Seaweed,Grass,Sea
-Seaweed,Grass,Ocean
-Solid,Earth,Idea
-Solid,Earth,Science
-Sunflower,Sun,Plant
-Sunflower,Sun,Flower
-Coconut,Palm,Fruit
-Coconut,Palm,Nuts
-Coconut,Palm,Vegetable
-Coconut,Palm,Meat
-Coconut,Beach,Fruit
-Coconut,Beach,Vegetable
-Flamethrower,Gun,Fire
-Flamethrower,Gun,Campfire
-Flamethrower,Gun,Volcano
-Manatee,Cow,Sea
-Manatee,Cow,Ocean
-Manatee,Cow,Fish
-Manatee,Cow,Lake
-Manatee,Cow,River
-Trojan horse,Horse,Wood
-Trojan horse,Horse,Machine
-Trojan horse,Horse,Statue
-Sprinkles,Sugar,Confetti
-Sprinkles,Sugar,Paint
-Sprinkles,Sugar,Rainbow
-Sprinkles,Sugar,Double rainbow!
-Aurora,Electricity,Atmosphere
-Aurora,Electricity,Antarctica
-Aurora,Electricity,Sky
-Aurora,Electricity,Arctic
-Aurora,Sky,Antarctica
-Aurora,Sky,Arctic
-Aurora,Sun,Atmosphere
-Painter,Human,Canvas
-Painter,Human,Paint
-Painter,Human,Painting
-Heat,Fire,Idea
-Heat,Fire,Science
-Heat,Lava,Philosophy
-Heat,Air,Energy
-Family,Human,Human
-Family,Human,House
-Family,Love,Container
-Roe,Egg,Fish
-Roe,Egg,Water
-Roe,Egg,Ocean
-Roe,Egg,Sea
-Roe,Egg,Lake
-Roe,Egg,Flying fish
-Chicken soup,Chicken,Water
-Chicken soup,Chicken,Liquid
-Chicken soup,Chicken wing,Water
-Chicken soup,Chicken wing,Liquid
-Tornado,Storm,Storm
-Tornado,Storm,Wind
-Tornado,Storm,Motion
-Tornado,Wind,Big
-Tornado,Wind,Wind
-Tornado,Wind,Motion
-Crystal ball,Glass,Witch
-Crystal ball,Glass,Wizard
-Crystal ball,Glass,Magic
-Crystal ball,Snow globe,Witch
-Crystal ball,Snow globe,Wizard
-Crystal ball,Snow globe,Magic
-Ghost,Graveyard,Night
-Ghost,Graveyard,Story
-Ghost,Graveyard,Legend
-Ghost,Graveyard,Curse
-Ghost,Grave,Night
-Ghost,Grave,Story
-Ghost,Grave,Legend
-Ghost,Grave,Curse
-Ghost,Gravestone,Night
-Ghost,Gravestone,Legend
-Ghost,Gravestone,Story
-Ghost,Castle,Night
-Ghost,Night,Story
-Ghost,Night,Legend
-Tree,Plant,Big
-Tree,Plant,Wood
-Tree,Nest,Container
-Unicorn,Horse,Legend
-Unicorn,Horse,Story
-Unicorn,Horse,Magic
-Unicorn,Horse,Rainbow
-Unicorn,Horse,Double rainbow!
-Husky,Dog,Snow
-Husky,Dog,Ice
-Husky,Dog,Antarctica
-Husky,Dog,Arctic
-Husky,Dog,Blizzard
-Husky,Dog,Glacier
-Seal,Dog,Sea
-Seal,Dog,Ocean
-Seal,Dog,Arctic
-Seal,Dog,Water
-Seal,Dog,Lake
-Firetruck,Firefighter,Car
-Firetruck,Firefighter,Wagon
-Firetruck,Fire,Car
-Firetruck,Fire,Wagon
-Firetruck,Fire extinguisher,Car
-Firetruck,Fire extinguisher,Wagon
-Atomic bomb,Explosion,Energy
-Atomic bomb,Explosion,Explosion
-Atomic bomb,Explosion,Big
-Dinosaur,Lizard,Big
-Vacuum cleaner,Broom,Electricity
-Vacuum cleaner,Broom,Machine
-Vine,Rainforest,Rope
-Vine,Rainforest,Thread
-Vine,Rainforest,Wire
-Paraglider,Kite,Big
-Flood,Rain,Rain
-Flood,Rain,River
-Flood,Rain,Lake
-Flood,Rain,Big
-Flood,House,River
-Flood,House,Tsunami
-Flood,River,City
-Flood,Tsunami,City
-Skeleton,Bone,Bone
-Skeleton,Bone,Corpse
-Barrel,Wine,Container
-Barrel,Wine,Wood
-Hurricane,Ocean,Tornado
-Hurricane,Sea,Tornado
-Hurricane,Ocean,Storm
-Hurricane,Sea,Storm
-Blood,Human,Blade
-Blood,Warrior,Sword
-Electric eel,Fish,Electricity
-Hippo,Horse,River
-Hippo,Horse,Water
-Hippo,Cow,River
-Hippo,Cow,Water
-Printer,Computer,Paper
-Printer,Computer,Newspaper
-Swimming pool,House,Lake
-Swimming pool,House,Swimmer
-Swimming pool,Aquarium,Big
-Clay,Mud,Sand
-Clay,Mud,Stone
-Clay,Mineral,Sand
-Clay,Mineral,Stone
-Clay,Mineral,Rock
-Clay,Stone,Liquid
-Clay,Rock,Liquid
-Galaxy,Star,Star
-Galaxy,Star,Solar system
-Galaxy,Star,Space
-Galaxy,Star,Container
-Galaxy,Solar system,Solar system
-Galaxy,Solar system,Space
-Galaxy,Solar system,Container
-Galaxy,Space,Space
-Galaxy,Supernova,Container
-Starfish,Star,Fish
-Starfish,Star,Ocean
-Starfish,Star,Sea
-Leaf,Tree,Wind
-Leaf,Flower,Wind
-Leaf,Orchard,Wind
-Leaf,Forest,Wind
-Spider,Animal,Thread
-Spider,Animal,Web
-Spider,Animal,Net
-Mist,Air,Water
-Mist,Air,Steam
-Mist,Air,Rain
-Prism,Glass,Rainbow
-Prism,Glass,Double rainbow!
-Prism,Crystal ball,Rainbow
-Prism,Crystal ball,Double rainbow!
-Swordfish,Fish,Sword
-Swordfish,Fish,Blade
-Swordfish,Shark,Sword
-Swordfish,Shark,Blade
-Zoo,Animal,Container
-Zoo,Animal,Cage
-Crayon,Rainbow,Pencil
-Crayon,Rainbow,Wax
-Crayon,Double rainbow!,Pencil
-Crayon,Double rainbow!,Wax
-Crayon,Pencil,Paint
-Crayon,Wax,Paint
-Excavator,Shovel,Big
-Excavator,Shovel,Car
-Flying squirrel,Squirrel,Bird
-Flying squirrel,Squirrel,Hummingbird
-Flying squirrel,Squirrel,Seagull
-Flying squirrel,Squirrel,Pigeon
-Flying squirrel,Squirrel,Air
-Flying squirrel,Squirrel,Airplane
-Flying squirrel,Squirrel,Seaplane
-Flying squirrel,Squirrel,Helicopter
-Rock,Pebble,Pebble
-Rock,Pebble,Big
-Rock,Boulder,Small
-Glacier,Mountain,Ice
-Glacier,Mountain,Snow
-Glacier,Mountain range,Ice
-Glacier,Mountain range,Snow
-Owl,Bird,Night
-Owl,Bird,Wizard
-Owl,Bird,Moon
-Owl,Bird,Twilight
-Alpaca,Sheep,Mountain
-Alpaca,Sheep,Mountain range
-Alpaca,Sheep,Mountain goat
-Rat,Animal,Pirate ship
-Rat,Animal,Sailboat
-Rat,Mouse,Pirate ship
-Rat,Mouse,Sailboat
-Rat,Mouse,City
-Rat,Mouse,Skyscraper
-Rat,Mouse,Village
-Rat,Mouse,Big
-Jar,Jam,Container
-Jar,Jam,Bottle
-Jar,Jam,Glass
-Jar,Jam,Bucket
-Bread,Dough,Fire
-Bread,Dough,Energy
-Gold,Metal,Sun
-Gold,Steel,Sun
-Gold,Metal,Rainbow
-Gold,Steel,Rainbow
-Gold,Metal,Butter
-Gold,Steel,Butter
-Gold,Metal,Sand
-Gold,Steel,Sand
-Gold,Metal,Light
-Gold,Steel,Light
-Gold,Metal,Alchemist
-Gold,Steel,Alchemist
-Gold,Metal,Philosopher's stone
-Gold,Steel,Philosopher's stone
-Gold,Quicksilver,Philosopher's stone
-Iceberg,Sea,Ice
-Iceberg,Sea,Antarctica
-Iceberg,Sea,Arctic
-Iceberg,Ocean,Ice
-Iceberg,Ocean,Antarctica
-Iceberg,Ocean,Arctic
-Helicopter,Airplane,Blade
-Helicopter,Airplane,Windmill
-Helicopter,Airplane,Wind turbine
-Helicopter,Seaplane,Blade
-Helicopter,Seaplane,Windmill
-Helicopter,Seaplane,Wind turbine
-Hamster,Mouse,Wheel
-Hamster,Mouse,Domestication
-Hamster,Rat,Wheel
-Hamster,Rat,Domestication
-Mousetrap,Cheese,Wood
-Mousetrap,Cheese,Metal
-Mousetrap,Cheese,Steel
-Mousetrap,Mouse,Blade
-Bulletproof vest,Bullet,Armor
-Bulletproof vest,Gun,Armor
-Blade,Stone,Metal
-Blade,Stone,Steel
-Blade,Rock,Metal
-Blade,Rock,Steel
-Solar cell,Sun,Tool
-Solar cell,Sun,Machine
-Solar cell,Sun,Electricity
-Solar cell,Sun,Energy
-Solar cell,Tool,Light
-Death,Corpse,Philosophy
-Death,Skeleton,Philosophy
-Death,Grave,Philosophy
-Death,Graveyard,Philosophy
-Grave,Earth,Coffin
-Grave,Earth,Corpse
-Grave,Field,Coffin
-Grave,Field,Corpse
-Grave,Forest,Corpse
-Grave,Forest,Coffin
-Grave,Gravestone,Grave
-Grave,Gravestone,Coffin
-Grave,Coffin,Container
-Hummingbird,Bird,Flower
-Hummingbird,Bird,Garden
-Hummingbird,Bird,Small
-Hummingbird,Bird,Bee
-Hummingbird,Bird,Butterfly
-Hummingbird,Flower,Owl
-Hummingbird,Flower,Pigeon
-Hummingbird,Flower,Seagull
-Hummingbird,Garden,Owl
-Hummingbird,Garden,Pigeon
-Hummingbird,Garden,Seagull
-Platypus,Beaver,Duck
-Platypus,Beaver,Bird
-Platypus,Beaver,Seagull
-Milk,Cow,Farmer
-Milk,Cow,Tool
-Milk,Cow,Water
-Milk,Cow,Liquid
-Milk,Goat,Farmer
-Milk,Goat,Tool
-Milk,Goat,Water
-Milk,Goat,Liquid
-Arrow,Wood,Bullet
-Arrow,Wood,Bow
-Sandstorm,Sand,Storm
-Sandstorm,Sand,Tornado
-Sandstorm,Sand,Motion
-Sandstorm,Desert,Storm
-Sandstorm,Desert,Tornado
-Sandstorm,Desert,Motion
-Sandstorm,Desert,Wind
-Paint,Water,Rainbow
-Paint,Water,Double rainbow!
-Paint,Water,Pencil
-Paint,Pottery,Rainbow
-Paint,Pottery,Double rainbow!
-Paint,Tool,Rainbow
-Paint,Tool,Double rainbow!
-Paint,Liquid,Rainbow
-Paint,Liquid,Double rainbow!
-Paint,Liquid,Pencil
-Combustion engine,Petroleum,Machine
-Combustion engine,Petroleum,Wheel
-Combustion engine,Petroleum,Steam engine
-Combustion engine,Explosion,Machine
-Combustion engine,Explosion,Steam engine
-Computer mouse,Computer,Mouse
-Computer mouse,Computer,Animal
-Bow,Wood,Rope
-Bow,Wood,Wire
-Bow,Tool,Elf
-Bow,Tool,Cupid
-Broom,Wood,Hay
-Broom,Tool,Baba yaga
-Drunk,Human,Alcohol
-Drunk,Human,Beer
-Drunk,Human,Wine
-Spoon,Shovel,Small
-Land,Soil,Soil
-Land,Soil,Big
-Land,Continent,Small
-Land,Earth,Earth
-Land,Earth,Stone
-Light,Electricity,Light bulb
-Light,Electricity,Flashlight
-Lasso,Rope,Cow
-Lasso,Rope,Horse
-Lasso,Rope,Pig
-Lasso,Rope,Wild boar
-Lasso,Rope,Sheep
-Lasso,Rope,Goat
-Coffin,Wood,Corpse
-Coffin,Container,Corpse
-Coffin,Container,Vampire
-Popsicle,Juice,Ice
-Popsicle,Juice,Cold
-Popsicle,Juice,Snow
-Popsicle,Juice,Wood
-Shovel,Tool,Gardener
-Current,Ocean,Motion
-Current,Ocean,Heat
-Current,Ocean,Cold
-Current,Ocean,Science
-Current,Sea,Motion
-Current,Sea,Heat
-Current,Sea,Cold
-Current,Sea,Science
-Scissors,Blade,Blade
-Scissors,Blade,Paper
-Scissors,Blade,Sword
-Scissors,Sword,Sword
-Scissors,Sword,Paper
-Farm,Farmer,House
-Farm,Farmer,Barn
-Farm,Farmer,Container
-Farm,House,Barn
-Farm,House,Tractor
-Jerky,Meat,Sun
-Jerky,Steak,Sun
-Jerky,Meat,Heat
-Jerky,Steak,Heat
-Seahorse,Horse,Water
-Seahorse,Horse,Sea
-Seahorse,Horse,Ocean
-Seahorse,Horse,Lake
-Seahorse,Horse,Fish
-Hill,Big,Boulder
-Hill,Earth,Boulder
-Hill,Stone,Boulder
-Hill,Boulder,Boulder
-Hill,Mountain,Small
-Apron,Fabric,Cook
-Apron,Fabric,Baker
-Wax,Beehive,Bee
-Wax,Beehive,Wall
-Wax,Beehive,Blade
-Wax,Beehive,Sword
-Wax,Beehive,Tool
-Wax,Beehive,Beekeeper
-Explosion,Fire,Gunpowder
-Explosion,Fire,Petroleum
-Explosion,Gunpowder,Electricity
-Explosion,Gunpowder,Lightning
-Explosion,Pressure,Volcano
-Explosion,Pressure,Petroleum
-Explosion,Explosion,Petroleum
-Explosion,Heat,Petroleum
-Explosion,Lava,Petroleum
-Explosion,Volcano,Petroleum
-Rain,Cloud,Heat
-Rain,Cloud,Pressure
-Rain,Cloud,Water
-Alligator,Lizard,Swamp
-Alligator,Lizard,River
-Alligator,Lizard,Lake
-Lighthouse,Light,House
-Lighthouse,Light,Ocean
-Lighthouse,Light,Sea
-Lighthouse,Light,Beach
-Lighthouse,Spotlight,House
-Lighthouse,Spotlight,Ocean
-Lighthouse,Spotlight,Sea
-Lighthouse,Spotlight,Beach
-Penicillin,Mold,Doctor
-Penicillin,Mold,Science
-Penicillin,Mold,Idea
-Penicillin,Mold,Hospital
-Mailbox,Letter,Box
-Mailbox,Letter,Metal
-Mailbox,Letter,Steel
-Mailbox,Letter,Wood
-Mailbox,Mailman,Box
-Mailbox,Mailman,Metal
-Mailbox,Mailman,Steel
-Mailbox,Mailman,Wood
-Binoculars,Telescope,Telescope
-Binoculars,Glasses,Glasses
-Snowball,Snow,Human
-Snowball,Snow,Stone
-Snowball,Snow,Rock
-Snowball,Snow,Earth
-Nessie,Lake,Legend
-Nessie,Lake,Story
-Nessie,Dinosaur,Legend
-Nessie,Dinosaur,Story
-Tablet,Laptop,Small
-Life,Primordial soup,Electricity
-Life,Primordial soup,Storm
-Life,Primordial soup,Volcano
-Life,Primordial soup,Lightning
-Life,Primordial soup,Energy
-Life,Electricity,Ocean
-Life,Electricity,Sea
-Life,Electricity,Lake
-Life,Lightning,Ocean
-Life,Lightning,Sea
-Life,Lightning,Lake
-Farmer,Human,Plant
-Farmer,Human,Grass
-Farmer,Human,Pitchfork
-Farmer,Human,Field
-Farmer,Human,Barn
-Farmer,Human,Plow
-Farmer,Human,Orchard
-Tobacco,Plant,Fire
-Tobacco,Plant,Smoke
-Tobacco,Grass,Smoke
-Statue,Stone,Hammer
-Statue,Boulder,Hammer
-Statue,Medusa,Human
-Statue,Medusa,Hacker
-Statue,Medusa,Engineer
-Statue,Medusa,Lumberjack
-Statue,Medusa,Pilot
-Statue,Medusa,Sailor
-Statue,Medusa,Farmer
-Statue,Medusa,Firefighter
-Statue,Medusa,Surfer
-Statue,Medusa,Astronaut
-Statue,Medusa,Butcher
-Statue,Medusa,Doctor
-Statue,Medusa,Baker
-Statue,Medusa,Drunk
-Statue,Medusa,Mirror
-Statue,Troll,Sun
-Statue,Troll,Dawn
-Statue,Cockatrice,Human
-Statue,Cockatrice,Hacker
-Statue,Cockatrice,Engineer
-Statue,Cockatrice,Lumberjack
-Statue,Cockatrice,Pilot
-Statue,Cockatrice,Sailor
-Statue,Cockatrice,Farmer
-Statue,Cockatrice,Firefighter
-Statue,Cockatrice,Surfer
-Statue,Cockatrice,Astronaut
-Statue,Cockatrice,Butcher
-Statue,Cockatrice,Doctor
-Statue,Cockatrice,Baker
-Statue,Cockatrice,Drunk
-Statue,Cockatrice,Mirror
-Pitchfork,Hay,Tool
-Pitchfork,Hay,Metal
-Pitchfork,Hay,Steel
-Pitchfork,Tool,Demon
-Candy cane,Sugar,Christmas tree
-Candy cane,Sugar,Christmas stocking
-Candy cane,Sugar,Santa
-Candy cane,Sugar,Reindeer
-Donut,Dough,Oil
-Donut,Dough,Wheel
-Donut,Cookie dough,Oil
-Donut,Cookie dough,Wheel
-Tide,Ocean,Moon
-Tide,Sea,Moon
-Igloo,House,Ice
-Igloo,House,Cold
-Igloo,House,Snow
-Igloo,House,Snowman
-Goat,Livestock,Mountain
-Goat,Livestock,Mountain range
-Goat,Livestock,Hill
-Goat,Cow,Mountain
-Goat,Cow,Mountain range
-Goat,Cow,Hill
-Ham,Smoke,Meat
-Ham,Smoke,Pig
-Hammer,Tool,Metal
-Hammer,Tool,Steel
-Hammer,Tool,Stone
-Hammer,Tool,Rock
-Hammer,Tool,Woodpecker
-Hospital,House,Sickness
-Hospital,House,Ambulance
-Hospital,House,Doctor
-Hospital,Wall,Sickness
-Hospital,Wall,Ambulance
-Hospital,Wall,Doctor
-Hospital,Doctor,Container
-Spotlight,Light,Machine
-Spotlight,Light,Metal
-Spotlight,Light,Steel
-Rv,House,Car
-Rv,House,Bus
-Batter,Milk,Flour
-Batter,Coconut milk,Flour
-Music,Musician,Flute
-Music,Musician,Sheet music
-Music,Musician,Drum
-Music,Musician,Pan flute
-Sheet music,Music,Paper
-Sheet music,Music,Book
-Continent,Land,Big
-Continent,Land,Land
-Continent,Land,Earth
-Continent,Mountain range,Mountain range
-Magic,Life,Rainbow
-Magic,Life,Double rainbow!
-Magic,Energy,Witch
-Magic,Energy,Wizard
-Wheel,Motion,Tool
-Wheel,Motion,Stone
-Wheel,Motion,Metal
-Wheel,Motion,Steel
-Wheel,Tool,Water
-Wheel,Tool,Stream
-Wheel,Tool,River
-Quicksand,Sand,Swamp
-Money,Paper,Gold
-Money,Paper,Diamond
-Money,Paper,Bank
-Barn,House,Cow
-Barn,House,Livestock
-Barn,House,Hay
-Barn,House,Farm
-Barn,House,Field
-Barn,House,Sheep
-Barn,House,Goat
-Barn,House,Babe the blue ox
-Barn,Container,Livestock
-Barn,Container,Cow
-Barn,Container,Horse
-Barn,Container,Pig
-Barn,Container,Hay
-Barn,Container,Sheep
-Barn,Container,Hay bale
-Barn,Container,Goat
-Barn,Container,Babe the blue ox
-Turtle,Egg,Sand
-Turtle,Egg,Beach
-Turtle,Animal,Beach
-Scalpel,Blade,Doctor
-Scalpel,Blade,Hospital
-Scalpel,Blade,Ambulance
-Scalpel,Sword,Doctor
-Scalpel,Sword,Hospital
-Scalpel,Sword,Ambulance
-Steam engine,Steam,Machine
-Steam engine,Steam,Wheel
-Steam engine,Boiler,Wheel
-Rainforest,Rain,Forest
-Robot vacuum,Robot,Vacuum cleaner
-Robot vacuum,Robot,Broom
-Robot vacuum,Computer,Vacuum cleaner
-Robot vacuum,Computer,Broom
-Venus,Planet,Acid rain
-Venus,Planet,Smog
-Venus,Planet,Volcano
-Thread,Cotton,Cotton
-Thread,Cotton,Tool
-Thread,Cotton,Wheel
-Thread,Cotton,Machine
-Pencil,Wood,Coal
-Pencil,Wood,Charcoal
-Tailor,Human,Sewing machine
-Tailor,Human,Needle
-Tailor,Human,Thread
-Marshmallows,Sugar,Campfire
-Solar system,Planet,Planet
-Solar system,Planet,Sun
-Solar system,Planet,Container
-Solar system,Sun,Container
-Solar system,Mars,Container
-Solar system,Mercury,Container
-Solar system,Venus,Container
-Solar system,Jupiter,Container
-Solar system,Saturn,Container
-Wire,Metal,Electricity
-Wire,Metal,Rope
-Wire,Steel,Electricity
-Wire,Steel,Rope
-Wire,Electricity,Rope
-Wand,Wizard,Wood
-Wand,Wizard,Sword
-Wand,Wizard,Tool
-Wand,Wizard,Pencil
-Diamond,Coal,Pressure
-Cyborg,Robot,Human
-Cyborg,Robot,Engineer
-Cyborg,Robot,Lumberjack
-Cyborg,Robot,Sailor
-Cyborg,Robot,Baker
-Cyborg,Robot,Cook
-Cyborg,Robot,Doctor
-Cyborg,Robot,Farmer
-Cyborg,Robot,Firefighter
-Cyborg,Robot,Pilot
-Cyborg,Robot,Astronaut
-Cyborg,Robot,Electrician
-Cow,Livestock,Barn
-Cow,Livestock,Field
-Cow,Livestock,Farmer
-Cow,Livestock,Grass
-Christmas tree,Tree,Light bulb
-Christmas tree,Tree,Star
-Christmas tree,Tree,Candle
-Christmas tree,Tree,Light
-Christmas tree,Tree,Gift
-Wood,Tree,Tool
-Wood,Tree,Axe
-Wood,Tree,Chainsaw
-Wood,Tree,Sword
-Wood,Tree,Lumberjack
-Wood,Forest,Tool
-Wood,Forest,Axe
-Wood,Forest,Chainsaw
-Wood,Forest,Sword
-Wood,Forest,Lumberjack
-Wood,Tree,Paul bunyan
-Wood,Forest,Paul bunyan
-Cashmere,Mountain goat,Thread
-Cashmere,Mountain goat,Fabric
-Cashmere,Mountain goat,Tool
-Cashmere,Mountain goat,Scissors
-Cashmere,Mountain goat,Wool
-Fireplace,Campfire,House
-Fireplace,Campfire,Brick
-Fireplace,Campfire,Wall
-Fireplace,Campfire,Container
-Fireplace,Wood,Container
-Sewing machine,Needle,Machine
-Sewing machine,Needle,Electricity
-Sewing machine,Needle,Robot
-Sewing machine,Thread,Machine
-Sewing machine,Thread,Electricity
-Sewing machine,Thread,Robot
-Pasta,Flour,Egg
-Ore,Hammer,Boulder
-Ore,Hammer,Earth
-Ore,Hammer,Rock
-Ore,Hammer,Stone
-Ore,Hammer,Hill
-Ore,Hammer,Mountain
-Sand castle,Castle,Sand
-Sand castle,Castle,Beach
-Sand castle,Castle,Desert
-Sand castle,Castle,Dune
-Cart,Wheel,Wood
-Candle,Wax,Thread
-Candle,Wax,Fire
-Candle,Wax,Light
-Candle,Wax,Flashlight
-Candle,Wax,Lamp
-Chain,Rope,Metal
-Chain,Rope,Steel
-Chain,Wire,Metal
-Chain,Wire,Steel
-Skier,Human,Ski goggles
-Skier,Human,Mountain
-Skier,Human,Mountain range
-Peat,Swamp,Plant
-Peat,Swamp,Pressure
-Tunnel,Engineer,Mountain
-Tunnel,Engineer,Mountain range
-Tunnel,Engineer,Hill
-Tunnel,Train,Mountain
-Tunnel,Train,Mountain range
-Tunnel,Train,Hill
-Tunnel,Cave,Mountain
-Tunnel,Cave,Mountain range
-Tunnel,Cave,Hill
-Axe,Wood,Blade
-Axe,Wood,Tool
-Axe,Wood,Stone
-Axe,Tool,Lumberjack
-Axe,Tool,Paul bunyan
-Machine,Tool,Wheel
-Machine,Tool,Tool
-Machine,Tool,Chain
-Machine,Tool,Engineer
-Machine,Boiler,Wheel
-Machine,Boiler,Tool
-Machine,Boiler,Chain
-Cuckoo,Bird,Clock
-Cuckoo,Bird,Alarm clock
-Cuckoo,Owl,Clock
-Cuckoo,Owl,Alarm clock
-Cuckoo,Hummingbird,Clock
-Cuckoo,Hummingbird,Alarm clock
-Pirate,Sailor,Sword
-Pirate,Sailor,Bayonet
-Pirate,Sailor,Pirate ship
-Pirate,Sailor,Gun
-Witch,Broom,Wizard
-Witch,Broom,Human
-Witch,Broom,Legend
-Witch,Broom,Story
-Witch,Broom,Magic
-Witch,Broom,Cauldron
-Witch,Cauldron,Story
-Witch,Cauldron,Legend
-Hamburger,Meat,Bread
-Hamburger,Meat,Cheese
-Iced tea,Tea,Ice
-Iced tea,Tea,Cold
-River,Lake,Motion
-River,Stream,Big
-River,Water,Mountain
-River,Rain,Mountain
-River,Rain,Hill
-Snow,Rain,Cold
-Snow,Rain,Mountain
-Snow,Rain,Mountain range
-Snow,Steam,Cold
-Snowman,Snow,Human
-Snowman,Snow,Carrot
-Snowman,Snow,Coal
-Snowman,Snowball,Carrot
-Snowman,Snowball,Coal
-Snowman,Snowball,Snowball
-Pigeon,Bird,City
-Pigeon,Bird,Letter
-Pigeon,Bird,Statue
-Pigeon,Bird,Skyscraper
-Pigeon,Bird,Village
-Ambulance,Car,Hospital
-Ambulance,Car,Doctor
-Boat,Wood,Water
-Boat,Wood,Sea
-Boat,Wood,Ocean
-Boat,Wood,Lake
-Boat,Wood,River
-Cutting board,Wood,Cook
-Park,City,Forest
-Park,City,Garden
-Park,City,Grass
-Park,City,Field
-Park,Village,Forest
-Park,Village,Garden
-Park,Village,Grass
-Park,Village,Field
-Firefighter,Human,Fire
-Firefighter,Human,Firetruck
-Firefighter,Human,Fire extinguisher
-Omelette,Egg,Fire
-Omelette,Egg,Heat
-Omelette,Egg,Tool
-Steel,Metal,Coal
-Steel,Metal,Charcoal
-Steel,Metal,Mineral
-Steel,Metal,Ash
-Flute,Wood,Wind
-Flute,Wood,Air
-Library,Book,Container
-Library,Book,House
-Sand,Stone,Air
-Sand,Stone,Wind
-Sand,Air,Rock
-Sand,Wind,Rock
-Sand,Pebble,Air
-Sand,Pebble,Wind
-Sand,Pebble,Small
-Piranha,Fish,Blood
-Piranha,Fish,Wolf
-Steel wool,Wool,Steel
-Steel wool,Wool,Metal
-Steel wool,Wool,Wire
-Domestication,Animal,Human
-Domestication,Animal,Farmer
-Domestication,Animal,Science
-Domestication,Farmer,Science
-Livestock,Animal,Field
-Livestock,Animal,Farmer
-Livestock,Animal,Barn
-Livestock,Animal,Domestication
-Cage,Wolf,Metal
-Cage,Wolf,Steel
-Cage,Wolf,Wall
-Cage,Fox,Metal
-Cage,Fox,Steel
-Cage,Fox,Wall
-Cage,Lion,Metal
-Cage,Lion,Steel
-Cage,Lion,Wall
-Cage,Hamster,Container
-Cage,Hamster,House
-Cage,Hamster,Wall
-French fries,Oil,Vegetable
-French fries,Oil,Potato
-French fries,Fire,Potato
-Sack,Container,Flour
-Sack,Container,Salt
-Sack,Container,Letter
-Wrapping paper,Paper,Gift
-Wrapping paper,Paper,Christmas tree
-Wrapping paper,Paper,Christmas stocking
-Wrapping paper,Paper,Santa
+Chainsaw,Axe,Machine
+Chainsaw,Axe,Electricity
+Chainsaw,Axe,Motion
+Chainsaw,Lumberjack,Machine
+Chainsaw,Lumberjack,Electricity
+Gust,Wind,Small
+Gust,Air,Small
+Atmosphere,Air,Planet
+Atmosphere,Air,Sky
+Idea,Human,Light bulb
+Idea,Light bulb,Engineer
+Idea,Light bulb,Science
+Idea,Science,Science
+Idea,Philosophy,Science
+Idea,Engineer,Engineer
+Idea,Hacker,Hacker
+Idea,Lumberjack,Lumberjack
+Idea,Farmer,Farmer
+Idea,Firefighter,Firefighter
+Idea,Electrician,Electrician
+Idea,Astronaut,Astronaut
+Idea,Warrior,Warrior
+Idea,Butcher,Butcher
+Idea,Doctor,Doctor
+Idea,Pilot,Pilot
+Idea,Baker,Baker
+Idea,Sailor,Sailor
+Idea,Surfer,Surfer
+Idea,Swimmer,Swimmer
+Idea,Cyclist,Cyclist
+Idea,Knight,Knight
+Idea,Monarch,Monarch
+Idea,Angler,Angler
+Idea,Mailman,Mailman
+Idea,Gardener,Gardener
+Idea,Philosophy,Philosophy
+Idea,Skier,Skier
+Idea,Diver,Diver
+Idea,Librarian,Librarian
+Idea,Alchemist,Alchemist
 Meat,Tool,Livestock
 Meat,Tool,Chicken
 Meat,Tool,Pig
@@ -1326,155 +2798,176 @@ Meat,Net,Swordfish
 Meat,Net,Shark
 Meat,Net,Piranha
 Meat,Net,Flying fish
-Acid rain,Rain,Smoke
-Acid rain,Rain,Smog
-Acid rain,Rain,Sickness
-Acid rain,Rain,City
-Acid rain,Cloud,Smoke
-Acid rain,Cloud,Smog
-Acid rain,Cloud,Sickness
-Shuriken,Star,Blade
-Shuriken,Star,Sword
-Shuriken,Star,Metal
-Shuriken,Star,Steel
-Shuriken,Ninja,Blade
-Soda,Carbon dioxide,Water
-Soda,Carbon dioxide,Juice
-Soda,Carbon dioxide,Tea
-Beekeeper,Human,Beehive
-Beekeeper,Human,Bee
-Beekeeper,Farmer,Beehive
-Beekeeper,Farmer,Bee
-Bucket,Container,Wood
-Bucket,Container,Yogurt
-Bucket,Container,Paint
-Bucket,Bottle,River
-Bucket,Bottle,Paint
-Bucket,Chicken wing,Container
-Bucket,Chicken wing,Box
-Thermometer,Quicksilver,Glass
-Thermometer,Quicksilver,Tool
-Thermometer,Quicksilver,Engineer
-Smoke,Earth,Gas
-Smoke,Campfire,Water
-Smoke,Campfire,Storm
-Smoke,Fire,Plant
-Smoke,Fire,Grass
-Smoke,Fire,Tree
-Smoke,Fire,Wood
-Smoke,Fire,Air
-Snake,Animal,Rope
-Snake,Animal,Wire
-Snake,Electric eel,Land
-Moth,Butterfly,Moon
-Moth,Butterfly,Night
-Moth,Butterfly,Candle
-Moth,Butterfly,Light
-Moth,Butterfly,Lamp
-Moth,Butterfly,Flashlight
-Piggy bank,Pig,Money
-Piggy bank,Pig,Pottery
-Piggy bank,Pig,Gold
-Cauldron,Witch,Metal
-Cauldron,Witch,Steel
-Cauldron,Witch,Fireplace
-Cauldron,Witch,Campfire
-Cauldron,Pottery,Metal
-Cauldron,Pottery,Steel
-Forest,Tree,Tree
-Forest,Tree,Plant
-Forest,Tree,Land
-Forest,Tree,Container
-Fruit tree,Fruit,Tree
-Fruit tree,Fruit,Plant
-Fruit tree,Fruit,Wood
-Cookie,Cookie dough,Heat
-Cookie,Cookie dough,Fire
-Cookie,Cookie dough,Baker
-Cookie,Cookie dough,Cookie cutter
-Cookie,Dough,Cookie cutter
-Rope,Thread,Thread
-Rope,Thread,Wire
-Rope,Wire,Tool
-Rope,Tool,Boat
-Rope,Tool,Sailboat
-Rope,Tool,Pirate ship
-Origami,Paper,Bird
-Origami,Paper,Animal
-Origami,Paper,Eagle
-Origami,Paper,Seagull
-Origami,Paper,Owl
-Origami,Paper,Pigeon
-Origami,Paper,Cow
-Origami,Paper,Horse
-Origami,Paper,Dog
-Origami,Paper,Cat
-Origami,Paper,Lion
-Origami,Paper,Hummingbird
-Origami,Paper,Chicken
-Origami,Paper,Penguin
-Origami,Paper,Duck
-Origami,Paper,Vulture
-String phone,Paper cup,Wire
-String phone,Paper cup,Thread
-String phone,Cup,Wire
-String phone,Cup,Thread
-Cannon,Gunpowder,Pirate ship
-Cannon,Gunpowder,Castle
-Cannon,Gun,Pirate ship
-Cannon,Gun,Castle
-Boulder,Big,Rock
-Boulder,Big,Stone
-Boulder,Small,Hill
-Boulder,Rock,Stone
-Boulder,Rock,Rock
-Boulder,Rock,Earth
-Scarecrow,Hay,Human
-Scarecrow,Hay,Statue
-Scarecrow,Hay,Golem
-Scarecrow,Hay,Sack
-Scarecrow,Farm,Statue
-Scarecrow,Barn,Statue
-Scarecrow,Pumpkin,Sack
-Scarecrow,Jack-o'-lantern,Sack
+Cotton,Plant,Cloud
+Cotton,Plant,Fabric
+Cotton,Plant,Thread
+Cotton,Plant,Wool
+Cotton,Plant,Sheep
+Dog,Wolf,Domestication
+Dog,Wolf,Farmer
+Dog,Wolf,Farm
+Dog,Wolf,Barn
+Dog,Wolf,Field
+Dog,Wolf,Bone
+Dog,Wolf,Campfire
+Hippo,Horse,River
+Hippo,Horse,Water
+Hippo,Cow,River
+Hippo,Cow,Water
+Drum,Wood,Leather
+Drum,Wood,Fabric
+Drum,Wood,Music
+Cotton candy,Sugar,Air
+Cotton candy,Sugar,Thread
+Cotton candy,Sugar,Cloud
+Soil,Earth,Life
+Soil,Earth,Organic matter
+Soil,Land,Life
+Soil,Land,Organic matter
+Blizzard,Snow,Storm
+Blizzard,Snow,Hurricane
+Blizzard,Snow,Tornado
+Blizzard,Snow,Snow
+Blizzard,Snow,Wind
+Blizzard,Snow,Big
+Grim reaper,Human,Scythe
+Grim reaper,Corpse,Scythe
+Grim reaper,Zombie,Scythe
+Grim reaper,Death,Scythe
+Grim reaper,Boat,Scythe
+Grim reaper,River,Scythe
+Grim reaper,Scythe,Deity
 Steamboat,Steam engine,Boat
 Steamboat,Steam engine,Sailboat
 Steamboat,Steam engine,Pirate ship
 Steamboat,Steam engine,Ocean
 Steamboat,Steam engine,Sea
-Grilled cheese,Cheese,Toast
-Rocket,Atmosphere,Airplane
-Rocket,Atmosphere,Metal
-Rocket,Atmosphere,Steel
-Rocket,Atmosphere,Train
-Rocket,Atmosphere,Machine
-Rocket,Atmosphere,Car
-Rocket,Atmosphere,Boat
-Rocket,Atmosphere,Steamboat
-Rocket,Atmosphere,Pirate ship
-Horseshoe,Horse,Metal
-Horseshoe,Horse,Steel
-Ninja,Human,Shuriken
-Juice,Fruit,Pressure
-Juice,Fruit,Earth
-Juice,Fruit,Stone
-Juice,Fruit,Rock
-Juice,Fruit,Explosion
-Juice,Fruit,Water
-Juice,Vegetable,Pressure
-Juice,Vegetable,Stone
-Juice,Vegetable,Rock
-Juice,Vegetable,Explosion
-Juice,Vegetable,Water
-Train,Steam engine,Metal
-Train,Steam engine,Steel
-Train,Steam engine,Wheel
-Train,Steam engine,Wagon
-Bbq,Campfire,Metal
-Bbq,Campfire,Steel
-Bbq,Campfire,Garden
-Bbq,Campfire,House
-Bbq,Campfire,Meat
+Iced tea,Tea,Ice
+Iced tea,Tea,Cold
+Writer,Human,Book
+Writer,Human,Pencil
+Platypus,Beaver,Duck
+Platypus,Beaver,Bird
+Platypus,Beaver,Seagull
+Pilot,Human,Airplane
+Pilot,Human,Seaplane
+Santa,Christmas tree,Human
+Santa,Christmas tree,Legend
+Santa,Christmas tree,Story
+Santa,Christmas stocking,Human
+Santa,Christmas stocking,Legend
+Santa,Christmas stocking,Story
+Vacuum cleaner,Broom,Electricity
+Vacuum cleaner,Broom,Machine
+Chimney,House,Fireplace
+Chimney,House,Smoke
+Chimney,Smoke,Brick
+Chimney,Smoke,Fireplace
+Chimney,Smoke,Stone
+Chimney,Fireplace,Brick
+Chimney,Fireplace,Stone
+Scissors,Blade,Blade
+Scissors,Blade,Paper
+Scissors,Blade,Sword
+Scissors,Sword,Sword
+Scissors,Sword,Paper
+Storm,Cloud,Cloud
+Storm,Electricity,Cloud
+Storm,Electricity,Atmosphere
+Storm,Rain,Wind
+Cold,Human,Rain
+Cold,Human,Mountain range
+Cold,Human,Mountain
+Cold,Human,Snow
+Cold,Human,Wind
+Cold,Human,Storm
+Cold,Space,Thermometer
+Ghost,Graveyard,Night
+Ghost,Graveyard,Story
+Ghost,Graveyard,Legend
+Ghost,Graveyard,Curse
+Ghost,Grave,Night
+Ghost,Grave,Story
+Ghost,Grave,Legend
+Ghost,Grave,Curse
+Ghost,Gravestone,Night
+Ghost,Gravestone,Legend
+Ghost,Gravestone,Story
+Ghost,Castle,Night
+Ghost,Night,Story
+Ghost,Night,Legend
+Graveyard,Grave,Grave
+Graveyard,Grave,Field
+Graveyard,Grave,Land
+Graveyard,Gravestone,Gravestone
+Graveyard,Gravestone,Field
+Graveyard,Gravestone,Land
+Graveyard,Gravestone,Container
+Zoo,Animal,Container
+Zoo,Animal,Cage
+Fireworks,Explosion,Sky
+Fireworks,Explosion,Atmosphere
+Ocean,Sea,Sea
+Ocean,Sea,Water
+Ocean,Sea,Big
+Ocean,Tide,Container
+Husky,Dog,Snow
+Husky,Dog,Ice
+Husky,Dog,Antarctica
+Husky,Dog,Arctic
+Husky,Dog,Blizzard
+Husky,Dog,Glacier
+Aviary,Big,Birdcage
+Clock,Sundial,Machine
+Clock,Sundial,Tool
+Clock,Sundial,Wheel
+Clock,Sundial,Electricity
+Clock,Cuckoo,Container
+Clock,Watch,Big
+Wolf,Animal,Moon
+Wolf,Animal,Dog
+Wolf,Dog,Forest
+Wolf,Dog,Blood
+Castle,Knight,Stone
+Castle,Knight,Wall
+Castle,Knight,House
+Castle,Knight,Container
+Castle,Warrior,Stone
+Castle,Warrior,Wall
+Castle,Warrior,House
+Castle,Vampire,House
+Castle,Vampire,Wall
+Castle,Monarch,Container
+Castle,Monarch,House
+Castle,Monarch,Wall
+Castle,Paladin,Stone
+Castle,Paladin,Wall
+Castle,Paladin,House
+Castle,Paladin,Container
+Oxygen,Sun,Plant
+Oxygen,Sun,Tree
+Oxygen,Sun,Grass
+Oxygen,Sun,Algae
+Oxygen,Carbon dioxide,Plant
+Oxygen,Carbon dioxide,Tree
+Oxygen,Carbon dioxide,Grass
+Oxygen,Carbon dioxide,Algae
+Ant,Grass,Animal
+Ant,Grass,Spider
+Forest,Tree,Tree
+Forest,Tree,Plant
+Forest,Tree,Land
+Forest,Tree,Container
+Diver,Scuba tank,Human
+Diver,Scuba tank,Swimmer
+Diver,Scuba tank,Sea
+Diver,Scuba tank,Ocean
+Diver,Scuba tank,Lake
+Land,Soil,Soil
+Land,Soil,Big
+Land,Continent,Small
+Land,Earth,Earth
+Land,Earth,Stone
 Avalanche,Earthquake,Snow
 Avalanche,Earthquake,Glacier
 Avalanche,Earthquake,Mountain
@@ -1488,48 +2981,153 @@ Avalanche,Sound,Mountain range
 Avalanche,Gun,Glacier
 Avalanche,Gun,Mountain
 Avalanche,Gun,Mountain range
-Hacker,Human,Computer
-Hacker,Human,Computer mouse
-Hacker,Human,Glasses
-Hacker,Human,Internet
-Sickness,Human,Bacteria
-Sickness,Human,Swamp
-Sickness,Human,Sickness
-Doghouse,Dog,House
-Doghouse,Dog,Wall
-Doghouse,Dog,Container
-Doghouse,Husky,House
-Doghouse,Husky,Wall
-Doghouse,Husky,Container
-Golem,Clay,Story
-Golem,Clay,Legend
-Golem,Story,Statue
-Golem,Statue,Life
-Golem,Statue,Legend
-Mountain,Big,Hill
-Mountain,Earth,Earthquake
-Mountain,Earth,Hill
-Mountain,Hill,Hill
-Mountain,Hill,Earthquake
-Mountain,Earth,Big
-Pollen,Plant,Dust
-Pollen,Plant,Wind
-Pollen,Flower,Dust
-Pollen,Flower,Wind
-Coral,Tree,Sea
-Coral,Tree,Ocean
-Coral,Fossil,Sea
-Coral,Fossil,Ocean
-Coral,Bone,Sea
-Coral,Bone,Ocean
-Duckling,Egg,Duck
-Minotaur,Human,Cow
-Minotaur,Cow,Werewolf
-Minotaur,Cow,Story
-Minotaur,Cow,Legend
-Minotaur,Cow,Monster
-Cookbook,Recipe,Recipe
-Cookbook,Book,Cook
+Sun,Sky,Light
+Sun,Sky,Fire
+Sun,Day,Space
+Sun,Day,Sky
+Sun,Day,Light
+Sun,Planet,Fire
+Sun,Planet,Light
+Starfish,Star,Fish
+Starfish,Star,Ocean
+Starfish,Star,Sea
+Swimmer,Human,Water
+Swimmer,Human,Swim goggles
+Swimmer,Human,Pond
+Swimmer,Human,Swimming pool
+Dragon,Lizard,Fire
+Dragon,Lizard,Air
+Dragon,Lizard,Sky
+Dragon,Lizard,Airplane
+Dragon,Lizard,Story
+Dragon,Lizard,Legend
+Dragon,Dinosaur,Monster
+Medusa,Snake,Human
+Medusa,Snake,Story
+Medusa,Snake,Legend
+Medusa,Snake,Hero
+Hay,Grass,Scythe
+Hay,Grass,Farmer
+Hay,Grass,Sun
+Hay,Grass,Grass
+Hay,Grass,Barn
+Hay,Grass,Farm
+Hay,Grass,Pitchfork
+Hay,Pitchfork,Barn
+Hay,Pitchfork,Farm
+Hay,Pitchfork,Farmer
+Pig,Mud,Livestock
+Pig,Mud,Animal
+Pig,Mud,Cow
+Ostrich,Bird,Earth
+Ostrich,Bird,Sand
+Ostrich,Bird,Big
+Beehive,House,Bee
+Beehive,Tree,Bee
+Beehive,Forest,Bee
+Beehive,Wall,Bee
+Beehive,Wood,Bee
+Beehive,Container,Bee
+Hill,Big,Boulder
+Hill,Earth,Boulder
+Hill,Stone,Boulder
+Hill,Boulder,Boulder
+Hill,Mountain,Small
+Scuba tank,Container,Air
+Scuba tank,Container,Atmosphere
+Scuba tank,Container,Oxygen
+Hedgehog,Animal,Needle
+Hedgehog,Mouse,Needle
+Hedgehog,Rat,Needle
+Goat,Livestock,Mountain
+Goat,Livestock,Mountain range
+Goat,Livestock,Hill
+Goat,Cow,Mountain
+Goat,Cow,Mountain range
+Goat,Cow,Hill
+Manatee,Cow,Sea
+Manatee,Cow,Ocean
+Manatee,Cow,Fish
+Manatee,Cow,Lake
+Manatee,Cow,River
+Mist,Air,Water
+Mist,Air,Steam
+Mist,Air,Rain
+Park,City,Forest
+Park,City,Garden
+Park,City,Grass
+Park,City,Field
+Park,Village,Forest
+Park,Village,Garden
+Park,Village,Grass
+Park,Village,Field
+Bus,Car,Car
+Bus,Car,Train
+Bus,Car,City
+Bus,Car,Big
+Rust,Air,Metal
+Rust,Air,Steel
+Rust,Metal,Oxygen
+Rust,Steel,Oxygen
+Swimming pool,House,Lake
+Swimming pool,House,Swimmer
+Swimming pool,Aquarium,Big
+Fishing rod,Fish,Tool
+Fishing rod,Fish,Wood
+Fishing rod,Fish,Wire
+Fishing rod,Fish,Thread
+Fishing rod,Swordfish,Tool
+Fishing rod,Swordfish,Wood
+Fishing rod,Swordfish,Wire
+Fishing rod,Swordfish,Thread
+Fishing rod,Piranha,Tool
+Fishing rod,Piranha,Wood
+Fishing rod,Piranha,Wire
+Fishing rod,Piranha,Thread
+Bow,Wood,Rope
+Bow,Wood,Wire
+Bow,Tool,Elf
+Bow,Tool,Cupid
+Fruit tree,Fruit,Tree
+Fruit tree,Fruit,Plant
+Fruit tree,Fruit,Wood
+Factory,House,Chimney
+Factory,House,Tool
+Eagle,Bird,Mountain
+Eagle,Bird,Mountain range
+Leather,Blade,Cow
+Leather,Blade,Pig
+Leather,Blade,Sheep
+Leather,Sword,Cow
+Leather,Sword,Pig
+Leather,Sword,Sheep
+Leather,Tool,Cow
+Leather,Tool,Pig
+Leather,Tool,Sheep
+Ring,Diamond,Metal
+Ring,Diamond,Steel
+Ring,Diamond,Gold
+Ring,Love,Gold
+Ring,Love,Diamond
+Ring,Love,Metal
+Ring,Love,Steel
+Fox,Chicken,Animal
+Fox,Chicken,Wolf
+Fox,Chicken,Dog
+Fox,Chicken coop,Animal
+Fox,Chicken coop,Wolf
+Fox,Chicken coop,Dog
+Bucket,Container,Wood
+Bucket,Container,Yogurt
+Bucket,Container,Paint
+Bucket,Bottle,River
+Bucket,Bottle,Paint
+Bucket,Chicken wing,Container
+Bucket,Chicken wing,Box
+Squirrel,Mouse,Tree
+Squirrel,Mouse,Plant
+Squirrel,Mouse,Nuts
+Squirrel,Animal,Nuts
 Recipe,Paper,Flour
 Recipe,Paper,Meat
 Recipe,Paper,Baker
@@ -1543,1305 +3141,155 @@ Recipe,Newspaper,Baker
 Recipe,Newspaper,Bakery
 Recipe,Newspaper,Vegetable
 Recipe,Newspaper,Fruit
-Wine,Alcohol,Fruit
-Wine,Alcohol,Juice
-Wine,Tool,Dionysus
-Fire,Fire,Alcohol
-Fire,Fire,Coal
-Carrot,Vegetable,Snowman
-Carrot,Vegetable,Grass
-Carrot,Vegetable,Garden
-Carrot,Snowman,Sun
-Legend,Story,Story
-Legend,Story,Big
-Legend,Story,Fairy tale
-Legend,Fairy tale,Big
-Pipe,Tobacco,Wood
-Pipe,Tobacco,Tool
-Cereal,Wheat,Milk
-Cereal,Wheat,Chocolate milk
-Cereal,Wheat,Coconut milk
-Little alchemy (element),Small,Alchemist
-Sweater,Wool,Tool
-Sweater,Wool,Human
-Cake,Dough,Candle
-Cake,Donut,Candle
-Cake,Bread,Sugar
-Skyscraper,House,Sky
-Skyscraper,House,Big
-Skyscraper,House,Cloud
-Skyscraper,Village,Sky
-Wizard,Human,Magic
-Wizard,Human,Unicorn
-Wizard,Human,Rainbow
-Wizard,Human,Double rainbow!
-Fridge,Cold,Metal
-Fridge,Cold,Steel
-Fridge,Cold,Machine
-Fridge,Cold,Electricity
-Fridge,Cold,Container
-Fridge,Ice,Metal
-Fridge,Ice,Steel
-Fridge,Ice,Container
-Fridge,Ice cream,Container
-Lens,Glass,Tool
-Lens,Glass,Engineer
-Lion,Cat,Animal
-Lion,Cat,Blood
-Lion,Cat,Big
-Lion,Cat,Monarch
-Rose,Love,Plant
-Rose,Love,Flower
-Rose,Blade,Plant
-Rose,Blade,Flower
-Cookie dough,Dough,Cookie
-Cookie dough,Dough,Sugar
-Cookie dough,Dough,Chocolate
-Dust,Earth,Air
-Dust,Soil,Air
-Dust,Land,Air
-Beach,Sand,Ocean
-Beach,Sand,Sea
-Beach,Sand,Lake
-Beach,Sand,Water
-Beach,Sand,Wave
-Hangar,Airplane,Container
-Hangar,Airplane,House
-Hangar,Airplane,Wall
-Hangar,Airplane,Barn
-Hangar,Seaplane,Container
-Hangar,Seaplane,House
-Hangar,Seaplane,Wall
-Hangar,Seaplane,Barn
-Hangar,Helicopter,Container
-Hangar,Helicopter,House
-Hangar,Helicopter,Wall
-Hangar,Helicopter,Barn
-Hangar,Rocket,Container
-Hangar,Rocket,House
-Hangar,Rocket,Wall
-Hangar,Rocket,Barn
-Hangar,Spaceship,Container
-Hangar,Spaceship,House
-Hangar,Spaceship,Wall
-Hangar,Spaceship,Barn
-Samurai,Human,Katana
-Skateboard,Wheel,Snowboard
-Skateboard,Wheel,Skier
-Skateboard,Wheel,Ski goggles
-Lava,Earth,Fire
-Lava,Earth,Heat
-Lava,Earth,Liquid
-Mud,Water,Earth
-Mud,Water,Soil
-Meteoroid,Space,Stone
-Meteoroid,Space,Rock
-Meteoroid,Space,Boulder
-Meteoroid,Solar system,Stone
-Meteoroid,Solar system,Rock
-Meteoroid,Solar system,Boulder
-Meteoroid,Sun,Stone
-Meteoroid,Sun,Rock
-Meteoroid,Sun,Boulder
-Potter,Human,Clay
-Potter,Human,Pottery
-Flying fish,Fish,Bird
-Flying fish,Fish,Sky
-Flying fish,Fish,Air
-Gnome,Garden,Statue
-Gnome,Garden,Legend
-Gnome,Garden,Story
-Gnome,Garden,Fairy tale
-Banana,Fruit,Monkey
-Bus,Car,Car
-Bus,Car,Train
-Bus,Car,City
-Bus,Car,Big
-Cold,Human,Rain
-Cold,Human,Mountain range
-Cold,Human,Mountain
-Cold,Human,Snow
-Cold,Human,Wind
-Cold,Human,Storm
-Cold,Space,Thermometer
-Gravestone,Grave,Stone
-Gravestone,Grave,Rock
-Gravestone,Death,Stone
-Gravestone,Death,Rock
-Gravestone,Graveyard,Stone
-Gravestone,Graveyard,Rock
-Seaplane,Airplane,Water
-Seaplane,Airplane,Sea
-Seaplane,Airplane,Ocean
-Seaplane,Airplane,Lake
-Circus,Tent,Big
-Circus,Tent,Animal
-Sailor,Human,Boat
-Sailor,Human,Sailboat
-Sailor,Human,Steamboat
-Sailor,Human,Sea
-Sailor,Human,Ocean
-Sailor,Human,Lake
-Scorpion,Animal,Sand
-Scorpion,Animal,Dune
-Scorpion,Spider,Sand
-Scorpion,Spider,Dune
-Scorpion,Spider,Desert
-Toolbox,Tool,Container
-Toolbox,Tool,Safe
-Toolbox,Tool,Box
-Toolbox,Hammer,Container
-Toolbox,Hammer,Box
-Toolbox,Ruler,Container
-Toolbox,Ruler,Box
-Toolbox,Steel wool,Container
-Toolbox,Steel wool,Box
-Toolbox,Chain,Box
-Toolbox,Chain,Container
-Cheese,Milk,Tool
-Cheese,Milk,Cook
-Cheese,Milk,Bacteria
-Grenade,Explosion,Metal
-Grenade,Explosion,Steel
-Grenade,Explosion,Warrior
-Pyramid,Desert,Stone
-Pyramid,Desert,Grave
-Pyramid,Desert,Graveyard
-Pyramid,Desert,Gravestone
-Pyramid,Desert,Mountain
-Pyramid,Desert,Hill
-Pyramid,Mummy,Container
-Pyramid,Container,Book of the dead
-Salt,Sea,Sun
-Salt,Sea,Fire
-Salt,Sea,Mineral
-Salt,Ocean,Sun
-Salt,Ocean,Fire
-Salt,Ocean,Mineral
-Bird,Animal,Sky
-Bird,Animal,Air
-Bird,Animal,Airplane
-Bird,Egg,Sky
-Bird,Egg,Air
-Bird,Egg,Airplane
-Egg timer,Egg,Clock
-Egg timer,Egg,Alarm clock
-Egg timer,Egg,Watch
-Peacock,Bird,Leaf
-Peacock,Bird,Rainbow
-Peacock,Bird,Double rainbow!
-Engineer,Human,Machine
-Engineer,Human,Steam engine
-Pebble,Small,Earth
-Pebble,Small,Stone
-Pebble,Small,Rock
-Cheeseburger,Cheese,Hamburger
-Cheeseburger,Cheese,Sandwich
-Night,Sky,Moon
-Smog,Smoke,Fog
-Smog,City,Smoke
-Smog,City,Fog
-Smog,City,Atmosphere
-Smog,City,Air
-Sushi,Fish,Seaweed
-Sushi,Caviar,Seaweed
-Tractor,Car,Farmer
-Tractor,Car,Field
-Tractor,Car,Cow
-Tractor,Wagon,Farmer
-Tractor,Wagon,Field
-Tractor,Wagon,Cow
-Family tree,Tree,Family
-Family tree,Tree,Village
-Fossil,Dinosaur,Earth
-Fossil,Dinosaur,Stone
-Fossil,Dinosaur,Rock
-Fossil,Bone,Earth
-Fossil,Bone,Stone
-Fossil,Bone,Rock
-Fossil,Corpse,Stone
-Fossil,Corpse,Rock
-Fossil,Skeleton,Earth
-Fossil,Skeleton,Stone
-Fossil,Skeleton,Rock
-Maple syrup,Sap,Heat
-Maple syrup,Sap,Sugar
-Motion,Wind,Science
-Motion,Wind,Idea
-Motion,Wind,Philosophy
-Motion,Tornado,Science
-Motion,Tornado,Philosophy
-Motion,Stream,Science
-Motion,Stream,Philosophy
-Motion,River,Science
-Motion,River,Philosophy
-Seagull,Bird,Sea
-Seagull,Bird,Ocean
-Seagull,Bird,Beach
-Seagull,Pigeon,Sea
-Seagull,Pigeon,Ocean
-Seagull,Pigeon,Beach
-Seagull,Rat,Sea
-Seagull,Rat,Ocean
-Seagull,Rat,Beach
-Vampire,Human,Blood
-Vampire,Human,Vampire
-Vampire,Human,Bat
-Fox,Chicken,Animal
-Fox,Chicken,Wolf
-Fox,Chicken,Dog
-Fox,Chicken coop,Animal
-Fox,Chicken coop,Wolf
-Fox,Chicken coop,Dog
-Musician,Human,Flute
-Musician,Human,Music
-Musician,Human,Sheet music
-Musician,Human,Drum
-Musician,Human,Pan flute
-Orchard,Fruit tree,Fruit tree
-Orchard,Fruit tree,Field
-Orchard,Fruit tree,Tree
-Orchard,Fruit tree,Farmer
-Orchard,Fruit tree,Farm
-Orchard,Fruit tree,Forest
-Orchard,Fruit tree,Container
-Stone,Earth,Pressure
-Stone,Earth,Solid
-Stone,Air,Lava
-Rust,Air,Metal
-Rust,Air,Steel
-Rust,Metal,Oxygen
-Rust,Steel,Oxygen
-Allergy,Human,Dust
-Allergy,Human,Pollen
-Mummy,Pyramid,Corpse
-Mummy,Pyramid,Fabric
-Mummy,Pyramid,Human
-Mummy,Corpse,Fabric
-Mummy,Corpse,Book of the dead
-Mummy,Human,Book of the dead
-Dragon,Lizard,Fire
-Dragon,Lizard,Air
-Dragon,Lizard,Sky
-Dragon,Lizard,Airplane
-Dragon,Lizard,Story
-Dragon,Lizard,Legend
-Dragon,Dinosaur,Monster
-Fishing rod,Fish,Tool
-Fishing rod,Fish,Wood
-Fishing rod,Fish,Wire
-Fishing rod,Fish,Thread
-Fishing rod,Swordfish,Tool
-Fishing rod,Swordfish,Wood
-Fishing rod,Swordfish,Wire
-Fishing rod,Swordfish,Thread
-Fishing rod,Piranha,Tool
-Fishing rod,Piranha,Wood
-Fishing rod,Piranha,Wire
-Fishing rod,Piranha,Thread
-Hay bale,Hay,Hay
-Hay bale,Hay,Barn
-Hay bale,Hay,Tractor
-Hay bale,Hay,Machine
-Silo,Wheat,Container
-Silo,Wheat,House
-Silo,Wheat,Barn
-Silo,Wheat,Wall
-Silo,Wheat,Farm
-Silo,Wheat,Safe
-Silo,Wheat,Bank
-Ninja turtle,Turtle,Ninja
-Ninja turtle,Turtle,Shuriken
-Ninja turtle,Turtle,Katana
-Ring,Diamond,Metal
-Ring,Diamond,Steel
-Ring,Diamond,Gold
-Ring,Love,Gold
-Ring,Love,Diamond
-Ring,Love,Metal
-Ring,Love,Steel
-Werewolf,Human,Wolf
-Werewolf,Human,Werewolf
-Werewolf,Wolf,Monster
-Quicksilver,Metal,Liquid
-Gust,Wind,Small
-Gust,Air,Small
-Armor,Metal,Fabric
-Armor,Steel,Fabric
-Bandage,Fabric,Blood
-Bandage,Fabric,Sword
-Bandage,Fabric,Blade
-Gingerbread man,Dough,Life
-Gingerbread man,Dough,Magic
-Gingerbread man,Dough,Story
-Gingerbread man,Cookie,Life
-Gingerbread man,Cookie,Magic
-Gingerbread man,Cookie,Story
-Gingerbread man,Cookie dough,Life
-Gingerbread man,Cookie dough,Magic
-Gingerbread man,Cookie dough,Story
-Bell,Sound,Metal
-Bell,Sound,Steel
-Bell,Sound,Wood
-Bell,Metal,Hammer
-Bell,Steel,Hammer
-Electrician,Human,Electricity
-Electrician,Human,Wire
-Charcoal,Fire,Wood
-Charcoal,Fire,Tree
-Charcoal,Fire,Corpse
-Charcoal,Fire,Organic matter
-Angler,Human,Fishing rod
-Angler,Sailor,Fishing rod
-Ant,Grass,Animal
-Ant,Grass,Spider
-Battery,Container,Electricity
-Battery,Container,Energy
-Battery,Electricity,Mineral
-Battery,Electricity,Ore
-Fork,Pitchfork,Small
-Astronaut,Human,Space
-Astronaut,Human,Spaceship
-Astronaut,Human,Space station
-Astronaut,Human,Rocket
-Astronaut,Human,Moon
-Astronaut,Human,Mars
-Astronaut,Human,Solar system
-Astronaut,Human,Mercury
-Astronaut,Human,Jupiter
-Astronaut,Human,Saturn
-Astronaut,Human,Venus
-Astronaut,Human,Moon rover
-Yogurt,Bacteria,Milk
-Yogurt,Bacteria,Ice cream
-Treasure,Treasure map,Pirate
-Treasure,Treasure map,Pirate ship
-Treasure,Treasure map,Island
-Treasure,Treasure map,Sailor
-Geyser,Steam,Earth
-Geyser,Steam,Hill
-Geyser,Steam,Mountain
-Geyser,Steam,Pressure
-Wall,Brick,Brick
-Wall,Wood,Wood
-Wall,Stone,Stone
-Safe,Metal,Money
-Safe,Metal,Gold
-Safe,Steel,Money
-Safe,Steel,Gold
-Safe,Container,Gun
-Safe,Container,Gold
-Telescope,Glass,Sky
-Telescope,Glass,Star
-Telescope,Glass,Space
-Telescope,Glass,Moon
-Telescope,Glass,Planet
-Telescope,Glass,Mars
-Telescope,Glass,Mercury
-Telescope,Glass,Venus
-Telescope,Glass,Saturn
-Telescope,Glass,Jupiter
-Telescope,Glass,Galaxy
-Telescope,Glass,Galaxy cluster
-Telescope,Glass,Universe
-Telescope,Glass,Supernova
-Storm,Cloud,Cloud
-Storm,Electricity,Cloud
-Storm,Electricity,Atmosphere
-Storm,Rain,Wind
-Cable car,Mountain,Car
-Cable car,Mountain,Wire
-Cable car,Mountain,Rope
-Cable car,Mountain range,Car
-Cable car,Mountain range,Wire
-Cable car,Mountain range,Rope
-Force knight,Human,Light sword
-Force knight,Warrior,Light sword
-Force knight,Knight,Light sword
-Ufo,Alien,Rocket
-Ufo,Alien,Airplane
-Ufo,Alien,Spaceship
-Ufo,Alien,Space station
-Ufo,Alien,Sky
-Ufo,Alien,Container
-Fence,Wood,Wall
-Fence,Wood,Field
-Fence,Wood,Garden
-Fence,Field,Wall
-Fence,Grass,Wall
-Fence,Garden,Wall
-Dynamite,Gunpowder,Wire
-Dynamite,Gunpowder,Pipe
-Dynamite,Gunpowder,Container
-Cave,House,Wolf
-Cave,House,Lion
-Cave,House,Fox
-Cave,House,Bat
-Cave,Container,Wolf
-Cave,Container,Lion
-Cave,Container,Fox
-Cave,Container,Bat
-Frankenstein's monster,Corpse,Legend
-Frankenstein's monster,Corpse,Lightning
-Frankenstein's monster,Corpse,Electricity
-Frankenstein's monster,Corpse,Story
-Frankenstein's monster,Zombie,Electricity
-Frankenstein's monster,Zombie,Lightning
-Frankenstein's monster,Monster,Story
-Frankenstein's monster,Monster,Corpse
-Snowboard,Snow,Wood
-Snowboard,Snow,Surfer
-Snowboard,Ice,Wood
-Snowboard,Ice,Surfer
-Snowboard,Surfer,Mountain
-Snowboard,Surfer,Mountain range
-Faun,Human,Goat
-Faun,Human,Mountain goat
-Faun,Legend,Goat
-Faun,Legend,Mountain goat
-Faun,Wizard,Goat
-Faun,Wizard,Mountain goat
-Faun,Magic,Goat
-Faun,Magic,Mountain goat
-The one ring,Ring,Volcano
-The one ring,Ring,Magic
-Mayonnaise,Egg,Oil
-House,Wall,Wall
-House,Wall,Human
-House,Wall,Tool
-House,Fireplace,Container
-House,Family,Container
-Ozone,Oxygen,Oxygen
-Ozone,Electricity,Oxygen
-Ozone,Electricity,Atmosphere
-Ozone,Electricity,Air
-Soil,Earth,Life
-Soil,Earth,Organic matter
-Soil,Land,Life
-Soil,Land,Organic matter
-Science,Human,Telescope
-Science,Human,Microscope
-Science,Human,Universe
-Butcher,Human,Meat
-Butcher,Human,Ham
-Anthill,Ant,House
-Anthill,Ant,Container
-Anthill,Ant,Hill
-Anthill,Ant,Earth
-Anthill,Ant,Land
-Anthill,Ant,Soil
-Sailboat,Boat,Wind
-Sailboat,Boat,Fabric
-Sailboat,Steamboat,Wind
-Sailboat,Steamboat,Fabric
-Sleigh,Cart,Snow
-Sleigh,Cart,Ice
-Sleigh,Cart,Arctic
-Sleigh,Cart,Antarctica
-Sleigh,Wagon,Snow
-Sleigh,Wagon,Ice
-Sleigh,Wagon,Arctic
-Sleigh,Wagon,Antarctica
-Steam,Water,Heat
-Steam,Water,Fire
-Steam,Water,Lava
-Steam,Water,Gas
-Fireworks,Explosion,Sky
-Fireworks,Explosion,Atmosphere
-Love,Human,Human
-Love,Cupid,Bow
-Love,Cupid,Arrow
-Birdcage,Bird,Container
-Birdcage,Bird,Safe
-Birdcage,Bird,Wall
-Birdcage,Bird,Cage
-Chameleon,Lizard,Rainbow
-Chameleon,Lizard,Double rainbow!
-Chameleon,Snake,Rainbow
-Chameleon,Snake,Double rainbow!
-Chameleon,Turtle,Rainbow
-Chameleon,Turtle,Double rainbow!
-Gas,Air,Idea
-Gas,Air,Science
-Gas,Energy,Liquid
-Garage,Car,House
-Garage,Car,Container
-Garage,Car,Wall
-Garage,Car,Barn
-Garage,Ambulance,House
-Garage,Ambulance,Container
-Garage,Ambulance,Wall
-Garage,Ambulance,Barn
-Garage,Motorcycle,House
-Garage,Motorcycle,Container
-Garage,Motorcycle,Wall
-Garage,Motorcycle,Barn
-Garage,Bus,House
-Garage,Bus,Container
-Garage,Bus,Wall
-Garage,Bus,Barn
-Garage,Sleigh,House
-Garage,Sleigh,Container
-Garage,Sleigh,Wall
-Garage,Sleigh,Barn
-Garage,Electric car,House
-Garage,Electric car,Container
-Garage,Electric car,Wall
-Garage,Electric car,Barn
-Garage,Snowmobile,House
-Garage,Snowmobile,Container
-Garage,Snowmobile,Wall
-Garage,Snowmobile,Barn
-Garage,Tractor,House
-Garage,Tractor,Container
-Garage,Tractor,Wall
-Garage,Tractor,Barn
-Garage,Rv,House
-Garage,Rv,Container
-Garage,Rv,Wall
-Garage,Rv,Barn
-Garage,Ice cream truck,House
-Garage,Ice cream truck,Container
-Garage,Ice cream truck,Wall
-Garage,Ice cream truck,Barn
-Armadillo,Armor,Animal
-Armadillo,Armor,Dog
-Armadillo,Armor,Cat
-Dune,Wind,Desert
-Dune,Wind,Sand
-Dune,Wind,Beach
-Dune,Sand,Desert
-Dune,Sandstorm,Desert
-Watch,Clock,Human
-Watch,Clock,Small
-Treasure map,Map,Pirate
-Treasure map,Map,Pirate ship
-Treasure map,Map,Treasure
-Treasure map,Map,Island
-Jupiter,Planet,Cloud
-Jupiter,Planet,Storm
-Jupiter,Planet,Big
-Jupiter,Planet,Gas
-Jupiter,Planet,Zeus
-Jupiter,Saturn,Big
-Hero,Human,Legend
-Hero,Dragon,Knight
-Hero,Human,Story
-Hero,Human,Lightning
-Don quixote,Windmill,Knight
-Don quixote,Windmill,Story
-Don quixote,Windmill,Legend
-Don quixote,Windmill,Hero
-Water lily,Flower,Pond
-Water lily,Flower,Puddle
-Water lily,Flower,Lake
-Water lily,Flower,Stream
-Librarian,Human,Library
-Puddle,Water,Water
-Puddle,Pond,Small
-Oasis,Desert,Water
-Oasis,Desert,Puddle
-Oasis,Desert,Pond
-Oasis,Desert,River
-Oasis,Desert,Lake
-Oasis,Desert,Stream
-Oasis,Desert,Tree
-Oasis,Desert,Palm
-Water gun,Gun,Water
-Water gun,Gun,Stream
-Water gun,Gun,Puddle
-Car,Wheel,Metal
-Car,Wheel,Steel
-Car,Wheel,Bicycle
-Car,Wheel,Motorcycle
-Car,Bicycle,Bicycle
-Car,Motorcycle,Motorcycle
-Car,Motorcycle,Machine
-Car,Wagon,Combustion engine
-Car,Cart,Combustion engine
-Pan flute,Flute,Flute
-Painting,Canvas,Paint
-Painting,Canvas,Painter
-Smartphone,Small,Tablet
-Dam,River,Beaver
-Dam,River,Wall
-Dam,Water,Wall
-Dam,Stream,Wall
-Dam,Beaver,Tree
-Dam,Beaver,Stream
-Dam,Beaver,House
-Dam,Beaver,Lake
-Dam,Beaver,Water
-Moon,Sky,Cheese
-Moon,Sky,Planet
-Moon,Sky,Stone
-Moon,Stone,Planet
-Moon,Night,Planet
-Moon,Night,Stone
-Moon,Night,Earth
-Moon,Night,Cheese
-Angel,Human,Bird
-Angel,Human,Light
-Angel,Human,Heaven
-Angel,Human,Good
-Angel,Good,Demon
-Angel,Good,Deity
-Lumberjack,Human,Axe
-Lumberjack,Human,Chainsaw
-Lumberjack,Human,Wood
-Lumberjack,Human,Tree
-Confetti,Paper,Scissors
-Confetti,Paper,Blade
-Fortune cookie,Paper,Cookie
-Fortune cookie,Paper,Cookie dough
-Fortune cookie,Paper,Gingerbread man
-Atmosphere,Air,Planet
-Atmosphere,Air,Sky
-Spaceship,Space,Airplane
-Spaceship,Space,Metal
-Spaceship,Space,Steel
-Spaceship,Space,Pirate ship
-Spaceship,Space,Boat
-Spaceship,Space,Steamboat
-Spaceship,Space,Car
-Spaceship,Astronaut,Container
-Algae,Water,Plant
-Algae,Water,Grass
-Algae,Grass,Pond
-Algae,Grass,Lake
-Chill,Air,Cold
-Chill,Human,Cold
-Chill,Human,Ice
-Pegasus,Horse,Bird
-Pegasus,Horse,Sky
-Pegasus,Unicorn,Bird
-Pegasus,Unicorn,Sky
-Fire extinguisher,Carbon dioxide,Fire
-Fire extinguisher,Carbon dioxide,Pressure
-Fire extinguisher,Carbon dioxide,Metal
-Fire extinguisher,Carbon dioxide,Steel
-Fire extinguisher,Carbon dioxide,Boiler
-Hot chocolate,Chocolate milk,Heat
-Hot chocolate,Chocolate,Heat
-Pottery,Clay,Wheel
-Pottery,Clay,Tool
-Syringe,Doctor,Needle
-Syringe,Tool,Needle
-Sound,Wave,Air
-Sound,Wave,Human
-Sound,Wave,Animal
-Sound,Wave,Wolf
-Cactus,Sand,Plant
-Cactus,Sand,Tree
-Cactus,Desert,Plant
-Cactus,Desert,Tree
-Graveyard,Grave,Grave
-Graveyard,Grave,Field
-Graveyard,Grave,Land
-Graveyard,Gravestone,Gravestone
-Graveyard,Gravestone,Field
-Graveyard,Gravestone,Land
-Graveyard,Gravestone,Container
-Shark,Wolf,Sea
-Shark,Wolf,Ocean
-Shark,Wolf,Fish
-Shark,Blood,Sea
-Shark,Blood,Ocean
-Shark,Blood,Fish
-Oil,Sunflower,Pressure
-Oil,Sunflower,Stone
-Oil,Sunflower,Wheel
-Oil,Sunflower,Windmill
-Pirate ship,Sailboat,Pirate
-Pirate ship,Boat,Pirate
-Pirate ship,Steam engine,Pirate
-Pirate ship,Pirate,Container
-Pirate ship,Pirate,House
-Chainsaw,Axe,Machine
-Chainsaw,Axe,Electricity
-Chainsaw,Axe,Motion
-Chainsaw,Lumberjack,Machine
-Chainsaw,Lumberjack,Electricity
-Chocolate milk,Chocolate,Milk
-Chocolate milk,Chocolate,Coconut milk
-Lake,Pond,Water
-Lake,Pond,Big
-Lake,Pond,Pond
-Lake,Sea,Small
-Metal,Stone,Fire
-Metal,Stone,Heat
-Metal,Ore,Fire
-Metal,Ore,Heat
-Metal,Ore,Tool
-Darkness,Sky,Night
-Darkness,Sky,Twilight
-Butterfly,Animal,Flower
-Butterfly,Animal,Garden
-Butterfly,Animal,Rainbow
-Butterfly,Animal,Double rainbow!
-Ash,Fire,Mineral
-Ash,Fire,Plant
-Ash,Fire,Tree
-Ash,Fire,Grass
-Ash,Fire,Paper
-Ash,Campfire,Water
-Ash,Campfire,Rain
-Ash,Campfire,Paper
-Ash,Vampire,Sun
-Ash,Vampire,Dawn
-Ash,Vampire,Holy grail
-Ash,Vampire,Holy water
-Bicycle,Wheel,Wheel
-Bicycle,Wheel,Chain
-Bicycle,Wheel,Machine
-Black hole,Pressure,Star
-Black hole,Pressure,Sun
-Black hole,Darkness,Star
-Black hole,Darkness,Sun
-Antarctica,Desert,Snow
-Antarctica,Desert,Ice
-Antarctica,Continent,Snow
-Antarctica,Continent,Ice
-Constellation,Star,Star
-Chicken,Bird,Domestication
-Chicken,Bird,Livestock
-Chicken,Bird,Farmer
-Chicken,Bird,Farm
-Chicken,Bird,Barn
-Chicken,Egg,Domestication
-Chicken,Egg,Livestock
-Chicken,Egg,Farmer
-Chicken,Egg,Barn
-Chicken,Egg,Farm
-Lawn,Grass,House
-Lawn,Grass,Container
-Lawn,Grass,Lawn mower
-Lawn,Field,Lawn mower
-Sunglasses,Glasses,Sun
-Sunglasses,Glasses,Beach
-Sunglasses,Glasses,Day
-Sunglasses,Glasses,Sky
-Sunglasses,Glasses,Light
-Canvas,Fabric,Paint
-Bat,Mouse,Sky
-Bat,Mouse,Air
-Bat,Mouse,Bird
-Bat,Mouse,Hummingbird
-Bat,Mouse,Atmosphere
-Supernova,Explosion,Star
-Supernova,Explosion,Sun
-Supernova,Explosion,Galaxy
-Supernova,Explosion,Space
-Smoothie,Fruit,Blender
-Smoothie,Fruit,Ice
-Smoothie,Fruit,Cold
-Milk shake,Ice cream,Milk
-Milk shake,Ice cream,Yogurt
-Milk shake,Ice cream,Water
-Email,Letter,Computer
-Email,Letter,Computer mouse
-Email,Letter,Internet
-Email,Letter,Electricity
-Sandwich,Bread,Meat
-Sandwich,Bread,Bacon
-Sandwich,Bread,Ham
-Sandwich,Bread,Cheese
-Sandwich,Bread,Vegetable
-Alien,Life,Space
-Alien,Life,Galaxy
-Alien,Life,Galaxy cluster
-Alien,Life,Solar system
-Alien,Life,Mars
-Alien,Life,Venus
-Alien,Life,Mercury
-Alien,Life,Saturn
-Alien,Life,Jupiter
-Microscope,Bacteria,Glass
-Microscope,Bacteria,Glasses
-Microscope,Bacteria,Safety glasses
-Microscope,Bacteria,Lens
-Microscope,Tool,Lens
-Sundial,Sun,Wheel
-Sundial,Sun,Tool
-Sundial,Sun,Clock
-Sundial,Sun,Watch
-Sundial,Light,Wheel
-Sundial,Light,Tool
-Sundial,Light,Clock
-Sundial,Light,Watch
-Sundial,Day,Wheel
-Sundial,Day,Tool
-Duck,Bird,Water
-Duck,Bird,Pond
-Duck,Bird,Lake
-Duck,Duckling,Big
-Duck,Owl,Water
-Duck,Owl,Pond
-Duck,Owl,Lake
-Duck,Pigeon,Water
-Duck,Pigeon,Pond
-Duck,Pigeon,Lake
-Duck,Chicken,Water
-Duck,Chicken,Pond
-Duck,Chicken,Lake
-Sheep,Livestock,Wool
-Sheep,Livestock,Hill
-Sheep,Livestock,Land
-Sheep,Livestock,Cloud
-Sheep,Goat,Domestication
-Sheep,Mountain goat,Domestication
-Blood bag,Blood,Container
-Blood bag,Blood,Sack
-Blood bag,Blood,Bottle
-Santa,Christmas tree,Human
-Santa,Christmas tree,Legend
-Santa,Christmas tree,Story
-Santa,Christmas stocking,Human
-Santa,Christmas stocking,Legend
-Santa,Christmas stocking,Story
-Paper airplane,Airplane,Paper
-Eclipse,Sun,Moon
-Clock,Sundial,Machine
-Clock,Sundial,Tool
-Clock,Sundial,Wheel
-Clock,Sundial,Electricity
-Clock,Cuckoo,Container
-Clock,Watch,Big
-Hedge,Plant,Fence
-Hedge,Leaf,Fence
-Hedge,Garden,Fence
-Hedge,Plant,Wall
-Hedge,Leaf,Wall
-Hedge,Garden,Wall
-Ice,Water,Cold
-Ice,Water,Solid
-Ice,Puddle,Cold
-Ice,Puddle,Solid
-Beehive,House,Bee
-Beehive,Tree,Bee
-Beehive,Forest,Bee
-Beehive,Wall,Bee
-Beehive,Wood,Bee
-Beehive,Container,Bee
-Closet,Container,Broom
-Closet,Container,Toolbox
-Closet,Container,Umbrella
-Closet,Container,Robot vacuum
-Closet,Container,Vacuum cleaner
-Spaghetti,Pasta,Thread
-Spaghetti,Pasta,Wire
-Spaghetti,Pasta,Rope
-Desert,Sand,Sand
-Desert,Sand,Land
-Desert,Sand,Cactus
-Desert,Sand,Lizard
-Desert,Sand,Vulture
-Bridge,Wood,River
-Bridge,Metal,River
-Bridge,Steel,River
-Bridge,Stream,Wood
-Bridge,Stream,Metal
-Bridge,Stream,Steel
-Light sword,Sword,Light
-Light sword,Sword,Electricity
-Light sword,Sword,Energy
-Light sword,Sword,Space
-Light sword,Sword,Force knight
-Universe,Space,Container
-Universe,Galaxy cluster,Galaxy cluster
-Universe,Galaxy cluster,Container
-Universe,Primordial soup,Cosmic egg
-Fish,Animal,Water
-Fish,Animal,Sea
-Fish,Animal,Ocean
-Fish,Animal,Lake
-Fish,Egg,Water
-Fish,Egg,Sea
-Fish,Egg,Ocean
-Fish,Egg,Lake
-Story,Human,Campfire
-Story,Human,Hero
-Pumpkin,Vegetable,Field
-Pumpkin,Vegetable,Farmer
-Pumpkin,Vegetable,Jack-o'-lantern
-Pumpkin,Plant,Jack-o'-lantern
-Sap,Tree,Blade
-Bottle,Container,Milk
-Bottle,Container,Water
-Bottle,Container,Coconut milk
-Bottle,Container,Juice
-Bottle,Container,Oil
-Bottle,Container,Alcohol
-Bottle,Container,Wine
-Bottle,Container,Beer
-Bottle,Container,Chocolate milk
-Bottle,Container,Soda
-Bottle,Container,Perfume
-Bottle,Container,Liquid
-Soap,Oil,Ash
-Soap,Oil,Wax
-Soap,Oil,Clay
-Soap,Wax,Ash
-Soap,Wax,Clay
-Beer,Alcohol,Wheat
-Frozen yogurt,Yogurt,Cold
-Frozen yogurt,Yogurt,Ice
-Pizza,Cheese,Dough
-Pizza,Cheese,Bread
-Pizza,Cheese,Wheel
-Pond,Puddle,Puddle
-Pond,Puddle,Water
-Pond,Puddle,Big
-Pond,Lake,Small
-Phoenix,Fire,Bird
-Phoenix,Fire,Life
-Phoenix,Fire,Death
-Phoenix,Fire,Egg
-Eagle,Bird,Mountain
-Eagle,Bird,Mountain range
-Needle,Thread,Metal
-Needle,Thread,Steel
-Needle,Thread,Tool
-Plow,Earth,Metal
-Plow,Earth,Steel
-Plow,Earth,Wood
-Plow,Field,Metal
-Plow,Field,Steel
-Plow,Field,Wood
-Plow,Field,Tool
-Sea,Lake,Lake
-Sea,Lake,Water
-Sea,Lake,Big
-Sea,Ocean,Small
-Wind turbine,Windmill,Electricity
-Wind turbine,Windmill,Machine
-Wind turbine,Windmill,Electrician
-Wind turbine,Wind,Electricity
-Computer,Hacker,Tool
-Computer,Hacker,Electricity
-Computer,Hacker,Wire
-Computer,Hacker,Machine
-Computer,Email,Container
-Garden,Plant,Grass
-Garden,Plant,House
-Garden,Plant,Lawn
-Garden,Flower,Flower
-Garden,Flower,Grass
-Garden,Flower,Plant
-Garden,Flower,House
-Garden,Flower,Lawn
-Garden,Flower,Container
-Parrot,Bird,Pirate
-Parrot,Bird,Pirate ship
-Parrot,Pigeon,Pirate
-Parrot,Pigeon,Pirate ship
-Newspaper,Paper,Paper
-Newspaper,Paper,Story
-Newspaper,Letter,Letter
-Eruption,Pressure,Volcano
-Eruption,Pressure,Lava
-Dry ice,Carbon dioxide,Cold
-Dry ice,Carbon dioxide,Ice
-Butterfly net,Butterfly,Net
-Butterfly net,Bee,Net
-Caramel,Sugar,Heat
-Map,Paper,Land
-Map,Paper,Hill
-Map,Paper,Mountain
-Map,Paper,Mountain range
-Map,Paper,Continent
-Map,Paper,Ocean
-Map,Paper,Sea
-Map,Paper,Lake
-Map,Paper,River
-Map,Paper,City
-Map,Paper,Village
-Banana bread,Bread,Banana
-Banana bread,Dough,Banana
-Toast,Sandwich,Fire
-Toast,Bread,Fire
 Pressure,Air,Air
 Pressure,Air,Atmosphere
 Pressure,Atmosphere,Atmosphere
 Pressure,Geyser,Science
 Pressure,Ocean,Ocean
-Aquarium,Glass,Water
-Aquarium,Glass,Fish
-Aquarium,Glass,Puddle
-Aquarium,Glass,Pond
-Aquarium,Fish,Container
-Aquarium,Small,Swimming pool
+Meteor,Meteoroid,Atmosphere
+Meteor,Meteoroid,Sky
+Meteor,Meteoroid,Air
+Meteor,Meteoroid,Night
+Meteor,Meteoroid,Day
+Cat,Animal,Milk
+Cat,Animal,Coconut milk
+Cat,Animal,Night
+Philosophy,Human,Story
+Philosophy,Human,Idea
+Philosophy,Egg,Chicken
+Pottery,Clay,Wheel
+Pottery,Clay,Tool
+Toucan,Bird,Rainbow
+Toucan,Bird,Double rainbow!
+Toucan,Bird,Palm
+Toucan,Palm,Owl
+Toucan,Palm,Seagull
+Toucan,Palm,Pigeon
+Librarian,Human,Library
+Dust,Earth,Air
+Dust,Soil,Air
+Dust,Land,Air
+Grenade,Explosion,Metal
+Grenade,Explosion,Steel
+Grenade,Explosion,Warrior
+Cactus,Sand,Plant
+Cactus,Sand,Tree
+Cactus,Desert,Plant
+Cactus,Desert,Tree
+Christmas tree,Tree,Light bulb
+Christmas tree,Tree,Star
+Christmas tree,Tree,Candle
+Christmas tree,Tree,Light
+Christmas tree,Tree,Gift
+Diamond,Coal,Pressure
+Pencil,Wood,Coal
+Pencil,Wood,Charcoal
+Witch,Broom,Wizard
+Witch,Broom,Human
+Witch,Broom,Legend
+Witch,Broom,Story
+Witch,Broom,Magic
+Witch,Broom,Cauldron
+Witch,Cauldron,Story
+Witch,Cauldron,Legend
+Wall,Brick,Brick
+Wall,Wood,Wood
+Wall,Stone,Stone
+Current,Ocean,Motion
+Current,Ocean,Heat
+Current,Ocean,Cold
+Current,Ocean,Science
+Current,Sea,Motion
+Current,Sea,Heat
+Current,Sea,Cold
+Current,Sea,Science
+Dynamite,Gunpowder,Wire
+Dynamite,Gunpowder,Pipe
+Dynamite,Gunpowder,Container
+Watch,Clock,Human
+Watch,Clock,Small
+Owl,Bird,Night
+Owl,Bird,Wizard
+Owl,Bird,Moon
+Owl,Bird,Twilight
+Honey,Bee,Flower
+Honey,Bee,Beehive
+Honey,Bee,Bee
+Honey,Beehive,Beekeeper
+Paper,Wood,Pressure
+Paper,Wood,Water
+Paper,Wood,Blender
+Paper,Wood,Machine
+Cup,Container,Smoothie
+Cup,Container,Tea
+Cup,Container,Milk shake
+Cup,Bottle,Smoothie
+Cup,Bottle,Tea
+Cup,Bottle,Milk shake
 Island,Volcano,Sea
 Island,Volcano,Ocean
 Island,Maui's fishhook,Ocean
 Island,Maui's fishhook,Sea
-Ocean,Sea,Sea
-Ocean,Sea,Water
-Ocean,Sea,Big
-Ocean,Tide,Container
-Rainbow,Rain,Sun
-Rainbow,Rain,Light
-Rainbow,Water,Light
-Rainbow,Water,Sun
-Rainbow,Cloud,Light
-Rainbow,Prism,Sun
-Rainbow,Prism,Light
-Medusa,Snake,Human
-Medusa,Snake,Story
-Medusa,Snake,Legend
-Medusa,Snake,Hero
-Saddle,Horse,Leather
-Saddle,Horse,Tool
-Saddle,Horse,Fabric
-Campfire,Fire,Wood
-Firewall,Fire,Wall
-Factory,House,Chimney
-Factory,House,Tool
-Village,House,House
-Village,Family,Family
-Village,House,Container
-Village,House,Bakery
-Village,Bakery,Container
-Windmill,Wind,House
-Windmill,Wind,Wheel
-Windmill,Wind,Wheat
-Windmill,Wind,Flour
-Windmill,Wheel,Wall
-Beaver,Animal,Wood
-Beaver,Animal,Dam
-Beaver,Animal,River
-Beaver,Animal,Stream
-Lava lamp,Lamp,Lava
-Lava lamp,Lamp,Fire
-Lava lamp,Lamp,Volcano
-Nuts,Tree,Farmer
-Nuts,Tree,Field
-Nuts,Tree,Domestication
-Laptop,Computer,Small
-Leather,Blade,Cow
-Leather,Blade,Pig
-Leather,Blade,Sheep
-Leather,Sword,Cow
-Leather,Sword,Pig
-Leather,Sword,Sheep
-Leather,Tool,Cow
-Leather,Tool,Pig
-Leather,Tool,Sheep
-Smoke signal,Fabric,Campfire
-Smoke signal,Fabric,Smoke
-Smoke signal,Smoke,Letter
-Trainyard,Train,Container
-Trainyard,Train,House
-Trainyard,Train,Wall
-Trainyard,Train,Garage
-Day,Sun,Sky
-Day,Sun,Night
-Blizzard,Snow,Storm
-Blizzard,Snow,Hurricane
-Blizzard,Snow,Tornado
-Blizzard,Snow,Snow
-Blizzard,Snow,Wind
-Blizzard,Snow,Big
-Wheat,Grass,Farmer
-Wheat,Grass,Domestication
-Wheat,Grass,Field
-Peanut butter,Nuts,Butter
-Peanut butter,Nuts,Pressure
-Titanic,Boat,Iceberg
-Titanic,Steamboat,Iceberg
-Titanic,Iceberg,Legend
-Titanic,Steamboat,Legend
-Cigarette,Tobacco,Paper
-Mac and cheese,Cheese,Pasta
-Earthquake,Earth,Motion
-Earthquake,Earth,Energy
-Earthquake,Continent,Motion
-Catnip,Cat,Plant
-Catnip,Cat,Grass
-Catnip,Cat,Flower
-Catnip,Baast,Plant
-Mouse,Animal,Cheese
-Mouse,Cheese,Barn
-Mouse,Cheese,House
-Mouse,Cheese,Farm
-Mouse,Cheese,Wall
-Tsunami,Sea,Earthquake
-Tsunami,Sea,Explosion
-Tsunami,Sea,Meteor
-Tsunami,Ocean,Earthquake
-Tsunami,Ocean,Explosion
-Tsunami,Ocean,Meteor
-Wolf,Animal,Moon
-Wolf,Animal,Dog
-Wolf,Dog,Forest
-Wolf,Dog,Blood
-Liquid,Water,Science
-Liquid,Water,Idea
-Liquid,Energy,Solid
-Bank,Gold,House
-Bank,Gold,Skyscraper
-Bank,Gold,City
-Bank,Safe,House
-Bank,Safe,Skyscraper
-Bank,Safe,City
-Bank,Money,House
-Bank,Money,Skyscraper
-Bank,Money,City
-Bank,Money,Container
-Bank,House,Vault
-Vulture,Corpse,Bird
-Vulture,Corpse,Eagle
-Vulture,Corpse,Owl
-Vulture,Corpse,Hummingbird
-Vulture,Corpse,Pigeon
-Vulture,Corpse,Penguin
-Vulture,Corpse,Chicken
-Vulture,Corpse,Duck
-Vulture,Desert,Bird
-Vulture,Desert,Eagle
-Vulture,Desert,Owl
-Vulture,Desert,Hummingbird
-Vulture,Desert,Pigeon
-Vulture,Desert,Penguin
-Vulture,Desert,Duck
-Book,Newspaper,Newspaper
-Book,Paper,Legend
-Book,Paper,Wood
-Book,Container,Story
-Book,Container,Fairy tale
-Book,Container,Legend
-Book,Container,Idea
-Glass,Sand,Fire
-Glass,Sand,Heat
-Glass,Sand,Lightning
-Glass,Sand,Electricity
-Wave,Ocean,Wind
-Wave,Ocean,Storm
-Wave,Ocean,Hurricane
-Wave,Sea,Wind
-Wave,Sea,Storm
-Wave,Sea,Hurricane
-Wave,Lake,Wind
-Wave,Lake,Storm
-Wave,Lake,Hurricane
-Stream,Pond,Motion
-Stream,Rivulet,Big
-Stream,River,Small
-Tea,Leaf,Water
-Tea,Leaf,Human
-Tea,Leaf,Heat
-Warmth,Heat,Air
-Warmth,Heat,Human
-Boiler,Pressure,Metal
-Boiler,Pressure,Tool
-Boiler,Pressure,Container
-Boiler,Steam,Metal
-Boiler,Steam,Tool
-Cotton,Plant,Cloud
-Cotton,Plant,Fabric
-Cotton,Plant,Thread
-Cotton,Plant,Wool
-Cotton,Plant,Sheep
-Harp,Angel,Music
-Harp,Angel,Musician
-Harp,Angel,Wire
-Harp,Wire,Music
-Squirrel,Mouse,Tree
-Squirrel,Mouse,Plant
-Squirrel,Mouse,Nuts
-Squirrel,Animal,Nuts
-Electricity,Metal,Lightning
-Electricity,Steel,Lightning
-Electricity,Storm,Science
-Electricity,Wind turbine,Wind
-Electricity,Wind turbine,Motion
-Electricity,Wind turbine,Storm
-Electricity,Wind turbine,Sandstorm
-Electricity,Solar cell,Sun
-Electricity,Solar cell,Light
-Electricity,Solar cell,Star
-Bacteria,Life,Primordial soup
-Bacteria,Life,Small
-Bacteria,Life,Mud
-Zombie,Corpse,Life
-Zombie,Corpse,Story
-Zombie,Corpse,Bacteria
-Zombie,Human,Zombie
-Zombie,Corpse,Necromancer
-Monkey,Animal,Tree
-Rivulet,Stream,Small
-Rivulet,Puddle,Motion
-Scythe,Blade,Grass
-Scythe,Blade,Wheat
-Scythe,Sword,Grass
-Scythe,Sword,Wheat
-Scythe,Axe,Grass
-Scythe,Axe,Wheat
-Scuba tank,Container,Air
-Scuba tank,Container,Atmosphere
-Scuba tank,Container,Oxygen
-Sword,Blade,Metal
-Sword,Blade,Steel
-Sword,Blade,Wood
-Stethoscope,Doctor,Tool
-Stethoscope,Doctor,Drum
-Stethoscope,Doctor,Sound
-Stethoscope,Tool,Sound
-Stethoscope,Tool,Hospital
-Bonsai tree,Tree,Pottery
-Bonsai tree,Tree,Scissors
-Bonsai tree,Tree,Wire
-Bonsai tree,Tree,Small
-Cook,Human,Fruit
-Cook,Human,Vegetable
-Cook,Human,Campfire
-Cook,Human,Nuts
-Ice cream truck,Ice cream,Car
-Ice cream truck,Ice cream,Bus
-Ice cream truck,Ice cream,Wagon
-Wagon,Cart,Horse
-Wagon,Cart,Fabric
-Wagon,Cart,House
-Wagon,Cart,Wall
-Wagon,Cart,Cow
-Brick,Mud,Fire
-Brick,Mud,Sun
-Brick,Clay,Fire
-Brick,Clay,Sun
-Brick,Clay,Stone
+Shuriken,Star,Blade
+Shuriken,Star,Sword
+Shuriken,Star,Metal
+Shuriken,Star,Steel
+Shuriken,Ninja,Blade
+Seasickness,Sickness,Sea
+Seasickness,Sickness,Ocean
+Seasickness,Sickness,Lake
+Seasickness,Sickness,Boat
+Seasickness,Sickness,Sailboat
+Seasickness,Sickness,Steamboat
+Library,Book,Container
+Library,Book,House
+Toast,Sandwich,Fire
+Toast,Bread,Fire
+Penguin,Bird,Antarctica
+Penguin,Bird,Snow
+Penguin,Bird,Ice
+Penguin,Bird,Cold
+Penguin,Animal,Antarctica
+Quicksand,Sand,Swamp
+Batter,Milk,Flour
+Batter,Coconut milk,Flour
+Solar system,Planet,Planet
+Solar system,Planet,Sun
+Solar system,Planet,Container
+Solar system,Sun,Container
+Solar system,Mars,Container
+Solar system,Mercury,Container
+Solar system,Venus,Container
+Solar system,Jupiter,Container
+Solar system,Saturn,Container
 Sky,Air,Cloud
 Sky,Sun,Atmosphere
 Sky,Sun,Moon
 Sky,Cloud,Atmosphere
-Swim goggles,Glasses,Water
-Swim goggles,Glasses,Lake
-Swim goggles,Glasses,Sea
-Swim goggles,Glasses,Ocean
-Swim goggles,Glasses,River
-Swim goggles,Sunglasses,Water
-Swim goggles,Sunglasses,Lake
-Swim goggles,Sunglasses,Sea
-Swim goggles,Sunglasses,Ocean
-Swim goggles,Sunglasses,River
-Alarm clock,Clock,Sound
-Alarm clock,Clock,Dawn
-Alarm clock,Clock,Bell
-Alarm clock,Watch,Sound
-Alarm clock,Watch,Dawn
-Alarm clock,Watch,Bell
-Parachute,Pilot,Fabric
-Parachute,Pilot,Umbrella
-Parachute,Airplane,Fabric
-Parachute,Airplane,Umbrella
-Parachute,Umbrella,Sky
-Parachute,Umbrella,Atmosphere
-Tank,Car,Armor
-Tank,Car,Gun
-Tank,Car,Metal
-Tank,Car,Steel
-Cotton candy,Sugar,Air
-Cotton candy,Sugar,Thread
-Cotton candy,Sugar,Cloud
+Alchemist,Human,Gold
+Alchemist,Gold,Philosophy
+Rose,Love,Plant
+Rose,Love,Flower
+Rose,Blade,Plant
+Rose,Blade,Flower
+Cannon,Gunpowder,Pirate ship
+Cannon,Gunpowder,Castle
+Cannon,Gun,Pirate ship
+Cannon,Gun,Castle
+Chicken wing,Chicken,Bone
+Chicken wing,Chicken,Bbq
+Polar bear,Animal,Ice
+Polar bear,Animal,Arctic
+Coffin,Wood,Corpse
+Coffin,Container,Corpse
+Coffin,Container,Vampire
+Acid rain,Rain,Smoke
+Acid rain,Rain,Smog
+Acid rain,Rain,Sickness
+Acid rain,Rain,City
+Acid rain,Cloud,Smoke
+Acid rain,Cloud,Smog
+Acid rain,Cloud,Sickness
 Dew,Grass,Fog
 Dew,Grass,Water
 Dew,Grass,Dawn
@@ -2851,358 +3299,62 @@ Dew,Tree,Fog
 Dew,Tree,Dawn
 Dew,Water,Dawn
 Dew,Fog,Dawn
-Toucan,Bird,Rainbow
-Toucan,Bird,Double rainbow!
-Toucan,Bird,Palm
-Toucan,Palm,Owl
-Toucan,Palm,Seagull
-Toucan,Palm,Pigeon
-Vegetable,Farmer,Field
-Vegetable,Farmer,Forest
-Vegetable,Farmer,Plant
-Vegetable,Plant,Field
-Vegetable,Plant,Domestication
-Flour,Wheat,Wheat
-Flour,Wheat,Stone
-Flour,Wheat,Windmill
-Flour,Wheat,Wheel
-Flour,Wheat,Rock
-Grass,Plant,Earth
-Grass,Plant,Land
-Seasickness,Sickness,Sea
-Seasickness,Sickness,Ocean
-Seasickness,Sickness,Lake
-Seasickness,Sickness,Boat
-Seasickness,Sickness,Sailboat
-Seasickness,Sickness,Steamboat
-Woodpecker,Bird,Wood
-Woodpecker,Bird,Tree
-Woodpecker,Bird,Forest
-Grim reaper,Human,Scythe
-Grim reaper,Corpse,Scythe
-Grim reaper,Zombie,Scythe
-Grim reaper,Death,Scythe
-Grim reaper,Boat,Scythe
-Grim reaper,River,Scythe
-Grim reaper,Scythe,Deity
-Volcano,Lava,Earth
-Volcano,Lava,Mountain
-Volcano,Lava,Hill
-Volcano,Lava,Container
-Volcano,Fire,Mountain
-Volcano,Fire,Hill
-Volcano,Pressure,Mountain
-Volcano,Pressure,Hill
-Meteor,Meteoroid,Atmosphere
-Meteor,Meteoroid,Sky
-Meteor,Meteoroid,Air
-Meteor,Meteoroid,Night
-Meteor,Meteoroid,Day
-Pterodactyl,Dinosaur,Air
-Pterodactyl,Dinosaur,Sky
-Pterodactyl,Dinosaur,Bird
-Pterodactyl,Dinosaur,Eagle
-Pterodactyl,Dinosaur,Vulture
-Pterodactyl,Dinosaur,Airplane
-Sphinx,Statue,Lion
-Sphinx,Statue,Desert
-Sphinx,Statue,Pyramid
-Sphinx,Lion,Stone
-Jam,Juice,Sugar
-Jam,Juice,Fruit
-Jam,Juice,Machine
-Jam,Fruit,Machine
-Jam,Fruit,Heat
-Sandstone,Sand,Stone
-Sandstone,Sand,Rock
-Sandstone,Sand,Earth
-Cat,Animal,Milk
-Cat,Animal,Coconut milk
-Cat,Animal,Night
-Reed,Plant,Pond
-Reed,Plant,Puddle
-Reed,Plant,Swamp
-Reed,Plant,River
-Reed,Grass,Pond
-Reed,Grass,Puddle
-Reed,Grass,Swamp
-Reed,Grass,River
-Chicken wing,Chicken,Bone
-Chicken wing,Chicken,Bbq
-Seed,Pollen,Plant
-Seed,Pollen,Bee
-Treehouse,Tree,House
-Treehouse,Tree,Wood
-Christmas stocking,Fireplace,Wool
-Christmas stocking,Christmas tree,Wool
-Christmas stocking,Reindeer,Wool
-Christmas stocking,Santa,Wool
-Fabric,Thread,Machine
-Fabric,Thread,Tool
-Fabric,Thread,Wheel
-Waterfall,River,Mountain
-Waterfall,River,Mountain range
-Waterfall,River,Hill
-Waterfall,Lake,Mountain
-Waterfall,Lake,Mountain range
-Waterfall,Lake,Hill
-Dawn,Day,Night
-Crow,Bird,Scarecrow
-Crow,Bird,Field
-Crow,Pigeon,Scarecrow
-Crow,Pigeon,Field
-Crow,Owl,Scarecrow
-Crow,Owl,Field
-Crow,Hummingbird,Scarecrow
-Crow,Hummingbird,Field
-Knight,Human,Armor
-Knight,Warrior,Armor
-Knight,Warrior,Hero
-Knight,Warrior,Horse
-Hail,Ice,Rain
-Hail,Ice,Cloud
-Hail,Ice,Storm
-Hail,Ice,Wind
-Hail,Ice,Steam
-Hail,Ice,Sky
-Ant farm,Farm,Ant
-Ant farm,Ant,Jar
-Ant farm,Ant,Glass
-Ant farm,Anthill,Farm
-Ant farm,Anthill,Jar
-Restaurant,House,Cook
-Roller coaster,Park,Train
-Roller coaster,Park,Car
-Roller coaster,Park,Cart
-Roller coaster,Park,Wagon
-Energy,Fire,Fire
-Energy,Fire,Science
-Energy,Fire,Atmosphere
-Energy,Heat,Science
-Horse,Animal,Field
-Horse,Animal,Horseshoe
-Horse,Animal,Saddle
-Horse,Animal,Land
-Horse,Livestock,Hay
-Horse,Livestock,Barn
-Horse,Livestock,Horseshoe
-Horse,Livestock,Saddle
-Lawn mower,Grass,Tool
-Lawn mower,Grass,Machine
-Lawn mower,Scythe,Electricity
-Lawn mower,Scythe,Helicopter
-Lawn mower,Scythe,Windmill
-Lawn mower,Scythe,Tool
-Lawn mower,Scythe,Machine
-Lawn mower,Scythe,Motion
-Lawn mower,Helicopter,Field
-Petroleum,Fossil,Pressure
-Petroleum,Fossil,Liquid
-Petroleum,Fossil,Water
-Tent,Fabric,Wood
-Tent,Fabric,House
-Tent,Fabric,Village
-Tent,Fabric,Wall
-Bayonet,Gun,Blade
-Bayonet,Gun,Sword
-Bayonet,Gun,Axe
-Star,Night,Sky
-Star,Night,Telescope
-Star,Space,Telescope
-Star,Sky,Space
-Star,Night,Space
-Star,Sun,Space
-Surfer,Human,Wave
-Surfer,Human,Beach
-Dough,Flour,Water
-Dough,Flour,Puddle
-Dough,Flour,Rain
-Baker,Human,Bakery
-Baker,Human,Bread
-Baker,Human,Banana bread
-Baker,Human,Pizza
-Baker,Human,Toast
-Baker,Human,Batter
-Baker,Human,Pie
-Baker,Human,Donut
-Baker,Human,Cookie
-Baker,Human,Cookie dough
-Baker,Human,Dough
-Pie,Dough,Fruit
-Pie,Cookie dough,Fruit
-Pie,Dough,Meat
-Pie,Fruit,Baker
-Pie,Fruit,Bakery
-Post office,Mailman,House
-Post office,Mailman,Wall
-Post office,Mailman,Container
-Post office,Mailman,Letter
-Post office,Letter,Letter
-Post office,Letter,House
-Post office,Letter,Wall
-Hourglass,Sand,Glass
-Hourglass,Sand,Container
-Philosophy,Human,Story
-Philosophy,Human,Idea
-Philosophy,Egg,Chicken
-Perfume,Flower,Water
-Perfume,Flower,Steam
-Perfume,Flower,Alcohol
-Perfume,Rose,Water
-Perfume,Rose,Steam
-Perfume,Rose,Alcohol
-Perfume,Sunflower,Water
-Perfume,Sunflower,Steam
-Perfume,Sunflower,Alcohol
-Diver,Scuba tank,Human
-Diver,Scuba tank,Swimmer
-Diver,Scuba tank,Sea
-Diver,Scuba tank,Ocean
-Diver,Scuba tank,Lake
-Sandpaper,Sand,Paper
-Sandpaper,Sand,Fabric
-Gingerbread house,House,Gingerbread man
-Gingerbread house,House,Dough
-Gingerbread house,House,Cookie dough
-Gingerbread house,House,Cookie
-Gingerbread house,House,Donut
-Gingerbread house,House,Cake
-Mermaid,Fish,Human
-Mermaid,Fish,Legend
-Mermaid,Fish,Magic
-Mermaid,Fish,Swimmer
-Mermaid,Fish,Selkie
-Mermaid,Swimmer,Magic
+Chill,Air,Cold
+Chill,Human,Cold
+Chill,Human,Ice
+Jerky,Meat,Sun
+Jerky,Steak,Sun
+Jerky,Meat,Heat
+Jerky,Steak,Heat
+Zombie,Corpse,Life
+Zombie,Corpse,Story
+Zombie,Corpse,Bacteria
+Zombie,Human,Zombie
+Zombie,Corpse,Necromancer
+Chicken soup,Chicken,Water
+Chicken soup,Chicken,Liquid
+Chicken soup,Chicken wing,Water
+Chicken soup,Chicken wing,Liquid
 Container,Philosophy,Safe
 Container,Philosophy,Pottery
 Container,Philosophy,House
 Container,Philosophy,Box
 Container,Philosophy,Bottle
 Container,Philosophy,Bucket
-Drone,Robot,Airplane
-Drone,Robot,Helicopter
-Drone,Robot,Paper airplane
-Drone,Robot,Seaplane
-Fairy tale,Story,Monarch
-Fairy tale,Story,Castle
-Fairy tale,Story,Knight
-Fairy tale,Story,Dragon
-Fairy tale,Story,Unicorn
-Fairy tale,Story,Faerie
-Fairy tale,Story,Elf
-Pinocchio,Wood,Life
-Pinocchio,Wood,Story
-Pinocchio,Golem,Story
-Mailman,Human,Letter
-Mailman,Human,Newspaper
-Mailman,Letter,Mailbox
-Obsidian,Lava,Water
-Obsidian,Lava,Cold
-Obsidian,Lava,Glass
-Excalibur,Sword,Stone
-Excalibur,Sword,Legend
-Excalibur,Sword,Story
-Excalibur,Sword,Monarch
-Excalibur,Sword,Lake
-Excalibur,Sword,Fairy tale
-Space,Star,Sky
-Space,Star,Sun
-Space,Star,Moon
-Space,Solar system,Night
-Space,Solar system,Sky
-Idea,Human,Light bulb
-Idea,Light bulb,Engineer
-Idea,Light bulb,Science
-Idea,Science,Science
-Idea,Philosophy,Science
-Idea,Engineer,Engineer
-Idea,Hacker,Hacker
-Idea,Lumberjack,Lumberjack
-Idea,Farmer,Farmer
-Idea,Firefighter,Firefighter
-Idea,Electrician,Electrician
-Idea,Astronaut,Astronaut
-Idea,Warrior,Warrior
-Idea,Butcher,Butcher
-Idea,Doctor,Doctor
-Idea,Pilot,Pilot
-Idea,Baker,Baker
-Idea,Sailor,Sailor
-Idea,Surfer,Surfer
-Idea,Swimmer,Swimmer
-Idea,Cyclist,Cyclist
-Idea,Knight,Knight
-Idea,Monarch,Monarch
-Idea,Angler,Angler
-Idea,Mailman,Mailman
-Idea,Gardener,Gardener
-Idea,Philosophy,Philosophy
-Idea,Skier,Skier
-Idea,Diver,Diver
-Idea,Librarian,Librarian
-Idea,Alchemist,Alchemist
-Pig,Mud,Livestock
-Pig,Mud,Animal
-Pig,Mud,Cow
-Internet,Computer,Computer
-Internet,Computer,Wire
-Internet,Computer,Web
-Internet,Computer,Net
-Snowboarder,Human,Snowboard
-Wool,Sheep,Tool
-Wool,Sheep,Scissors
-Wool,Sheep,Blade
-Mercury,Planet,Small
-Mercury,Planet,Heat
-Swamp,Mud,Grass
-Swamp,Mud,Tree
-Swamp,Tree,Lake
-Swamp,Algae,Lake
-Swamp,Algae,Pond
-Swamp,Reed,Lake
-Swamp,Reed,Pond
-Swamp,Reed,Mud
-Gift,Christmas tree,Santa
-Gift,Christmas tree,Wrapping paper
-Gift,Santa,Christmas stocking
-Gift,Santa,Chimney
-Gift,Santa,Fireplace
-Gift,Santa,Cookie
-Gift,Santa,Milk
-Gift,Santa,Wrapping paper
-Gift,Christmas stocking,Wrapping paper
-Gift,Fireplace,Wrapping paper
-Paper cup,Cup,Paper
-Horizon,Earth,Sky
-Horizon,Continent,Sky
-Horizon,Land,Sky
-Horizon,Lake,Sky
-Horizon,Ocean,Sky
-Horizon,Sea,Sky
-Lizard,Stone,Animal
-Lizard,Rock,Animal
-Lizard,Swamp,Animal
-Lizard,Heat,Animal
-Lizard,Egg,Stone
-Lizard,Egg,Rock
-Lizard,Egg,Swamp
-Lizard,Dinosaur,Small
-Lizard,Blood,Cold
-Small,Philosophy,Bacteria
-Small,Philosophy,Oxygen
-Small,Philosophy,Carbon dioxide
-Small,Philosophy,Ozone
-Small,Philosophy,Pebble
-Small,Philosophy,Rivulet
-Small,Philosophy,Ant
-Small,Philosophy,Spider
-Small,Philosophy,Bee
-Small,Philosophy,Scorpion
-Small,Philosophy,Confetti
-Small,Philosophy,Seahorse
-Vault,Safe,Big
-Alchemist,Human,Gold
-Alchemist,Gold,Philosophy
+Steam engine,Steam,Machine
+Steam engine,Steam,Wheel
+Steam engine,Boiler,Wheel
+Eruption,Pressure,Volcano
+Eruption,Pressure,Lava
+Samurai,Human,Katana
+Tobacco,Plant,Fire
+Tobacco,Plant,Smoke
+Tobacco,Grass,Smoke
+Lasso,Rope,Cow
+Lasso,Rope,Horse
+Lasso,Rope,Pig
+Lasso,Rope,Wild boar
+Lasso,Rope,Sheep
+Lasso,Rope,Goat
+Chocolate milk,Chocolate,Milk
+Chocolate milk,Chocolate,Coconut milk
+Bakery,House,Bread
+Bakery,House,Baker
+Bakery,House,Donut
+Bakery,House,Cake
+Bakery,City,Bread
+Bakery,City,Baker
+Bakery,City,Donut
+Bakery,City,Cake
+Bakery,Village,Bread
+Bakery,Village,Baker
+Bakery,Village,Donut
+Bakery,Village,Cake
+Bakery,Baker,Container
+Hero,Human,Legend
+Hero,Dragon,Knight
+Hero,Human,Story
+Hero,Human,Lightning
 Tool,Human,Metal
 Tool,Human,Steel
 Tool,Human,Wood
@@ -3212,255 +3364,103 @@ Tool,Wood,Metal
 Tool,Wood,Steel
 Tool,Wood,Stone
 Tool,Wood,Rock
-Mountain goat,Goat,Mountain
-Mountain goat,Goat,Mountain range
-Box,Container,Pizza
-Box,Container,Pencil
-Box,Container,Cereal
-Box,Container,Cookie
-Box,Container,Donut
-Box,Container,Cake
-Box,Container,Crayon
-Cup,Container,Smoothie
-Cup,Container,Tea
-Cup,Container,Milk shake
-Cup,Bottle,Smoothie
-Cup,Bottle,Tea
-Cup,Bottle,Milk shake
-Water,Heat,Ice
-Water,Heat,Snow
-Archipelago,Island,Island
-Archipelago,Island,Sea
-Archipelago,Island,Ocean
-Twilight,Day,Night
-Organic matter,Life,Death
-Organic matter,Life,Science
-Organic matter,Bacteria,Death
-Organic matter,Corpse,Science
-Mineral,Organic matter,Stone
-Mineral,Organic matter,Rock
-Mineral,Organic matter,Earth
-Mineral,Organic matter,Boulder
-Mineral,Organic matter,Hill
-Mineral,Organic matter,Mountain
-Ostrich,Bird,Earth
-Ostrich,Bird,Sand
-Ostrich,Bird,Big
-Steak,Meat,Bbq
-Steak,Meat,Fire
-Steak,Cow,Bbq
-Steak,Cow,Fire
-Narwhal,Unicorn,Fish
-Narwhal,Unicorn,Sea
-Narwhal,Unicorn,Ocean
-Narwhal,Unicorn,Water
-Narwhal,Unicorn,Shark
-Narwhal,Unicorn,Swordfish
-Narwhal,Unicorn,Flying fish
-Centaur,Horse,Human
-Centaur,Horse,Story
-Fruit,Flower,Rain
-Fruit,Flower,Water
-Fruit,Flower,Tree
-Fruit,Tree,Farmer
-Fruit,Farmer,Orchard
-Jack-o'-lantern,Pumpkin,Fire
-Jack-o'-lantern,Pumpkin,Candle
-Jack-o'-lantern,Pumpkin,Light
-Jack-o'-lantern,Pumpkin,Night
-Jack-o'-lantern,Pumpkin,Ghost
-Jack-o'-lantern,Pumpkin,Skeleton
-Jack-o'-lantern,Vegetable,Ghost
-Jack-o'-lantern,Vegetable,Skeleton
-Jack-o'-lantern,Vegetable,Night
-Rabbit,Animal,Carrot
-Rabbit,Rabbit,Rabbit
-Butter,Milk,Pressure
-Butter,Milk,Energy
-Butter,Milk,Motion
-Butter,Milk,Tool
-Picnic,Sandwich,Grass
-Picnic,Sandwich,Beach
-Picnic,Sandwich,Lawn
-Picnic,Sandwich,Garden
-Picnic,Sandwich,Fabric
-Sun,Sky,Light
-Sun,Sky,Fire
-Sun,Day,Space
-Sun,Day,Sky
-Sun,Day,Light
-Sun,Planet,Fire
-Sun,Planet,Light
-Field,Farmer,Earth
-Field,Farmer,Land
-Field,Farmer,Soil
-Field,Tool,Earth
-Field,Tool,Land
-Field,Tool,Soil
-Field,Plow,Earth
-Field,Plow,Land
-Field,Plow,Soil
-Fog,Cloud,Earth
-Fog,Cloud,Hill
-Fog,Cloud,Mountain
-Fog,Cloud,City
-Fog,Cloud,Field
-Fog,Cloud,Forest
-Egg,Life,Container
-Egg,Bird,Bird
-Egg,Turtle,Turtle
-Egg,Lizard,Lizard
-Egg,Vulture,Vulture
-Egg,Phoenix,Phoenix
-Egg,Chicken,Chicken
-Egg,Dragon,Dragon
-Egg,Penguin,Penguin
-Egg,Owl,Owl
-Egg,Dinosaur,Dinosaur
-Egg,Duck,Duck
-Egg,Seagull,Seagull
-Egg,Eagle,Eagle
-Egg,Scorpion,Scorpion
-Egg,Spider,Spider
-Egg,Pigeon,Pigeon
-Egg,Fish,Fish
-Egg,Piranha,Piranha
-Egg,Parrot,Parrot
-Egg,Peacock,Peacock
-Egg,Hummingbird,Hummingbird
-Egg,Chameleon,Chameleon
-Egg,Ostrich,Ostrich
-Egg,Woodpecker,Woodpecker
-Egg,Bee,Bee
-Egg,Crow,Crow
-Egg,Frog,Frog
-Egg,Pterodactyl,Pterodactyl
-Egg,Ant,Ant
-Egg,Moth,Moth
-Egg,Butterfly,Butterfly
-Egg,Snake,Snake
-Egg,Flying fish,Flying fish
-Egg,Tyrannosaurus rex,Tyrannosaurus rex
-Arctic,Cold,Sea
-Arctic,Cold,Ocean
-Electric car,Electricity,Car
-Electric car,Electricity,Wagon
-Electric car,Car,Wind turbine
-Electric car,Wagon,Wind turbine
-Electric car,Solar cell,Car
-Electric car,Solar cell,Wagon
-Sugar,Fruit,Fire
-Sugar,Fruit,Energy
-Sugar,Juice,Fire
-Sugar,Juice,Energy
-Sugar,Alcohol,Fire
-Sugar,Alcohol,Energy
-Sugar,Beer,Fire
-Sugar,Beer,Energy
-Sugar,Wine,Fire
-Sugar,Wine,Energy
-Plasma,Science,Star
-Plasma,Science,Sun
-Plasma,Heat,Heat
-Plasma,Heat,Pressure
+Don quixote,Windmill,Knight
+Don quixote,Windmill,Story
+Don quixote,Windmill,Legend
+Don quixote,Windmill,Hero
+Flying fish,Fish,Bird
+Flying fish,Fish,Sky
+Flying fish,Fish,Air
+Penicillin,Mold,Doctor
+Penicillin,Mold,Science
+Penicillin,Mold,Idea
+Penicillin,Mold,Hospital
+Dough,Flour,Water
+Dough,Flour,Puddle
+Dough,Flour,Rain
+Pizza,Cheese,Dough
+Pizza,Cheese,Bread
+Pizza,Cheese,Wheel
+Continent,Land,Big
+Continent,Land,Land
+Continent,Land,Earth
+Continent,Mountain range,Mountain range
+Bacteria,Life,Primordial soup
+Bacteria,Life,Small
+Bacteria,Life,Mud
+Family,Human,Human
+Family,Human,House
+Family,Love,Container
+Mayonnaise,Egg,Oil
+Vault,Safe,Big
+Smartphone,Small,Tablet
 Bullet,Gunpowder,Metal
 Bullet,Gunpowder,Steel
 Bullet,Gunpowder,Tool
 Bullet,Gunpowder,Container
-Glasses,Glass,Glass
-Glasses,Glass,Metal
-Glasses,Glass,Steel
-Glasses,Glass,Human
-Glasses,Human,Lens
-Glasses,Lens,Lens
-Double rainbow!,Rainbow,Rainbow
-Animal,Life,Land
-Animal,Life,Forest
-Animal,Life,Mountain
-Animal,Life,Mountain range
-Animal,Life,Beach
-Animal,Life,Desert
-Greenhouse,Glass,Plant
-Greenhouse,Glass,Grass
-Greenhouse,Glass,Tree
-Greenhouse,Glass,Garden
-Greenhouse,Aquarium,Plant
-Greenhouse,Aquarium,Tree
-Greenhouse,Aquarium,Grass
-Greenhouse,Plant,Container
-Saturn,Ring,Planet
-Saturn,Jupiter,Small
-Vinegar,Wine,Air
-Vinegar,Wine,Oxygen
-Mountain range,Mountain,Mountain
-Mountain range,Mountain,Continent
-Mars,Planet,Rust
-Mars,Planet,Desert
-City,Village,Village
-City,Village,Skyscraper
-City,Village,Big
-City,Skyscraper,Skyscraper
-City,Skyscraper,Container
-City,Skyscraper,Bank
-City,Skyscraper,Post office
-City,Bank,Container
-City,Bank,Post office
-Lightning,Electricity,Cloud
-Lightning,Electricity,Storm
-Lightning,Electricity,Rain
-Lightning,Energy,Cloud
-Lightning,Energy,Storm
-Lightning,Energy,Rain
-Lightning,Land,Storm
-Lightning,Zeus,Tool
-Lightning,Cyclops,Tool
-Flashlight,Tool,Light
-Flashlight,Tool,Light bulb
-Flashlight,Tool,Lamp
-Flashlight,Human,Lamp
-Ivy,Plant,Wall
-Ivy,Grass,Wall
-Doctor,Human,Hospital
-Doctor,Human,Stethoscope
-Yeti,Mountain,Story
-Yeti,Mountain,Legend
-Yeti,Mountain range,Story
-Yeti,Mountain range,Legend
-Yeti,Glacier,Story
-Yeti,Glacier,Legend
-Yeti,Antarctica,Story
-Yeti,Antarctica,Legend
-Yeti,Monster,Mountain
-Yeti,Monster,Mountain range
-Yeti,Monster,Glacier
-Yeti,Monster,Antarctica
-Blender,Blade,Glass
-Blender,Blade,Electricity
-Blender,Blade,Windmill
-Blender,Blade,Wind turbine
-Blender,Blade,Motion
-Lamp,Light bulb,Metal
-Lamp,Light bulb,Steel
-Snow globe,Crystal ball,Ice
-Snow globe,Crystal ball,Cold
-Snow globe,Crystal ball,Snow
-Snow globe,Crystal ball,Snowman
-Snow globe,Crystal ball,Snowball
-Snow globe,Crystal ball,Snowmobile
-Snow globe,Crystal ball,Santa
-Snow globe,Crystal ball,Christmas tree
-Snow globe,Crystal ball,Christmas stocking
-Snow globe,Crystal ball,Blizzard
-Snow globe,Glass,Snow
-Snow globe,Glass,Snowman
-Snow globe,Glass,Snowball
-Snow globe,Glass,Snowmobile
-Snow globe,Glass,Santa
-Snow globe,Glass,Christmas tree
-Snow globe,Glass,Christmas stocking
-Snow globe,Glass,Blizzard
-Coal,Pressure,Organic matter
-Coal,Earth,Peat
-Coal,Stone,Peat
-Coal,Rock,Peat
-Coal,Pressure,Peat
+Ninja turtle,Turtle,Ninja
+Ninja turtle,Turtle,Shuriken
+Ninja turtle,Turtle,Katana
+Blade,Stone,Metal
+Blade,Stone,Steel
+Blade,Rock,Metal
+Blade,Rock,Steel
+Aurora,Electricity,Atmosphere
+Aurora,Electricity,Antarctica
+Aurora,Electricity,Sky
+Aurora,Electricity,Arctic
+Aurora,Sky,Antarctica
+Aurora,Sky,Arctic
+Aurora,Sun,Atmosphere
+Electrician,Human,Electricity
+Electrician,Human,Wire
+Snake,Animal,Rope
+Snake,Animal,Wire
+Snake,Electric eel,Land
+Ufo,Alien,Rocket
+Ufo,Alien,Airplane
+Ufo,Alien,Spaceship
+Ufo,Alien,Space station
+Ufo,Alien,Sky
+Ufo,Alien,Container
+Gardener,Human,Garden
+Gardener,Farmer,Garden
+The one ring,Ring,Volcano
+The one ring,Ring,Magic
+Butterfly net,Butterfly,Net
+Butterfly net,Bee,Net
+Birdcage,Bird,Container
+Birdcage,Bird,Safe
+Birdcage,Bird,Wall
+Birdcage,Bird,Cage
+Carrot,Vegetable,Snowman
+Carrot,Vegetable,Grass
+Carrot,Vegetable,Garden
+Carrot,Snowman,Sun
+Soda,Carbon dioxide,Water
+Soda,Carbon dioxide,Juice
+Soda,Carbon dioxide,Tea
+Axe,Wood,Blade
+Axe,Wood,Tool
+Axe,Wood,Stone
+Axe,Tool,Lumberjack
+Axe,Tool,Paul bunyan
+Beer,Alcohol,Wheat
+Jar,Jam,Container
+Jar,Jam,Bottle
+Jar,Jam,Glass
+Jar,Jam,Bucket
+Wrapping paper,Paper,Gift
+Wrapping paper,Paper,Christmas tree
+Wrapping paper,Paper,Christmas stocking
+Wrapping paper,Paper,Santa
+Sandwich,Bread,Meat
+Sandwich,Bread,Bacon
+Sandwich,Bread,Ham
+Sandwich,Bread,Cheese
+Sandwich,Bread,Vegetable
+Smog,Smoke,Fog
+Smog,City,Smoke
+Smog,City,Fog
+Smog,City,Atmosphere
+Smog,City,Air
