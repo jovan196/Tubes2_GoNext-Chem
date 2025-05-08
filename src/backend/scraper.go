@@ -9,7 +9,6 @@ import (
 	"os"
 	"regexp"
 	"strings"
-
 	"github.com/PuerkitoBio/goquery"
 )
 
