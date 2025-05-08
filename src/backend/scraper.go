@@ -33,12 +33,12 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// 2) Prepare regex to find "Element + Element" pairs
+	// Regex pasangan Elemen+Elemen
 	re := regexp.MustCompile(`([A-Za-z ]+)\s*\+\s*([A-Za-z ]+)`)
 
 	graph := make(map[string][][2]string)
 
-	// 3) Loop through each table, find rows with at least two columns
+	// loop tabel, cari baris yang mengandung minimal 2 kolom
 	doc.Find("table").Each(func(_ int, table *goquery.Selection) {
 		table.Find("tr").Each(func(_ int, row *goquery.Selection) {
 			cells := row.Find("td")
@@ -61,17 +61,6 @@ func main() {
 	jf, _ := os.Create("elements_graph.json")
 	defer jf.Close()
 	json.NewEncoder(jf).Encode(graph)
-
-	// 6) Write CSV
-	cf, _ := os.Create("elements_graph.csv")
-	defer cf.Close()
-	w := csv.NewWriter(cf)
-	w.Write([]string{"Product", "Ingredient1", "Ingredient2"})
-	for prod, pairs := range graph {
-		for _, p := range pairs {
-			w.Write([]string{prod, p[0], p[1]})
-		}
-	}
 	w.Flush()
 
 	fmt.Printf("Extracted %d products\n", len(graph))
