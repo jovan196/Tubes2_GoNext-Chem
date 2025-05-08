@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchForm from "./components/SearchForm";
+import RecipeTree from "./components/RecipeTree"; // pastikan ini ditambahkan
 
 function App() {
   const [result, setResult] = useState(null);
@@ -11,10 +12,8 @@ function App() {
 
       {result && (
         <div className="mt-8">
-          <h2 className="font-bold">Hasil:</h2>
-          <pre className="bg-white p-4 rounded shadow-md">
-            {JSON.stringify(result, null, 2)}
-          </pre>
+          <h2 className="font-bold mb-4">Hasil:</h2>
+          <RecipeTree data={result} />
         </div>
       )}
     </div>
