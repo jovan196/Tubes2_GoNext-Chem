@@ -8,18 +8,20 @@ import (
 )
 
 func main() {
+	// Scrape & simpan graph (jika perlu setiap startup)
 	ScrapeElement()
 
-	err := LoadGraph("elements_graph.json")
-	if err != nil {
-		log.Fatal("Failed to load graph:", err)
+	// Load ke memori
+	if err := LoadGraph("elements_graph.json"); err != nil {
+		log.Fatal("LoadGraph:", err)
 	}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/search", SearchHandler)
 
+	// izinkan CORS untuk frontend Next.js
 	handler := cors.Default().Handler(mux)
 
-	log.Println("Server started at :8080")
+	log.Println("Server listening on :8080")
 	log.Fatal(http.ListenAndServe(":8080", handler))
 }

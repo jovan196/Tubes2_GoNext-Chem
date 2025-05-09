@@ -1,79 +1,107 @@
 package main
 
 import (
-	"encoding/csv"
 	"encoding/json"
 	"fmt"
 	"log"
 	"os"
+	"regexp"
+	"sort"
 	"strings"
+	"time"
 
 	"github.com/gocolly/colly"
 )
 
+// Recipe represents a combination: result ← input elements
+type Recipe struct {
+	Result string   `json:"result"`
+	Input  []string `json:"input"`
+}
+
 func ScrapeElement() {
-	url := "https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2)"
-	graph := map[string][][2]string{}
+	// collector with timeout
+	c := colly.NewCollector(
+		colly.UserAgent("LA2-Scraper/1.0"),
+	)
+	c.SetRequestTimeout(30 * time.Second)
 
-	c := colly.NewCollector(colly.AllowedDomains("little-alchemy.fandom.com"))
-	tableIndex := 0
+	var recipes []Recipe
+	plus := regexp.MustCompile(`\s*\+\s*`)
 
-	c.OnHTML("table.list-table", func(table *colly.HTMLElement) {
-		tableIndex++
-
-		table.ForEach("tbody tr", func(_ int, h *colly.HTMLElement) {
-			product := strings.TrimSpace(h.ChildText("td:first-of-type a"))
-			if product == "" || product == "Time" || product == "Ruins" || product == "Archeologist" {
+	// for each row in the table
+	c.OnHTML("table.list-table tbody tr", func(e *colly.HTMLElement) {
+		// get the product name
+		result := strings.TrimSpace(e.ChildText("td:nth-child(1) a"))
+		if result == "" {
+			return
+		}
+		// iterate each <li> in the second column
+		e.ForEach("td:nth-child(2) li", func(_ int, li *colly.HTMLElement) {
+			// try to get all anchors to wiki pages
+			elements := li.ChildAttrs("a[href^='/wiki/']", "href")
+			comps := make([]string, 0, len(elements))
+			for _, href := range elements {
+				comps = append(comps, li.DOM.Find("a[href='"+href+"']").Text())
+			}
+			// fallback: split on plus if fewer than 2 anchors
+			if len(comps) < 2 {
+				for _, part := range plus.Split(li.Text, -1) {
+					if p := strings.TrimSpace(part); p != "" {
+						comps = append(comps, p)
+					}
+				}
+			}
+			if len(comps) < 2 {
 				return
 			}
-
-			h.ForEach("td:nth-of-type(2) li", func(_ int, li *colly.HTMLElement) {
-				aTags := li.DOM.Find("a")
-				if aTags.Length() < 4 {
-					return
-				}
-
-				ingredient1 := strings.TrimSpace(aTags.Eq(1).Text())
-				ingredient2 := strings.TrimSpace(aTags.Eq(3).Text())
-
-				if ingredient1 == "" || ingredient2 == "" || ingredient1 == "Time" || ingredient2 == "Time" ||
-					ingredient1 == "Ruins" || ingredient2 == "Ruins" || ingredient1 == "Archeologist" || ingredient2 == "Archeologist" {
-					return
-				}
-
-				graph[product] = append(graph[product], [2]string{ingredient1, ingredient2})
+			recipes = append(recipes, Recipe{
+				Result: result,
+				Input:  uniqueSort(comps),
 			})
 		})
 	})
 
-	err := c.Visit(url)
-	if err != nil {
-		log.Fatal(err)
+	// visit the page
+	if err := c.Visit("https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2)"); err != nil {
+		log.Fatalf("Failed to visit page: %v", err)
 	}
 
-	// Simpan ke JSON
-	jsonFile, err := os.Create("elements_graph.json")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer jsonFile.Close()
-	json.NewEncoder(jsonFile).Encode(graph)
-
-	// Simpan ke CSV
-	csvFile, err := os.Create("elements_graph.csv")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer csvFile.Close()
-	writer := csv.NewWriter(csvFile)
-	defer writer.Flush()
-
-	writer.Write([]string{"Product", "Ingredient1", "Ingredient2"})
-	for prod, pairs := range graph {
-		for _, pair := range pairs {
-			writer.Write([]string{prod, pair[0], pair[1]})
+	// sort recipes by result, then inputs
+	sort.Slice(recipes, func(i, j int) bool {
+		if recipes[i].Result != recipes[j].Result {
+			return recipes[i].Result < recipes[j].Result
 		}
+		return strings.Join(recipes[i].Input, ",") < strings.Join(recipes[j].Input, ",")
+	})
+
+	// write output JSON
+	outFile := "elements_graph.json"
+	f, err := os.Create(outFile)
+	if err != nil {
+		log.Fatalf("Failed to create %s: %v", outFile, err)
+	}
+	defer f.Close()
+
+	enc := json.NewEncoder(f)
+	enc.SetIndent("", "  ")
+	if err := enc.Encode(map[string]interface{}{"recipes": recipes}); err != nil {
+		log.Fatalf("Failed to encode JSON: %v", err)
 	}
 
-	fmt.Printf("Sukses scraping %d elemen\n", len(graph))
+	fmt.Printf("✅ Parsed %d recipes → %s\n", len(recipes), outFile)
+}
+
+// uniqueSort dedups and sorts a slice of strings
+func uniqueSort(in []string) []string {
+	set := make(map[string]struct{}, len(in))
+	for _, s := range in {
+		set[s] = struct{}{}
+	}
+	out := make([]string, 0, len(set))
+	for s := range set {
+		out = append(out, s)
+	}
+	sort.Strings(out)
+	return out
 }

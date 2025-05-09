@@ -23,21 +23,25 @@ type SearchResponse struct {
 	Steps  []RecipeStep `json:"steps"`
 }
 
-func buildStepsFromTrace(node *TraceNode) []RecipeStep {
-	visited := map[string]bool{}
-	var steps []RecipeStep
+// writeJSONResponse menulis v sebagai JSON ke ResponseWriter
+func writeJSONResponse(w http.ResponseWriter, v interface{}) {
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(v)
+}
 
+func buildStepsFromTrace(node *TraceNode) []RecipeStep {
+	visited := make(map[string]bool)
+	var steps []RecipeStep
 	var dfs func(*TraceNode)
 	dfs = func(n *TraceNode) {
 		if n == nil || visited[n.Product] {
 			return
 		}
-		// leaf nodes (basic) may have nil parents
+		visited[n.Product] = true
+		// jika leaf (basic), parent mungkin nil
 		if n.Parent[0] == nil || n.Parent[1] == nil {
-			visited[n.Product] = true
 			return
 		}
-		visited[n.Product] = true
 		dfs(n.Parent[0])
 		dfs(n.Parent[1])
 		steps = append(steps, RecipeStep{
@@ -63,57 +67,40 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 
 	algo := strings.ToLower(req.Algorithm)
 	switch algo {
+
 	case "bfs":
 		if req.Mode == "multiple" {
 			nodes := MultiBFS_Trace(req.Target, req.Max)
-			var resp []SearchResponse
-			for _, node := range nodes {
-				resp = append(resp, SearchResponse{
-					Result: req.Target,
-					Steps:  buildStepsFromTrace(node),
-				})
+			var out []SearchResponse
+			for _, n := range nodes {
+				out = append(out, SearchResponse{Result: req.Target, Steps: buildStepsFromTrace(n)})
 			}
-			w.Header().Set("Content-Type", "application/json")
-			json.NewEncoder(w).Encode(resp)
+			writeJSONResponse(w, out)
 			return
 		}
-		// single
-		node := BFS(req.Target)
-		if node == nil {
-			http.Error(w, "Element not reachable", http.StatusNotFound)
+		if node := BFS(req.Target); node != nil {
+			writeJSONResponse(w, []SearchResponse{{Result: req.Target, Steps: buildStepsFromTrace(node)}})
 			return
 		}
-		result := SearchResponse{Result: req.Target, Steps: buildStepsFromTrace(node)}
-		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode([]SearchResponse{result})
-		return
+		http.Error(w, "Element not reachable", http.StatusNotFound)
 
 	case "dfs":
 		if req.Mode == "multiple" {
 			nodes := MultiDFS_Trace(req.Target, req.Max)
-			var resp []SearchResponse
-			for _, node := range nodes {
-				resp = append(resp, SearchResponse{
-					Result: req.Target,
-					Steps:  buildStepsFromTrace(node),
-				})
+			var out []SearchResponse
+			for _, n := range nodes {
+				out = append(out, SearchResponse{Result: req.Target, Steps: buildStepsFromTrace(n)})
 			}
-			w.Header().Set("Content-Type", "application/json")
-			json.NewEncoder(w).Encode(resp)
+			writeJSONResponse(w, out)
 			return
 		}
-		node := DFS(req.Target)
-		if node == nil {
-			http.Error(w, "Element not reachable", http.StatusNotFound)
+		if node := DFS(req.Target); node != nil {
+			writeJSONResponse(w, []SearchResponse{{Result: req.Target, Steps: buildStepsFromTrace(node)}})
 			return
 		}
-		result := SearchResponse{Result: req.Target, Steps: buildStepsFromTrace(node)}
-		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode([]SearchResponse{result})
-		return
+		http.Error(w, "Element not reachable", http.StatusNotFound)
 
 	default:
 		http.Error(w, "Only BFS and DFS are implemented", http.StatusNotImplemented)
-		return
 	}
 }

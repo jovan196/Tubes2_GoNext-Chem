@@ -1,155 +1,134 @@
 package main
 
-import (
-	"sync"
-)
+// elemen dasar
+var basic = []string{"Air", "Earth", "Fire", "Water"}
 
 type TraceNode struct {
 	Product string
 	From    [2]string
 	Parent  [2]*TraceNode
+	Depth   int
 }
 
-func BFS(target string) *TraceNode {
-	// Inisialisasi node dasar
-	basicElements := []string{"Air", "Water", "Earth", "Fire", "Time"}
-	allNodes := map[string]*TraceNode{}
-	queue := []*TraceNode{}
-
-	for _, elem := range basicElements {
-		node := &TraceNode{Product: elem}
-		allNodes[elem] = node
-		queue = append(queue, node)
+/*func isBasic(e string) bool {
+	for _, b := range basic {
+		if b == e {
+			return true
+		}
 	}
+	return false
+}*/
 
+// ----------  SINGLE  BFS  ----------
+func BFS(target string) *TraceNode {
+	all := map[string]*TraceNode{}
+	queue := []*TraceNode{}
 	visited := map[string]bool{}
-	for _, elem := range basicElements {
-		visited[elem] = true
+
+	// init dasar
+	for _, b := range basic {
+		n := &TraceNode{Product: b, Depth: 0}
+		all[b] = n
+		queue = append(queue, n)
+		if b == target {
+			return n // <--  langsung selesai
+		}
+
 	}
 
 	for len(queue) > 0 {
-		curr := queue[0]
-		queue = queue[1:]
+		curr := queue[0]  // <-- ambil dulu
+		queue = queue[1:] // pop
+		visited[curr.Product] = true
 
-		for product, recipes := range Graph {
-			if visited[product] {
+		for prod, recs := range Graph {
+			if visited[prod] { // boleh skip hanya jika node SUDAH diproses
 				continue
 			}
-			for _, pair := range recipes {
+			for _, pair := range recs {
 				a, b := pair[0], pair[1]
-				if (curr.Product == a && visited[b]) || (curr.Product == b && visited[a]) {
-					// Cek apakah bahan-bahan sudah pernah dibuat
-					left := allNodes[a]
-					right := allNodes[b]
-					if left == nil || right == nil {
+				left, okL := all[a]
+				right, okR := all[b]
+				if !okL || !okR { // kedua bahan belum tersedia
+					continue
+				}
+
+				node := &TraceNode{
+					Product: prod,
+					From:    [2]string{a, b},
+					Parent:  [2]*TraceNode{left, right},
+					Depth:   max(left.Depth, right.Depth) + 1,
+				}
+				all[prod] = node
+				if prod == target {
+					return node
+				}
+				queue = append(queue, node)
+			}
+		}
+	}
+	return nil
+}
+
+// ----------  MULTIPLE  BFS  ----------
+func MultiBFS_Trace(target string, maxSol int) []*TraceNode {
+	var solutions []*TraceNode
+	for _, pair := range Graph[target] { // coba tiap resep langsung
+		startA, startB := pair[0], pair[1]
+
+		// fresh structures utk tiap percobaan
+		all := map[string]*TraceNode{
+			startA: {Product: startA},
+			startB: {Product: startB},
+		}
+		queue := []*TraceNode{all[startA], all[startB]}
+		visited := map[string]bool{}
+		for _, b := range basic {
+			visited[b] = true
+		}
+
+		for len(queue) > 0 && len(solutions) < maxSol {
+			curr := queue[0]
+			queue = queue[1:]
+			visited[curr.Product] = true
+
+			for prod, recs := range Graph {
+				if visited[prod] {
+					continue
+				}
+				for _, rc := range recs {
+					a, b := rc[0], rc[1]
+					left, okL := all[a]
+					right, okR := all[b]
+					if !okL || !okR {
 						continue
 					}
-
 					node := &TraceNode{
-						Product: product,
+						Product: prod,
 						From:    [2]string{a, b},
 						Parent:  [2]*TraceNode{left, right},
+						Depth:   max(left.Depth, right.Depth) + 1,
 					}
-
-					allNodes[product] = node
-					if product == target {
-						return node
+					all[prod] = node
+					if prod == target {
+						solutions = append(solutions, node)
+						break // temukan satu jalur; cari jalur lain dg resep berbeda
 					}
-
-					visited[product] = true
 					queue = append(queue, node)
 				}
 			}
 		}
-	}
-
-	return nil
-}
-
-func MultiBFS_Trace(target string, max int) []*TraceNode {
-	var results []*TraceNode
-	var mu sync.Mutex
-	var wg sync.WaitGroup
-	resultChan := make(chan *TraceNode, max)
-
-	visitedGlobal := map[string]bool{
-		"Air": true, "Water": true, "Earth": true, "Fire": true, "Time": true,
-	}
-
-	for product, recipes := range Graph {
-		if product == target {
-			for _, pair := range recipes {
-				wg.Add(1)
-				go func(pair [2]string) {
-					defer wg.Done()
-
-					queue := []*TraceNode{
-						{Product: pair[0]},
-						{Product: pair[1]},
-					}
-
-					visited := make(map[string]bool)
-					for k, v := range visitedGlobal {
-						visited[k] = v
-					}
-					visited[pair[0]] = true
-					visited[pair[1]] = true
-
-					for len(queue) > 0 {
-						curr := queue[0]
-						queue = queue[1:]
-
-						for prod, recs := range Graph {
-							for _, rec := range recs {
-								if (curr.Product == rec[0] && visited[rec[1]]) || (curr.Product == rec[1] && visited[rec[0]]) {
-									node := &TraceNode{
-										Product: product,
-										From:    [2]string{pair[0], pair[1]},
-										Parent:  [2]*TraceNode{findNode(queue, pair[0]), findNode(queue, pair[1])},
-									}
-
-									if prod == target {
-										mu.Lock()
-										if len(results) < max {
-											results = append(results, node)
-											resultChan <- node
-										}
-										mu.Unlock()
-										return
-									}
-									if !visited[prod] {
-										visited[prod] = true
-										queue = append(queue, node)
-									}
-								}
-							}
-						}
-					}
-				}(pair)
-			}
-		}
-	}
-
-	go func() {
-		wg.Wait()
-		close(resultChan)
-	}()
-
-	for node := range resultChan {
-		results = append(results, node)
-		if len(results) >= max {
+		if len(solutions) >= maxSol {
 			break
 		}
 	}
-
-	return results
+	return solutions
 }
 
-func findNode(queue []*TraceNode, name string) *TraceNode {
-	for i := len(queue) - 1; i >= 0; i-- {
-		if queue[i].Product == name {
-			return queue[i]
-		}
+// ----------  helper ----------
+func max(a, b int) int {
+	if a > b {
+		return a
 	}
-	return nil
+	return b
 }
