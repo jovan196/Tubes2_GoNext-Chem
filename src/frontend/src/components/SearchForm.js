@@ -50,16 +50,15 @@ function SearchForm({ setResult }) {
           />
           BFS
         </label>
-        <label className="flex items-center gap-2 text-gray-500">
+        <label className="flex items-center gap-2">
           <input
             type="radio"
             name="algorithm"
             value="DFS"
             checked={algorithm === "DFS"}
             onChange={(e) => setAlgorithm(e.target.value)}
-            disabled // karena belum ada implementasi DFS
           />
-          DFS (belum aktif)
+          DFS
         </label>
       </div>
 
