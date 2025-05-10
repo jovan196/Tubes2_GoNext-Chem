@@ -65,30 +65,30 @@ const RecipeTree = ({ data }) => {
                 renderCustomNodeElement={({ nodeDatum }) => {
                   const isBasic = BASIC.has(nodeDatum.name);
                   const color = isBasic ? "#D1FAE5" : "#DBEAFE";
-                  return (
+                    return (
                     <g>
                       <rect
-                        width={80}
-                        height={30}
-                        x={-40}
-                        y={-15}
-                        fill={color}
-                        stroke="#555"
-                        strokeWidth={1.5}
-                        rx={6}
+                      width={80}
+                      height={30}
+                      x={-40}
+                      y={-15}
+                      fill={color}
+                      stroke="#555"
+                      strokeWidth={1}
+                      rx={6}
                       />
                       <text
-                        fill="#111"
-                        x={0}
-                        y={5}
-                        textAnchor="middle"
-                        fontSize={12}
-                        fontWeight="bold"
+                      fill="#111"
+                      x={0}
+                      y={5}
+                      textAnchor="middle"
+                      fontSize={12}
+                      fontWeight="normal"
                       >
-                        {nodeDatum.name}
+                      {nodeDatum.name}
                       </text>
                     </g>
-                  );
+                    );
                 }}
               />
             </div>
