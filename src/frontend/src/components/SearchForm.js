@@ -6,22 +6,31 @@ function SearchForm({ setResult }) {
   const [algorithm, setAlgorithm] = useState("BFS");
   const [multiple, setMultiple] = useState(false);
   const [maxRecipe, setMaxRecipe] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
     const payload = {
-      target,
+      target: target.trim(),
       algorithm,
       mode: multiple ? "multiple" : "single",
-      max: multiple ? parseInt(maxRecipe) : 1,
+      max: multiple ? parseInt(maxRecipe, 10) : 1,
     };
 
     try {
-      const res = await axios.post("http://localhost:8080/api/search", payload);
+      const res = await axios.post(
+        "http://localhost:8080/api/search",
+        payload
+      );
+      // res.data is array of { result, steps, timeMs, visitedCount }
       setResult(res.data);
     } catch (err) {
       alert("Gagal mengambil data dari backend.");
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -40,26 +49,18 @@ function SearchForm({ setResult }) {
       />
 
       <div className="flex justify-around">
-        <label className="flex items-center gap-2">
-          <input
-            type="radio"
-            name="algorithm"
-            value="BFS"
-            checked={algorithm === "BFS"}
-            onChange={(e) => setAlgorithm(e.target.value)}
-          />
-          BFS
-        </label>
-        <label className="flex items-center gap-2">
-          <input
-            type="radio"
-            name="algorithm"
-            value="DFS"
-            checked={algorithm === "DFS"}
-            onChange={(e) => setAlgorithm(e.target.value)}
-          />
-          DFS
-        </label>
+        {['BFS', 'DFS'].map((algo) => (
+          <label key={algo} className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="algorithm"
+              value={algo}
+              checked={algorithm === algo}
+              onChange={(e) => setAlgorithm(e.target.value)}
+            />
+            {algo}
+          </label>
+        ))}
       </div>
 
       <label className="flex items-center gap-2">
@@ -79,14 +80,16 @@ function SearchForm({ setResult }) {
           value={maxRecipe}
           onChange={(e) => setMaxRecipe(e.target.value)}
           className="w-full p-2 border rounded"
+          required
         />
       )}
 
       <button
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
+        disabled={loading}
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full disabled:opacity-50"
       >
-        Cari Recipe
+        {loading ? 'Mencari...' : 'Cari Recipe'}
       </button>
     </form>
   );

@@ -4,6 +4,8 @@ import (
 	"sync"
 )
 
+var LastBFSVisited int
+
 type TraceNode struct {
 	Product string
 	From    [2]string
@@ -11,6 +13,7 @@ type TraceNode struct {
 }
 
 func BFS(target string) *TraceNode {
+	LastBFSVisited = 0
 	// Inisialisasi node dasar
 	basicElements := []string{"Air", "Water", "Earth", "Fire", "Time"}
 	allNodes := map[string]*TraceNode{}
@@ -28,6 +31,7 @@ func BFS(target string) *TraceNode {
 	}
 
 	for len(queue) > 0 {
+		LastBFSVisited++
 		curr := queue[0]
 		queue = queue[1:]
 

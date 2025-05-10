@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"strings"
+	"time"
 )
 
 type SearchRequest struct {
@@ -19,8 +20,10 @@ type RecipeStep struct {
 }
 
 type SearchResponse struct {
-	Result string       `json:"result"`
-	Steps  []RecipeStep `json:"steps"`
+	Result       string       `json:"result"`
+	Steps        []RecipeStep `json:"steps"`
+	TimeMs       int64        `json:"timeMs"`
+	VisitedCount int          `json:"visitedCount"`
 }
 
 func buildStepsFromTrace(node *TraceNode) []RecipeStep {
@@ -62,6 +65,7 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	algo := strings.ToLower(req.Algorithm)
+	start := time.Now()
 	switch algo {
 	case "bfs":
 		if req.Mode == "multiple" {
@@ -69,8 +73,10 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 			var resp []SearchResponse
 			for _, node := range nodes {
 				resp = append(resp, SearchResponse{
-					Result: req.Target,
-					Steps:  buildStepsFromTrace(node),
+					Result:       req.Target,
+					Steps:        buildStepsFromTrace(node),
+					TimeMs:       time.Since(start).Milliseconds(),
+					VisitedCount: LastBFSVisited,
 				})
 			}
 			w.Header().Set("Content-Type", "application/json")
@@ -83,7 +89,12 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Element not reachable", http.StatusNotFound)
 			return
 		}
-		result := SearchResponse{Result: req.Target, Steps: buildStepsFromTrace(node)}
+		result := SearchResponse{
+			Result:       req.Target,
+			Steps:        buildStepsFromTrace(node),
+			TimeMs:       time.Since(start).Milliseconds(),
+			VisitedCount: LastBFSVisited,
+		}
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode([]SearchResponse{result})
 		return
@@ -94,8 +105,10 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 			var resp []SearchResponse
 			for _, node := range nodes {
 				resp = append(resp, SearchResponse{
-					Result: req.Target,
-					Steps:  buildStepsFromTrace(node),
+					Result:       req.Target,
+					Steps:        buildStepsFromTrace(node),
+					TimeMs:       time.Since(start).Milliseconds(),
+					VisitedCount: LastDFSVisited,
 				})
 			}
 			w.Header().Set("Content-Type", "application/json")
@@ -107,7 +120,12 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Element not reachable", http.StatusNotFound)
 			return
 		}
-		result := SearchResponse{Result: req.Target, Steps: buildStepsFromTrace(node)}
+		result := SearchResponse{
+			Result:       req.Target,
+			Steps:        buildStepsFromTrace(node),
+			TimeMs:       time.Since(start).Milliseconds(),
+			VisitedCount: LastDFSVisited,
+		}
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode([]SearchResponse{result})
 		return
