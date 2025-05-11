@@ -1,34 +1,41 @@
 import React, { useMemo } from "react";
 import Tree from "react-d3-tree";
 
-// Elemen dasar termasuk Time
 const BASIC = new Set(["Air", "Water", "Earth", "Fire", "Time"]);
 
 const RecipeTree = ({ data }) => {
-  // Precompute tree data for all responses (hook at top-level)
   const treeDatas = useMemo(() => {
-    if (!Array.isArray(data) || data.length === 0) {
-      return [];
-    }
+    if (!Array.isArray(data) || data.length === 0) return [];
+
     return data.map((resp) => {
       const { result, steps } = resp;
-      // Map product -> ingredients
+
+      // Step map: product → array of ingredient arrays
       const map = new Map();
       steps.forEach(({ product, ingredients }) => {
-        map.set(product, ingredients);
+        if (!map.has(product)) {
+          map.set(product, []);
+        }
+        map.get(product).push(ingredients);
       });
 
-      const visited = new Set();
-      // Recursive build
       const buildNode = (name) => {
-        if (visited.has(name)) return { name };
-        visited.add(name);
+        const recipes = map.get(name);
+        if (!recipes) return { name };
 
-        const childs = map.get(name);
-        if (!childs) return { name };
+        if (recipes.length === 1) {
+          return {
+            name,
+            children: recipes[0].map(buildNode),
+          };
+        }
+
         return {
           name,
-          children: childs.map(buildNode),
+          children: recipes.map((ingredients, i) => ({
+            name: `#${i + 1}`,
+            children: ingredients.map(buildNode),
+          })),
         };
       };
 
@@ -36,8 +43,7 @@ const RecipeTree = ({ data }) => {
     });
   }, [data]);
 
-  // Jika tak ada data atau array kosong
-  if (!Array.isArray(data) || data.length === 0) {
+  if (!treeDatas.length) {
     return <p className="text-center">Tidak ada recipe ditemukan.</p>;
   }
 
@@ -65,30 +71,30 @@ const RecipeTree = ({ data }) => {
                 renderCustomNodeElement={({ nodeDatum }) => {
                   const isBasic = BASIC.has(nodeDatum.name);
                   const color = isBasic ? "#D1FAE5" : "#DBEAFE";
-                    return (
+                  return (
                     <g>
                       <rect
-                      width={80}
-                      height={30}
-                      x={-40}
-                      y={-15}
-                      fill={color}
-                      stroke="#555"
-                      strokeWidth={1}
-                      rx={6}
+                        width={80}
+                        height={30}
+                        x={-40}
+                        y={-15}
+                        fill={color}
+                        stroke="#555"
+                        strokeWidth={1}
+                        rx={6}
                       />
                       <text
-                      fill="#111"
-                      x={0}
-                      y={5}
-                      textAnchor="middle"
-                      fontSize={12}
-                      fontWeight="normal"
+                        fill="#111"
+                        x={0}
+                        y={5}
+                        textAnchor="middle"
+                        fontSize={12}
+                        fontWeight="normal"
                       >
-                      {nodeDatum.name}
+                        {nodeDatum.name}
                       </text>
                     </g>
-                    );
+                  );
                 }}
               />
             </div>
