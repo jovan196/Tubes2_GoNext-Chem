@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/csv"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -11,9 +10,12 @@ import (
 	"github.com/gocolly/colly"
 )
 
+var Tier = map[string]int{}
+
 func ScrapeElement() {
 	url := "https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2)"
 	graph := map[string][][2]string{}
+	tier := map[string]int{} // ← rekam tier di sini
 
 	c := colly.NewCollector(colly.AllowedDomains("little-alchemy.fandom.com"))
 	tableIndex := 0
@@ -26,6 +28,9 @@ func ScrapeElement() {
 			if product == "" || product == "Time" || product == "Ruins" || product == "Archeologist" {
 				return
 			}
+
+			// catat tier produk
+			tier[product] = tableIndex
 
 			h.ForEach("td:nth-of-type(2) li", func(_ int, li *colly.HTMLElement) {
 				aTags := li.DOM.Find("a")
@@ -51,7 +56,7 @@ func ScrapeElement() {
 		log.Fatal(err)
 	}
 
-	// Simpan ke JSON
+	// Simpan graph
 	jsonFile, err := os.Create("elements_graph.json")
 	if err != nil {
 		log.Fatal(err)
@@ -59,21 +64,13 @@ func ScrapeElement() {
 	defer jsonFile.Close()
 	json.NewEncoder(jsonFile).Encode(graph)
 
-	// Simpan ke CSV
-	csvFile, err := os.Create("elements_graph.csv")
+	// Simpan tier
+	tierFile, err := os.Create("elements_tier.json")
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer csvFile.Close()
-	writer := csv.NewWriter(csvFile)
-	defer writer.Flush()
-
-	writer.Write([]string{"Product", "Ingredient1", "Ingredient2"})
-	for prod, pairs := range graph {
-		for _, pair := range pairs {
-			writer.Write([]string{prod, pair[0], pair[1]})
-		}
-	}
+	defer tierFile.Close()
+	json.NewEncoder(tierFile).Encode(tier)
 
 	fmt.Printf("Sukses scraping %d elemen\n", len(graph))
 }

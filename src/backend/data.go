@@ -23,3 +23,14 @@ func LoadGraph(filename string) error {
 	fmt.Printf("Loaded %d elements from %s\n", len(Graph), filename)
 	return nil
 }
+
+func LoadTier(filename string) error {
+	file, err := os.Open(filename)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	decoder := json.NewDecoder(file)
+	return decoder.Decode(&Tier)
+}

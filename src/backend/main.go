@@ -10,9 +10,16 @@ import (
 func main() {
 	ScrapeElement()
 
-	err := LoadGraph("elements_graph.json")
+	var err error
+
+	err = LoadGraph("elements_graph.json")
 	if err != nil {
 		log.Fatal("Failed to load graph:", err)
+	}
+
+	err = LoadTier("elements_tier.json")
+	if err != nil {
+		log.Fatal("Failed to load tier:", err)
 	}
 
 	mux := http.NewServeMux()

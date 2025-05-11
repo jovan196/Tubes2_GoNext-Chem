@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"runtime"
+	"sync"
+	"sync/atomic"
 )
 
 var LastBFSVisited int
@@ -10,11 +13,11 @@ type TraceNode struct {
 	Product string
 	From    [2]string
 	Parent  [2]*TraceNode
+	Depth   int
 }
 
 func BFS(target string) *TraceNode {
 	LastBFSVisited = 0
-	// Inisialisasi node dasar
 	basicElements := []string{"Air", "Water", "Earth", "Fire", "Time"}
 	allNodes := map[string]*TraceNode{}
 	queue := []*TraceNode{}
@@ -42,7 +45,6 @@ func BFS(target string) *TraceNode {
 			for _, pair := range recipes {
 				a, b := pair[0], pair[1]
 				if (curr.Product == a && visited[b]) || (curr.Product == b && visited[a]) {
-					// Cek apakah bahan-bahan sudah pernah dibuat
 					left := allNodes[a]
 					right := allNodes[b]
 					if left == nil || right == nil {
@@ -53,6 +55,7 @@ func BFS(target string) *TraceNode {
 						Product: product,
 						From:    [2]string{a, b},
 						Parent:  [2]*TraceNode{left, right},
+						Depth:   1 + max(left.Depth, right.Depth),
 					}
 
 					allNodes[product] = node
@@ -70,100 +73,126 @@ func BFS(target string) *TraceNode {
 	return nil
 }
 
-// MultiBFS_Trace mengembalikan hingga maxResults jalur unik menuju target
 func MultiBFS_Trace(target string, maxResults int) []*TraceNode {
-	// 1) Siapkan map product → list of trace trees
-	nodesMap := make(map[string][]*TraceNode)
-	// 2) Queue produk yang akan dieksplor
-	queue := []string{}
-	// 3) Inisialisasi elemen dasar
 	basic := []string{"Air", "Water", "Earth", "Fire", "Time"}
+	nodes := make(map[string][]*TraceNode)
+	queue := [][]*TraceNode{}
+	results := []*TraceNode{}
+	seenHash := make(map[string]bool)
+	var counter int32
+
 	for _, b := range basic {
-		tn := &TraceNode{Product: b}
-		nodesMap[b] = []*TraceNode{tn}
-		queue = append(queue, b)
+		n := &TraceNode{Product: b}
+		nodes[b] = []*TraceNode{n}
+		queue = append(queue, []*TraceNode{n})
 	}
 
-	// 4) Hasil akhir
-	var results []*TraceNode
-
-	// 5) Untuk menghindari duplikasi sama persis (a, b, dan sub-tree yang sama)
-	visitedComb := make(map[string]map[string]bool) // outProd → map[key]bool
-	totalCombinations := 0
-	for _, rec := range Graph[target] {
-		a, b := rec[0], rec[1]
-		if a == target || b == target {
-			continue
-		}
-		totalCombinations++
-	}
-	if maxResults > totalCombinations {
-		// jika maxResults lebih besar dari total kombinasi, set ke total kombinasi
-		// maxResults = totalCombinations
-	}
-
-	// 6) BFS: level-order expand sampai kumpulkan maxResults
-	for len(queue) > 0 && len(results) < maxResults {
-		LastBFSVisited++
-		prod := queue[0]
+	var mu sync.Mutex
+	sem := make(chan struct{}, runtime.NumCPU())
+	var wg sync.WaitGroup
+	for len(queue) > 0 && int(atomic.LoadInt32(&counter)) < maxResults {
+		currLevel := queue[0]
 		queue = queue[1:]
+		LastBFSVisited++
+		nextLevel := []*TraceNode{}
 
-		// Cek semua resep yang menghasilkan sesuatu dari `prod` sebagai salah satu bahan
-		for outProd, recs := range Graph {
-			for _, rec := range recs {
-				a, b := rec[0], rec[1]
-				// hanya recipes yang melibatkan prod
-				if a != prod && b != prod {
-					continue
-				}
-				tracesA, okA := nodesMap[a]
-				tracesB, okB := nodesMap[b]
-				// butuh keduanya punya trace
-				if !okA || !okB {
-					continue
-				}
-				// siapkan visitedComb[outProd]
-				if visitedComb[outProd] == nil {
-					visitedComb[outProd] = make(map[string]bool)
-				}
-				// buat kombinasi semua sub-tree A × sub-tree B
-				for _, ta := range tracesA {
-					for _, tb := range tracesB {
-						// cegah self-loop apapun kedalam level deeper
-						if containsProduct(ta, outProd) || containsProduct(tb, outProd) {
-							continue
-						}
-						// unique key per kombinasi sub-tree pointer
-						key := fmt.Sprintf("%s|%p|%p", outProd, ta, tb)
-						if visitedComb[outProd][key] {
-							continue
-						}
-						visitedComb[outProd][key] = true
+		for _, curr := range currLevel {
+			for outProd, recs := range Graph {
+				for _, pair := range recs {
+					a, b := pair[0], pair[1]
+					if curr.Product != a && curr.Product != b {
+						continue
+					}
 
-						// bangun trace baru
-						newTrace := &TraceNode{
-							Product: outProd,
-							From:    [2]string{a, b},
-							Parent:  [2]*TraceNode{ta, tb},
-						}
-						// simpan
-						nodesMap[outProd] = append(nodesMap[outProd], newTrace)
+					mu.Lock()
+					listA := nodes[a]
+					listB := nodes[b]
+					mu.Unlock()
 
-						// jika target, tambahkan ke results
-						if outProd == target {
-							results = append(results, newTrace)
-							if len(results) >= maxResults {
-								return results
+					if len(listA) == 0 || len(listB) == 0 {
+						continue
+					}
+
+					for _, ta := range listA {
+						for _, tb := range listB {
+							if Tier[a] >= Tier[target] || Tier[b] >= Tier[target] {
+								continue
 							}
-						} else {
-							// enqueue outProd untuk level berikut
-							queue = append(queue, outProd)
+							sem <- struct{}{}
+							wg.Add(1)
+							go func(a, b, out string, ta, tb *TraceNode) {
+								defer wg.Done()
+								defer func() { <-sem }()
+
+								if containProduct(ta, out) || containProduct(tb, out) {
+									return
+								}
+
+								mu.Lock()
+								node := &TraceNode{
+									Product: out,
+									From:    [2]string{a, b},
+									Parent:  [2]*TraceNode{ta, tb},
+									Depth:   1 + max(ta.Depth, tb.Depth),
+								}
+								hash := hashSubtree(node)
+								if seenHash[hash] {
+									mu.Unlock()
+									return
+								}
+								seenHash[hash] = true
+								nodes[out] = append(nodes[out], node)
+								if out == target && int(atomic.LoadInt32(&counter)) < maxResults {
+									results = append(results, node)
+									atomic.AddInt32(&counter, 1)
+								}
+								mu.Unlock()
+								nextLevel = append(nextLevel, node)
+							}(a, b, outProd, ta, tb)
 						}
 					}
 				}
 			}
 		}
+
+		wg.Wait()
+		if len(nextLevel) > 0 {
+			queue = append(queue, nextLevel)
+		}
 	}
 
 	return results
+}
+
+func hashSubtree(n *TraceNode) string {
+	if n == nil {
+		return ""
+	}
+	if n.Parent[0] == nil && n.Parent[1] == nil {
+		return n.Product
+	}
+	l := hashSubtree(n.Parent[0])
+	r := hashSubtree(n.Parent[1])
+	if l > r {
+		l, r = r, l
+	}
+	return fmt.Sprintf("%s(%s+%s)", n.Product, l, r)
+}
+
+func containProduct(n *TraceNode, prod string) bool {
+	if n == nil {
+		return false
+	}
+	if n.Product == prod {
+		return true
+	}
+	return containProduct(n.Parent[0], prod) ||
+		containProduct(n.Parent[1], prod)
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
