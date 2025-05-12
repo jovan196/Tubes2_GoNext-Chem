@@ -16,6 +16,22 @@ type TraceNode struct {
 	Depth   int
 }
 
+func convertTraceToOutput(n *TraceNode) *OutputNode {
+	if n == nil {
+		return nil
+	}
+	node := &OutputNode{Name: n.Product}
+
+	if n.Parent[0] != nil && n.Parent[1] != nil {
+		node.Children = []*OutputNode{
+			convertTraceToOutput(n.Parent[0]),
+			convertTraceToOutput(n.Parent[1]),
+		}
+	}
+
+	return node
+}
+
 func BFS(target string) *TraceNode {
 	LastBFSVisited = 0
 	basicElements := []string{"Air", "Water", "Earth", "Fire", "Time"}
@@ -44,7 +60,7 @@ func BFS(target string) *TraceNode {
 			}
 			for _, pair := range recipes {
 				a, b := pair[0], pair[1]
-				if Tier[a] >= Tier[target] && Tier[b] >= Tier[target] {
+				if Tier[a] >= Tier[target] || Tier[b] >= Tier[target] {
 					continue
 				}
 				if (curr.Product == a && visited[b]) || (curr.Product == b && visited[a]) {
@@ -76,16 +92,16 @@ func BFS(target string) *TraceNode {
 	return nil
 }
 
-func MultiBFS_Trace(target string, maxResults int) []*TraceNode {
-	// Reset counter for this search operation
+func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 	LastBFSVisited = 0
-
 	basic := []string{"Air", "Water", "Earth", "Fire", "Time"}
-	nodes := make(map[string][]*TraceNode)
 	queue := [][]*TraceNode{}
-	results := []*TraceNode{}
+	nodes := make(map[string][]*TraceNode)
 	seenHash := make(map[string]bool)
 	var counter int32
+	var mu sync.Mutex
+	var wg sync.WaitGroup
+	sem := make(chan struct{}, runtime.NumCPU())
 
 	for _, b := range basic {
 		n := &TraceNode{Product: b}
@@ -93,16 +109,13 @@ func MultiBFS_Trace(target string, maxResults int) []*TraceNode {
 		queue = append(queue, []*TraceNode{n})
 	}
 
-	var mu sync.Mutex
-	sem := make(chan struct{}, runtime.NumCPU())
-	var wg sync.WaitGroup
+	roots := []*TraceNode{}
+
 	for len(queue) > 0 && int(atomic.LoadInt32(&counter)) < maxResults {
 		currLevel := queue[0]
 		queue = queue[1:]
-
-		// Increment the visit counter for each level
-		atomic.AddInt32(&counter, 1)
 		LastBFSVisited++
+
 		nextLevel := []*TraceNode{}
 
 		for _, curr := range currLevel {
@@ -129,7 +142,7 @@ func MultiBFS_Trace(target string, maxResults int) []*TraceNode {
 							}
 							sem <- struct{}{}
 							wg.Add(1)
-							go func(a, b, out string, ta, tb *TraceNode) {
+							go func(ta, tb *TraceNode, out string) {
 								defer wg.Done()
 								defer func() { <-sem }()
 
@@ -137,40 +150,42 @@ func MultiBFS_Trace(target string, maxResults int) []*TraceNode {
 									return
 								}
 
-								mu.Lock()
-								node := &TraceNode{
+								n := &TraceNode{
 									Product: out,
-									From:    [2]string{a, b},
+									From:    [2]string{ta.Product, tb.Product},
 									Parent:  [2]*TraceNode{ta, tb},
 									Depth:   1 + max(ta.Depth, tb.Depth),
 								}
-								hash := hashSubtree(node)
-								if seenHash[hash] {
+								h := hashSubtree(n)
+
+								mu.Lock()
+								if seenHash[h] {
 									mu.Unlock()
 									return
 								}
-								seenHash[hash] = true
-								nodes[out] = append(nodes[out], node)
+								seenHash[h] = true
+
+								nodes[out] = append(nodes[out], n)
 								if out == target && int(atomic.LoadInt32(&counter)) < maxResults {
-									results = append(results, node)
+									roots = append(roots, n)
 									atomic.AddInt32(&counter, 1)
 								}
 								mu.Unlock()
-								nextLevel = append(nextLevel, node)
-							}(a, b, outProd, ta, tb)
+
+								nextLevel = append(nextLevel, n)
+							}(ta, tb, outProd)
 						}
 					}
 				}
 			}
 		}
-
 		wg.Wait()
 		if len(nextLevel) > 0 {
 			queue = append(queue, nextLevel)
 		}
 	}
 
-	return results
+	return mergeTraceTrees(roots)
 }
 
 func hashSubtree(n *TraceNode) string {

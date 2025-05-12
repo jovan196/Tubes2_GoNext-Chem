@@ -6,41 +6,7 @@ const BASIC = new Set(["Air", "Water", "Earth", "Fire", "Time"]);
 const RecipeTree = ({ data }) => {
   const treeDatas = useMemo(() => {
     if (!Array.isArray(data) || data.length === 0) return [];
-
-    return data.map((resp) => {
-      const { result, steps } = resp;
-
-      // Step map: product → array of ingredient arrays
-      const map = new Map();
-      steps.forEach(({ product, ingredients }) => {
-        if (!map.has(product)) {
-          map.set(product, []);
-        }
-        map.get(product).push(ingredients);
-      });
-
-      const buildNode = (name) => {
-        const recipes = map.get(name);
-        if (!recipes) return { name };
-
-        if (recipes.length === 1) {
-          return {
-            name,
-            children: recipes[0].map(buildNode),
-          };
-        }
-
-        return {
-          name,
-          children: recipes.map((ingredients, i) => ({
-            name: `#${i + 1}`,
-            children: ingredients.map(buildNode),
-          })),
-        };
-      };
-
-      return buildNode(result);
-    });
+    return data.map((resp) => resp.tree); // pakai .tree langsung dari backend
   }, [data]);
 
   if (!treeDatas.length) {
