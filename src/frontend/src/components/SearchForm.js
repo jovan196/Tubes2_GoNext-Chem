@@ -19,19 +19,35 @@ function SearchForm({ setResult }) {
       max: multiple ? parseInt(maxRecipe, 10) : 1,
     };
 
-    try {
-      const res = await axios.post(
+    axios.post(
         "http://localhost:8080/api/search",
         payload
-      );
-      // res.data is array of { result, steps, timeMs, visitedCount }
-      setResult(res.data);
-    } catch (err) {
-      alert("Gagal mengambil data dari backend.");
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
+      ).then(
+        res => {
+          setResult(res.data);
+        }
+      ).catch(error => {
+        let errorMessage = error.message
+        if (error.response && error.response.data) {
+          errorMessage = error.response.data.message || errorMessage
+        }
+        alert(errorMessage);
+      }).finally(() => setLoading(false));
+
+    // try {
+    //   const res = await axios.post(
+    //     "http://localhost:8080/api/search",
+    //     payload
+    //   );
+    //   // res.data is array of { result, steps, timeMs, visitedCount }
+    //   setResult(res.data);
+    // } catch (err) {
+    //   //alert("Gagal mengambil data dari backend.");
+    //   alert(err);
+    //   console.error(err);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   return (

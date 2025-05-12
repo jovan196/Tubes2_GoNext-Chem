@@ -55,11 +55,11 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		var tree *OutputNode
 		var visitCount int
 		if node == nil {
-			tree = MultiBFS_Trace(req.Target, 1)
-			if tree == nil {
-				http.Error(w, "Element not reachable", http.StatusNotFound)
-				return
-			}
+			// tree = MultiBFS_Trace(req.Target, 1)
+			// if tree == nil {
+			http.Error(w, createError("Element "+req.Target+" not reachable", http.StatusNotFound), http.StatusNotFound)
+			return
+			//}
 			visitCount = LastBFSVisited
 		} else {
 			tree = toOutputTree(node)
@@ -78,6 +78,16 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		return
 
 	default:
-		http.Error(w, "Only BFS implemented (revised)", http.StatusNotImplemented)
+		http.Error(w, createError("Only BFS implemented (revised)", http.StatusNotImplemented), http.StatusNotImplemented)
 	}
+}
+
+func createError(message string, statusCode int) string {
+	response := map[string]interface{}{
+		"error":      true,
+		"message":    message,
+		"statusCode": statusCode,
+	}
+	errorResponse, _ := json.Marshal(response)
+	return string(errorResponse)
 }

@@ -33,68 +33,120 @@ func convertTraceToOutput(n *TraceNode) *OutputNode {
 }
 
 func BFS(target string) *TraceNode {
-	LastBFSVisited = 0
-	basicElements := []string{"Air", "Water", "Earth", "Fire", "Time"}
-	allNodes := map[string]*TraceNode{}
+	buildableMemo = make(map[string]map[int]bool)
+	if Tier[target] == 1 {
+		return &TraceNode{Product: target}
+	}
+
+	visited := map[string]*TraceNode{}
 	queue := []*TraceNode{}
 
-	tierTarget, ok := Tier[target]
-	if !ok {
-		// jika target tidak punya tier, anggap paling tinggi agar tidak diblok semua
-		tierTarget = 999
-	}
-
-	for _, elem := range basicElements {
-		node := &TraceNode{Product: elem}
-		allNodes[elem] = node
-		queue = append(queue, node)
-	}
-
-	visited := map[string]bool{}
-	for _, elem := range basicElements {
-		visited[elem] = true
-	}
+	root := &TraceNode{Product: target}
+	queue = append(queue, root)
+	visited[target] = root
 
 	for len(queue) > 0 {
-		LastBFSVisited++
 		curr := queue[0]
+		fmt.Println(curr.Product)
 		queue = queue[1:]
 
-		for product, recipes := range Graph {
-			if visited[product] || Tier[product] >= tierTarget {
+		if Tier[curr.Product] == 1 {
+			continue
+		}
+
+		for _, pair := range Graph[curr.Product] {
+
+			a, b := pair[0], pair[1]
+			fmt.Printf("%s %s\n", a, b)
+			if Tier[a] >= Tier[curr.Product] || Tier[b] >= Tier[curr.Product] {
+				fmt.Println("giganig")
 				continue
 			}
-			for _, pair := range recipes {
-				a, b := pair[0], pair[1]
-				if Tier[a] >= tierTarget || Tier[b] >= tierTarget {
-					continue
-				}
-				if (curr.Product == a && visited[b]) || (curr.Product == b && visited[a]) {
-					left := allNodes[a]
-					right := allNodes[b]
-					if left == nil || right == nil {
-						continue
-					}
+			fmt.Println(1)
 
-					node := &TraceNode{
-						Product: product,
-						From:    [2]string{a, b},
-						Parent:  [2]*TraceNode{left, right},
-						Depth:   1 + max(left.Depth, right.Depth),
-					}
-
-					allNodes[product] = node
-					if product == target {
-						return node
-					}
-
-					visited[product] = true
-					queue = append(queue, node)
-				}
+			// ⛔ Check: pastikan a dan b bisa dibentuk dari basic
+			if !canBuild(a, Tier[a]) || !canBuild(b, Tier[b]) {
+				continue
 			}
+			fmt.Println(2)
+
+			left := visited[a]
+			if left == nil {
+				left = &TraceNode{Product: a}
+				visited[a] = left
+				queue = append(queue, left)
+			}
+			fmt.Println(3)
+			right := visited[b]
+			if right == nil {
+				right = &TraceNode{Product: b}
+				visited[b] = right
+				queue = append(queue, right)
+			}
+			fmt.Println(4)
+
+			curr.From = [2]string{a, b}
+			curr.Parent = [2]*TraceNode{left, right}
+			curr.Depth = 1 + max(left.Depth, right.Depth)
+			fmt.Println(5)
+			break // hanya ambil 1 recipe valid
 		}
 	}
-	return nil
+
+	// Validasi terakhir: jika root tidak punya Parent berarti tidak valid
+	if root.Parent[0] == nil && root.Parent[1] == nil {
+		if Tier[root.Product] != 1 { // bukan basic
+			return nil
+		}
+	}
+	fmt.Println("basing")
+	return root
+}
+
+var buildableMemo = make(map[string]map[int]bool)
+var buildableMutex sync.Mutex
+
+func canBuild(target string, tierLimit int) bool {
+	buildableMutex.Lock()
+	if m, ok := buildableMemo[target]; ok {
+		if val, ok := m[tierLimit]; ok {
+			buildableMutex.Unlock()
+			return val
+		}
+	} else {
+		buildableMemo[target] = make(map[int]bool)
+	}
+	buildableMutex.Unlock()
+
+	if Tier[target] == 1 {
+		buildableMutex.Lock()
+		buildableMemo[target][tierLimit] = true
+		buildableMutex.Unlock()
+		return true
+	}
+
+	for _, pair := range Graph[target] {
+		a, b := pair[0], pair[1]
+		if Tier[a] >= tierLimit || Tier[b] >= tierLimit {
+			continue
+		}
+		if canBuild(a, tierLimit) && canBuild(b, tierLimit) {
+			buildableMutex.Lock()
+			buildableMemo[target][tierLimit] = true
+			buildableMutex.Unlock()
+			return true
+		}
+	}
+
+	buildableMutex.Lock()
+	buildableMemo[target][tierLimit] = false
+	buildableMutex.Unlock()
+	return false
+}
+
+func exists(m map[string]struct{}, key string) bool {
+	_, ok := m[key]
+	return ok
 }
 
 func MultiBFS_Trace(target string, maxResults int) *OutputNode {
