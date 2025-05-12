@@ -38,6 +38,12 @@ func BFS(target string) *TraceNode {
 	allNodes := map[string]*TraceNode{}
 	queue := []*TraceNode{}
 
+	tierTarget, ok := Tier[target]
+	if !ok {
+		// jika target tidak punya tier, anggap paling tinggi agar tidak diblok semua
+		tierTarget = 999
+	}
+
 	for _, elem := range basicElements {
 		node := &TraceNode{Product: elem}
 		allNodes[elem] = node
@@ -55,12 +61,12 @@ func BFS(target string) *TraceNode {
 		queue = queue[1:]
 
 		for product, recipes := range Graph {
-			if visited[product] {
+			if visited[product] || Tier[product] >= tierTarget {
 				continue
 			}
 			for _, pair := range recipes {
 				a, b := pair[0], pair[1]
-				if Tier[a] >= Tier[target] || Tier[b] >= Tier[target] {
+				if Tier[a] >= tierTarget || Tier[b] >= tierTarget {
 					continue
 				}
 				if (curr.Product == a && visited[b]) || (curr.Product == b && visited[a]) {
@@ -88,7 +94,6 @@ func BFS(target string) *TraceNode {
 			}
 		}
 	}
-
 	return nil
 }
 

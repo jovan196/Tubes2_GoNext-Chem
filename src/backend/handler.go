@@ -52,17 +52,27 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		node := BFS(req.Target)
+		var tree *OutputNode
+		var visitCount int
 		if node == nil {
-			http.Error(w, "Element not reachable", http.StatusNotFound)
-			return
+			tree = MultiBFS_Trace(req.Target, 1)
+			if tree == nil {
+				http.Error(w, "Element not reachable", http.StatusNotFound)
+				return
+			}
+			visitCount = LastBFSVisited
+		} else {
+			tree = toOutputTree(node)
+			visitCount = LastBFSVisited
 		}
 
 		resp := SearchResponse{
 			Result:       req.Target,
-			Tree:         toOutputTree(node),
+			Tree:         tree,
 			TimeMs:       time.Since(start).Milliseconds(),
-			VisitedCount: LastBFSVisited,
+			VisitedCount: visitCount,
 		}
+
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode([]SearchResponse{resp})
 		return
