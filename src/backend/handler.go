@@ -54,16 +54,17 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		node := BFS(req.Target)
 		var tree *OutputNode
 		var visitCount int
+		visitCount = LastBFSVisited
 		if node == nil {
 			// tree = MultiBFS_Trace(req.Target, 1)
 			// if tree == nil {
 			http.Error(w, createError("Element "+req.Target+" not reachable", http.StatusNotFound), http.StatusNotFound)
 			return
 			//}
-			visitCount = LastBFSVisited
+
 		} else {
 			tree = toOutputTree(node)
-			visitCount = LastBFSVisited
+
 		}
 
 		resp := SearchResponse{

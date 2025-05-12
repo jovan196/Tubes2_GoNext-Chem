@@ -46,17 +46,11 @@ func mergeTraceTrees(roots []*TraceNode) *OutputNode {
 	seen := make(map[string]bool)
 
 	for i, root := range roots {
-		left := convertTraceToOutput(root.Parent[0])
-		right := convertTraceToOutput(root.Parent[1])
 		hash := hashSubtree(root)
-
 		if !seen[hash] {
 			output.Children = append(output.Children, &OutputNode{
-				Name: fmt.Sprintf("#%d", i+1),
-				Children: []*OutputNode{
-					left,
-					right,
-				},
+				Name:     fmt.Sprintf("#%d", i+1),
+				Children: []*OutputNode{convertTraceToOutputRecursive(root)},
 			})
 			seen[hash] = true
 		}

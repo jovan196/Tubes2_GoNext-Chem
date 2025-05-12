@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
-	"sync/atomic"
 )
 
 var LastBFSVisited int
@@ -33,6 +32,7 @@ func convertTraceToOutput(n *TraceNode) *OutputNode {
 }
 
 func BFS(target string) *TraceNode {
+	LastBFSVisited = 0
 	buildableMemo = make(map[string]map[int]bool)
 	if Tier[target] == 1 {
 		return &TraceNode{Product: target}
@@ -46,8 +46,8 @@ func BFS(target string) *TraceNode {
 	visited[target] = root
 
 	for len(queue) > 0 {
+		LastBFSVisited++
 		curr := queue[0]
-		fmt.Println(curr.Product)
 		queue = queue[1:]
 
 		if Tier[curr.Product] == 1 {
@@ -57,38 +57,30 @@ func BFS(target string) *TraceNode {
 		for _, pair := range Graph[curr.Product] {
 
 			a, b := pair[0], pair[1]
-			fmt.Printf("%s %s\n", a, b)
 			if Tier[a] >= Tier[curr.Product] || Tier[b] >= Tier[curr.Product] {
-				fmt.Println("giganig")
 				continue
 			}
-			fmt.Println(1)
 
-			// ⛔ Check: pastikan a dan b bisa dibentuk dari basic
+			// Check: pastikan a dan b bisa dibentuk dari basic
 			if !canBuild(a, Tier[a]) || !canBuild(b, Tier[b]) {
 				continue
 			}
-			fmt.Println(2)
-
 			left := visited[a]
 			if left == nil {
 				left = &TraceNode{Product: a}
 				visited[a] = left
 				queue = append(queue, left)
 			}
-			fmt.Println(3)
 			right := visited[b]
 			if right == nil {
 				right = &TraceNode{Product: b}
 				visited[b] = right
 				queue = append(queue, right)
 			}
-			fmt.Println(4)
 
 			curr.From = [2]string{a, b}
 			curr.Parent = [2]*TraceNode{left, right}
 			curr.Depth = 1 + max(left.Depth, right.Depth)
-			fmt.Println(5)
 			break // hanya ambil 1 recipe valid
 		}
 	}
@@ -99,27 +91,37 @@ func BFS(target string) *TraceNode {
 			return nil
 		}
 	}
-	fmt.Println("basing")
 	return root
 }
 
 var buildableMemo = make(map[string]map[int]bool)
-var buildableMutex sync.Mutex
+var buildableMutex sync.RWMutex
 
 func canBuild(target string, tierLimit int) bool {
-	buildableMutex.Lock()
+	return canBuildInternal(target, tierLimit, map[string]bool{})
+}
+
+func canBuildInternal(target string, tierLimit int, visited map[string]bool) bool {
+	buildableMutex.RLock()
 	if m, ok := buildableMemo[target]; ok {
 		if val, ok := m[tierLimit]; ok {
-			buildableMutex.Unlock()
+			buildableMutex.RUnlock()
 			return val
 		}
-	} else {
-		buildableMemo[target] = make(map[int]bool)
 	}
-	buildableMutex.Unlock()
+	buildableMutex.RUnlock()
+
+	// Jika sedang diproses (recursive cycle)
+	if visited[target] {
+		return false
+	}
+	visited[target] = true
 
 	if Tier[target] == 1 {
 		buildableMutex.Lock()
+		if _, ok := buildableMemo[target]; !ok {
+			buildableMemo[target] = make(map[int]bool)
+		}
 		buildableMemo[target][tierLimit] = true
 		buildableMutex.Unlock()
 		return true
@@ -130,8 +132,11 @@ func canBuild(target string, tierLimit int) bool {
 		if Tier[a] >= tierLimit || Tier[b] >= tierLimit {
 			continue
 		}
-		if canBuild(a, tierLimit) && canBuild(b, tierLimit) {
+		if canBuildInternal(a, tierLimit, copyMap(visited)) && canBuildInternal(b, tierLimit, copyMap(visited)) {
 			buildableMutex.Lock()
+			if _, ok := buildableMemo[target]; !ok {
+				buildableMemo[target] = make(map[int]bool)
+			}
 			buildableMemo[target][tierLimit] = true
 			buildableMutex.Unlock()
 			return true
@@ -139,9 +144,20 @@ func canBuild(target string, tierLimit int) bool {
 	}
 
 	buildableMutex.Lock()
+	if _, ok := buildableMemo[target]; !ok {
+		buildableMemo[target] = make(map[int]bool)
+	}
 	buildableMemo[target][tierLimit] = false
 	buildableMutex.Unlock()
 	return false
+}
+
+func copyMap(original map[string]bool) map[string]bool {
+	copy := make(map[string]bool)
+	for k, v := range original {
+		copy[k] = v
+	}
+	return copy
 }
 
 func exists(m map[string]struct{}, key string) bool {
@@ -151,95 +167,88 @@ func exists(m map[string]struct{}, key string) bool {
 
 func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 	LastBFSVisited = 0
-	basic := []string{"Air", "Water", "Earth", "Fire", "Time"}
-	queue := [][]*TraceNode{}
-	nodes := make(map[string][]*TraceNode)
+	buildableMemo = make(map[string]map[int]bool)
+	if Tier[target] == 1 {
+		return &OutputNode{Name: target}
+	}
+
+	roots := []*TraceNode{}
+	queue := []*TraceNode{}
 	seenHash := make(map[string]bool)
-	var counter int32
+	visited := make(map[string]*TraceNode)
 	var mu sync.Mutex
 	var wg sync.WaitGroup
 	sem := make(chan struct{}, runtime.NumCPU())
 
-	for _, b := range basic {
-		n := &TraceNode{Product: b}
-		nodes[b] = []*TraceNode{n}
-		queue = append(queue, []*TraceNode{n})
-	}
+	root := &TraceNode{Product: target}
+	queue = append(queue, root)
+	visited[target] = root
 
-	roots := []*TraceNode{}
-
-	for len(queue) > 0 && int(atomic.LoadInt32(&counter)) < maxResults {
-		currLevel := queue[0]
+	for len(queue) > 0 && len(roots) < maxResults {
+		curr := queue[0]
 		queue = queue[1:]
 		LastBFSVisited++
 
-		nextLevel := []*TraceNode{}
+		if Tier[curr.Product] == 1 {
+			continue
+		}
 
-		for _, curr := range currLevel {
-			for outProd, recs := range Graph {
-				for _, pair := range recs {
-					a, b := pair[0], pair[1]
-					if curr.Product != a && curr.Product != b {
-						continue
-					}
+		recipes := Graph[curr.Product]
+		for _, pair := range recipes {
+			a, b := pair[0], pair[1]
+			if Tier[a] >= Tier[curr.Product] || Tier[b] >= Tier[curr.Product] {
+				continue
+			}
+			if !canBuild(a, Tier[a]) || !canBuild(b, Tier[b]) {
+				continue
+			}
 
-					mu.Lock()
-					listA := nodes[a]
-					listB := nodes[b]
-					mu.Unlock()
+			sem <- struct{}{}
+			wg.Add(1)
+			go func(a, b, outProd string, curr *TraceNode) {
+				defer wg.Done()
+				defer func() { <-sem }()
 
-					if len(listA) == 0 || len(listB) == 0 {
-						continue
-					}
-
-					for _, ta := range listA {
-						for _, tb := range listB {
-							if Tier[a] >= Tier[target] || Tier[b] >= Tier[target] {
-								continue
-							}
-							sem <- struct{}{}
-							wg.Add(1)
-							go func(ta, tb *TraceNode, out string) {
-								defer wg.Done()
-								defer func() { <-sem }()
-
-								if containProduct(ta, out) || containProduct(tb, out) {
-									return
-								}
-
-								n := &TraceNode{
-									Product: out,
-									From:    [2]string{ta.Product, tb.Product},
-									Parent:  [2]*TraceNode{ta, tb},
-									Depth:   1 + max(ta.Depth, tb.Depth),
-								}
-								h := hashSubtree(n)
-
-								mu.Lock()
-								if seenHash[h] {
-									mu.Unlock()
-									return
-								}
-								seenHash[h] = true
-
-								nodes[out] = append(nodes[out], n)
-								if out == target && int(atomic.LoadInt32(&counter)) < maxResults {
-									roots = append(roots, n)
-									atomic.AddInt32(&counter, 1)
-								}
-								mu.Unlock()
-
-								nextLevel = append(nextLevel, n)
-							}(ta, tb, outProd)
-						}
+				// Check and add children nodes
+				mu.Lock()
+				left := visited[a]
+				if left == nil {
+					left = &TraceNode{Product: a}
+					visited[a] = left
+					if Tier[a] > 1 {
+						queue = append(queue, left)
 					}
 				}
-			}
+				right := visited[b]
+				if right == nil {
+					right = &TraceNode{Product: b}
+					visited[b] = right
+					if Tier[b] > 1 {
+						queue = append(queue, right)
+					}
+				}
+				mu.Unlock()
+
+				node := &TraceNode{
+					Product: outProd,
+					From:    [2]string{a, b},
+					Parent:  [2]*TraceNode{left, right},
+					Depth:   1 + max(left.Depth, right.Depth),
+				}
+
+				h := hashSubtree(node)
+
+				mu.Lock()
+				if !seenHash[h] && len(roots) < maxResults {
+					seenHash[h] = true
+					roots = append(roots, node)
+				}
+				mu.Unlock()
+			}(a, b, curr.Product, curr)
+
 		}
+
 		wg.Wait()
-		if len(nextLevel) > 0 {
-			queue = append(queue, nextLevel)
-		}
 	}
 
 	return mergeTraceTrees(roots)
