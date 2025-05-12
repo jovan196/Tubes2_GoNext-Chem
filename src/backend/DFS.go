@@ -45,6 +45,9 @@ func DFS(target string) *TraceNode {
 				}
 				for _, r := range recs {
 					a, b := r[0], r[1]
+					if Tier[a] >= Tier[goal] && Tier[b] >= Tier[goal] {
+						continue
+					}
 					if visited[a] && visited[b] {
 						left, lok := nodes[a]
 						right, rok := nodes[b]
@@ -124,6 +127,9 @@ func DFS(target string) *TraceNode {
 
 // MultiDFS_Trace mengembalikan hingga maxResults jalur unik atau fallback ke MultiBFS
 func MultiDFS_Trace(target string, maxResults int) []*TraceNode {
+	// Reset the counter for this operation
+	LastDFSVisited = 0
+
 	var results []*TraceNode
 	used := make(map[string]bool)
 	recipeKey := func(a, b string) string {
@@ -135,6 +141,9 @@ func MultiDFS_Trace(target string, maxResults int) []*TraceNode {
 
 	// helper DFS multi satu level
 	for _, rec := range Graph[target] {
+		// Increment visit counter for each recipe attempt
+		LastDFSVisited++
+
 		a, b := rec[0], rec[1]
 		// ═══ skip resep yang menyebutkan target sendiri ═══
 		if a == target || b == target {
@@ -160,6 +169,11 @@ func MultiDFS_Trace(target string, maxResults int) []*TraceNode {
 			continue
 		}
 
+		// Each successful recipe discovery counts as an additional visit
+		if !containsProduct(left, target) && !containsProduct(right, target) {
+			LastDFSVisited += 2 // Count both successful branches
+		}
+
 		used[key] = true
 		if containsProduct(left, target) || containsProduct(right, target) {
 			continue
@@ -168,10 +182,10 @@ func MultiDFS_Trace(target string, maxResults int) []*TraceNode {
 		results = append(results, n)
 	}
 
-	if len(results) == 0 {
-		// fallback: gunakan BFS multi-trace
-		return MultiBFS_Trace(target, maxResults)
-	}
+	// if len(results) == 0 {
+	// 	// fallback: gunakan BFS multi-trace
+	// 	// return MultiBFS_Trace(target, maxResults)
+	// }
 	return results
 }
 

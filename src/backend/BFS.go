@@ -44,6 +44,9 @@ func BFS(target string) *TraceNode {
 			}
 			for _, pair := range recipes {
 				a, b := pair[0], pair[1]
+				if Tier[a] >= Tier[target] && Tier[b] >= Tier[target] {
+					continue
+				}
 				if (curr.Product == a && visited[b]) || (curr.Product == b && visited[a]) {
 					left := allNodes[a]
 					right := allNodes[b]
@@ -74,6 +77,9 @@ func BFS(target string) *TraceNode {
 }
 
 func MultiBFS_Trace(target string, maxResults int) []*TraceNode {
+	// Reset counter for this search operation
+	LastBFSVisited = 0
+
 	basic := []string{"Air", "Water", "Earth", "Fire", "Time"}
 	nodes := make(map[string][]*TraceNode)
 	queue := [][]*TraceNode{}
@@ -93,6 +99,9 @@ func MultiBFS_Trace(target string, maxResults int) []*TraceNode {
 	for len(queue) > 0 && int(atomic.LoadInt32(&counter)) < maxResults {
 		currLevel := queue[0]
 		queue = queue[1:]
+
+		// Increment the visit counter for each level
+		atomic.AddInt32(&counter, 1)
 		LastBFSVisited++
 		nextLevel := []*TraceNode{}
 
