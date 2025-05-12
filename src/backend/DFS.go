@@ -141,6 +141,11 @@ func MultiDFS_Trace(target string, maxResults int) []*TraceNode {
 			continue
 		}
 
+		// skip resep jika tier elemen a dan b lebih tinggi dari target
+		if Tier[a] >= Tier[target] && Tier[b] >= Tier[target] {
+			continue
+		}
+
 		if len(results) >= maxResults {
 			break
 		}
