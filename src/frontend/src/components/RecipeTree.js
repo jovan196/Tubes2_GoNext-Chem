@@ -28,7 +28,7 @@ const RecipeTree = ({ data }) => {
             {treeData ? (
               <>
                 <p className="text-sm text-gray-600 mb-4">
-                  Waktu: {timeMs} ms &middot; Node visited: {visitedCount}
+                  Waktu: {timeMs} ms &middot; Simpul Dikunjungi: {visitedCount}
                 </p>
                 <div className="w-full h-[400px]">
                   <Tree

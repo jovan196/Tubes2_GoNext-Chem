@@ -21,6 +21,18 @@ type SearchResponse struct {
 	VisitedCount int         `json:"visitedCount"`
 }
 
+// countOutputNodes recursively counts nodes in the output tree
+func countOutputNodes(n *OutputNode) int {
+	if n == nil {
+		return 0
+	}
+	count := 1
+	for _, c := range n.Children {
+		count += countOutputNodes(c)
+	}
+	return count
+}
+
 func SearchHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Only POST allowed", http.StatusMethodNotAllowed)
@@ -40,11 +52,12 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 	case "bfs":
 		if req.Mode == "multiple" {
 			root := MultiBFS_Trace(req.Target, req.Max)
+			visitedCount := countOutputNodes(root)
 			result := SearchResponse{
 				Result:       req.Target,
 				Tree:         root,
 				TimeMs:       time.Since(start).Milliseconds(),
-				VisitedCount: LastBFSVisited,
+				VisitedCount: visitedCount,
 			}
 			w.Header().Set("Content-Type", "application/json")
 			json.NewEncoder(w).Encode([]SearchResponse{result})
@@ -88,11 +101,12 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 
 			// Create response with merged trees
 			output := mergeTraceTrees(results)
+			visitedCount := countOutputNodes(output)
 			result := SearchResponse{
 				Result:       req.Target,
 				Tree:         output,
 				TimeMs:       time.Since(start).Milliseconds(),
-				VisitedCount: LastDFSVisited,
+				VisitedCount: visitedCount,
 			}
 
 			w.Header().Set("Content-Type", "application/json")
