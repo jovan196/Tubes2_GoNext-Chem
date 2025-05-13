@@ -69,12 +69,13 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		node := BFS(req.Target)
 		var tree *OutputNode
 		var visitCount int
-		visitCount = LastBFSVisited
 		if node == nil {
 			tree = nil
+			visitCount = 0
 
 		} else {
 			tree = toOutputTree(node)
+			visitCount = LastBFSVisited
 		}
 		// Uji waktu
 		// time.Sleep(1 * time.Second)
