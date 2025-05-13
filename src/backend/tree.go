@@ -57,3 +57,31 @@ func mergeTraceTrees(roots []*TraceNode) *OutputNode {
 	}
 	return output
 }
+
+func mergeTraceTreesDFS(roots []*TraceNode) *OutputNode {
+	if len(roots) == 0 {
+		return nil
+	}
+	output := &OutputNode{Name: roots[0].Product}
+	seen := make(map[string]bool)
+
+	for i, root := range roots {
+		hash := hashSubtree(root)
+		if !seen[hash] {
+			// build children from each direct parent ingredient
+			var children []*OutputNode
+			if root.Parent[0] != nil && root.Parent[1] != nil {
+				children = []*OutputNode{
+					convertTraceToOutputRecursive(root.Parent[0]),
+					convertTraceToOutputRecursive(root.Parent[1]),
+				}
+			}
+			output.Children = append(output.Children, &OutputNode{
+				Name:     fmt.Sprintf("#%d", i+1),
+				Children: children,
+			})
+			seen[hash] = true
+		}
+	}
+	return output
+}

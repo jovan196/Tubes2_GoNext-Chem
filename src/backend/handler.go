@@ -78,8 +78,53 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode([]SearchResponse{resp})
 		return
 
+	case "dfs":
+		if req.Mode == "multiple" {
+			results := MultiDFS_Trace(req.Target, req.Max)
+			if len(results) == 0 {
+				http.Error(w, createError("Element "+req.Target+" not reachable", http.StatusNotFound), http.StatusNotFound)
+				return
+			}
+
+			// Create response with merged trees
+			output := mergeTraceTreesDFS(results)
+			result := SearchResponse{
+				Result:       req.Target,
+				Tree:         output,
+				TimeMs:       time.Since(start).Milliseconds(),
+				VisitedCount: LastDFSVisited,
+			}
+
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode([]SearchResponse{result})
+			return
+		}
+
+		node := DFS(req.Target)
+		var tree *OutputNode
+		var visitCount int
+		visitCount = LastDFSVisited
+
+		if node == nil {
+			http.Error(w, createError("Element "+req.Target+" not reachable", http.StatusNotFound), http.StatusNotFound)
+			return
+		} else {
+			tree = toOutputTree(node)
+		}
+
+		resp := SearchResponse{
+			Result:       req.Target,
+			Tree:         tree,
+			TimeMs:       time.Since(start).Milliseconds(),
+			VisitedCount: visitCount,
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode([]SearchResponse{resp})
+		return
+
 	default:
-		http.Error(w, createError("Only BFS implemented (revised)", http.StatusNotImplemented), http.StatusNotImplemented)
+		http.Error(w, createError("Only BFS and DFS implemented", http.StatusNotImplemented), http.StatusNotImplemented)
 	}
 }
 

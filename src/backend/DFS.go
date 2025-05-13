@@ -1,5 +1,10 @@
 package main
 
+import (
+	"runtime"
+	"sync"
+)
+
 var LastDFSVisited int
 
 func DFS(target string) *TraceNode {
@@ -132,6 +137,8 @@ func MultiDFS_Trace(target string, maxResults int) []*TraceNode {
 
 	var results []*TraceNode
 	used := make(map[string]bool)
+	var mu sync.Mutex
+
 	recipeKey := func(a, b string) string {
 		if a < b {
 			return a + "+" + b
@@ -139,53 +146,61 @@ func MultiDFS_Trace(target string, maxResults int) []*TraceNode {
 		return b + "+" + a
 	}
 
-	// helper DFS multi satu level
+	// concurrency limiter and wait group
+	sem := make(chan struct{}, runtime.NumCPU())
+	var wg sync.WaitGroup
+
 	for _, rec := range Graph[target] {
-		// Increment visit counter for each recipe attempt
-		LastDFSVisited++
-
 		a, b := rec[0], rec[1]
-		// ═══ skip resep yang menyebutkan target sendiri ═══
-		if a == target || b == target {
+		// skip invalid or duplicate recipes
+		if a == target || b == target || (Tier[a] >= Tier[target] && Tier[b] >= Tier[target]) {
 			continue
 		}
 
-		// skip resep jika tier elemen a dan b lebih tinggi dari target
-		if Tier[a] >= Tier[target] && Tier[b] >= Tier[target] {
-			continue
-		}
-
+		mu.Lock()
 		if len(results) >= maxResults {
+			mu.Unlock()
 			break
 		}
 		key := recipeKey(a, b)
 		if used[key] {
+			mu.Unlock()
 			continue
 		}
-
-		left := DFS(rec[0])
-		right := DFS(rec[1])
-		if left == nil || right == nil {
-			continue
-		}
-
-		// Each successful recipe discovery counts as an additional visit
-		if !containsProduct(left, target) && !containsProduct(right, target) {
-			LastDFSVisited += 2 // Count both successful branches
-		}
-
 		used[key] = true
-		if containsProduct(left, target) || containsProduct(right, target) {
-			continue
-		}
-		n := &TraceNode{Product: target, From: [2]string{rec[0], rec[1]}, Parent: [2]*TraceNode{left, right}}
-		results = append(results, n)
-	}
+		mu.Unlock()
 
-	// if len(results) == 0 {
-	// 	// fallback: gunakan BFS multi-trace
-	// 	// return MultiBFS_Trace(target, maxResults)
-	// }
+		// count this recipe attempt
+		LastDFSVisited++
+
+		// spawn goroutine to process this recipe
+		sem <- struct{}{}
+		wg.Add(1)
+		go func(a, b string) {
+			defer wg.Done()
+			defer func() { <-sem }()
+
+			left := DFS(a)
+			right := DFS(b)
+			if left == nil || right == nil {
+				return
+			}
+
+			// exclude branches containing target to avoid cycles
+			if containsProduct(left, target) || containsProduct(right, target) {
+				return
+			}
+
+			// merge result
+			n := &TraceNode{Product: target, From: [2]string{a, b}, Parent: [2]*TraceNode{left, right}}
+			mu.Lock()
+			if len(results) < maxResults {
+				results = append(results, n)
+			}
+			mu.Unlock()
+		}(a, b)
+	}
+	wg.Wait()
 	return results
 }
 
