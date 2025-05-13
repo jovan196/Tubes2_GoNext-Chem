@@ -172,17 +172,18 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 		return &OutputNode{Name: target}
 	}
 
-	roots := []*TraceNode{}
-	queue := []*TraceNode{}
-	seenHash := make(map[string]bool)
-	visited := make(map[string]*TraceNode)
-	var mu sync.Mutex
-	var wg sync.WaitGroup
-	sem := make(chan struct{}, runtime.NumCPU())
+	type Work struct {
+		Node *TraceNodeMulti
+	}
 
-	root := &TraceNode{Product: target}
-	queue = append(queue, root)
-	visited[target] = root
+	var (
+		queue      = []*TraceNodeMulti{{Product: target}}
+		roots      []*TraceNodeMulti
+		seenHashes = make(map[string]bool)
+		mu         sync.Mutex
+		wg         sync.WaitGroup
+		sem        = make(chan struct{}, runtime.NumCPU())
+	)
 
 	for len(queue) > 0 && len(roots) < maxResults {
 		curr := queue[0]
@@ -193,8 +194,7 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 			continue
 		}
 
-		recipes := Graph[curr.Product]
-		for _, pair := range recipes {
+		for _, pair := range Graph[curr.Product] {
 			a, b := pair[0], pair[1]
 			if Tier[a] >= Tier[curr.Product] || Tier[b] >= Tier[curr.Product] {
 				continue
@@ -205,53 +205,65 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 
 			sem <- struct{}{}
 			wg.Add(1)
-			go func(a, b, outProd string, curr *TraceNode) {
+			go func(a, b string, curr *TraceNodeMulti) {
 				defer wg.Done()
 				defer func() { <-sem }()
 
-				// Check and add children nodes
-				mu.Lock()
-				left := visited[a]
-				if left == nil {
-					left = &TraceNode{Product: a}
-					visited[a] = left
-					if Tier[a] > 1 {
-						queue = append(queue, left)
-					}
-				}
-				right := visited[b]
-				if right == nil {
-					right = &TraceNode{Product: b}
-					visited[b] = right
-					if Tier[b] > 1 {
-						queue = append(queue, right)
-					}
-				}
-				mu.Unlock()
-
-				node := &TraceNode{
-					Product: outProd,
+				left := &TraceNodeMulti{Product: a}
+				right := &TraceNodeMulti{Product: b}
+				node := &TraceNodeMulti{
+					Product: curr.Product,
 					From:    [2]string{a, b},
-					Parent:  [2]*TraceNode{left, right},
+					Parent:  [2]*TraceNodeMulti{left, right},
 					Depth:   1 + max(left.Depth, right.Depth),
 				}
 
-				h := hashSubtree(node)
+				expand(left)
+				expand(right)
+
+				h := hashSubtreeMulti(node)
 
 				mu.Lock()
-				if !seenHash[h] && len(roots) < maxResults {
-					seenHash[h] = true
+				if !seenHashes[h] && len(roots) < maxResults {
+					seenHashes[h] = true
 					roots = append(roots, node)
+					queue = append(queue, node)
 				}
 				mu.Unlock()
-			}(a, b, curr.Product, curr)
-
+			}(a, b, curr)
 		}
 
 		wg.Wait()
+		if len(roots) == 0 {
+			return nil
+		}
 	}
 
-	return mergeTraceTrees(roots)
+	return mergeTraceTreesMulti(roots)
+}
+
+func expand(n *TraceNodeMulti) {
+	if n == nil || (n.Parent[0] != nil && n.Parent[1] != nil) || Tier[n.Product] == 1 {
+		return
+	}
+	for _, pair := range Graph[n.Product] {
+		a, b := pair[0], pair[1]
+		if Tier[a] >= Tier[n.Product] || Tier[b] >= Tier[n.Product] {
+			continue
+		}
+		if !canBuild(a, Tier[a]) || !canBuild(b, Tier[b]) {
+			continue
+		}
+		left := &TraceNodeMulti{Product: a}
+		right := &TraceNodeMulti{Product: b}
+		n.From = [2]string{a, b}
+		n.Parent = [2]*TraceNodeMulti{left, right}
+		n.Depth = 1 + max(left.Depth, right.Depth)
+
+		expand(left)
+		expand(right)
+		break
+	}
 }
 
 func hashSubtree(n *TraceNode) string {
@@ -263,6 +275,21 @@ func hashSubtree(n *TraceNode) string {
 	}
 	l := hashSubtree(n.Parent[0])
 	r := hashSubtree(n.Parent[1])
+	if l > r {
+		l, r = r, l
+	}
+	return fmt.Sprintf("%s(%s+%s)", n.Product, l, r)
+}
+
+func hashSubtreeMulti(n *TraceNodeMulti) string {
+	if n == nil {
+		return ""
+	}
+	if n.Parent[0] == nil && n.Parent[1] == nil {
+		return n.Product
+	}
+	l := hashSubtreeMulti(n.Parent[0])
+	r := hashSubtreeMulti(n.Parent[1])
 	if l > r {
 		l, r = r, l
 	}

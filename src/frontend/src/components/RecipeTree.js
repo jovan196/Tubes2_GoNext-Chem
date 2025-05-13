@@ -24,46 +24,55 @@ const RecipeTree = ({ data }) => {
             <h2 className="font-bold mb-2">
               Recipe {idx + 1} untuk <em>{result}</em>
             </h2>
-            <p className="text-sm text-gray-600 mb-4">
-              Waktu: {timeMs} ms &middot; Node visited: {visitedCount}
-            </p>
-            <div className="w-full h-[400px]">
-              <Tree
-                data={treeData}
-                orientation="vertical"
-                pathFunc="elbow"
-                translate={{ x: 300, y: 100 }}
-                collapsible={false}
-                renderCustomNodeElement={({ nodeDatum }) => {
-                  const isBasic = BASIC.has(nodeDatum.name);
-                  const color = isBasic ? "#D1FAE5" : "#DBEAFE";
-                  return (
-                    <g>
-                      <rect
-                        width={80}
-                        height={30}
-                        x={-40}
-                        y={-15}
-                        fill={color}
-                        stroke="#555"
-                        strokeWidth={1}
-                        rx={6}
-                      />
-                      <text
-                        fill="#111"
-                        x={0}
-                        y={5}
-                        textAnchor="middle"
-                        fontSize={12}
-                        fontWeight="normal"
-                      >
-                        {nodeDatum.name}
-                      </text>
-                    </g>
-                  );
-                }}
-              />
-            </div>
+
+            {treeData ? (
+              <>
+                <p className="text-sm text-gray-600 mb-4">
+                  Waktu: {timeMs} ms &middot; Node visited: {visitedCount}
+                </p>
+                <div className="w-full h-[400px]">
+                  <Tree
+                    data={treeData}
+                    orientation="vertical"
+                    pathFunc="elbow"
+                    translate={{ x: 300, y: 100 }}
+                    collapsible={false}
+                    renderCustomNodeElement={({ nodeDatum }) => {
+                      const isBasic = BASIC.has(nodeDatum.name);
+                      const color = isBasic ? "#D1FAE5" : "#DBEAFE";
+                      return (
+                        <g>
+                          <rect
+                            width={80}
+                            height={30}
+                            x={-40}
+                            y={-15}
+                            fill={color}
+                            stroke="#555"
+                            strokeWidth={1}
+                            rx={6}
+                          />
+                          <text
+                            fill="#111"
+                            x={0}
+                            y={5}
+                            textAnchor="middle"
+                            fontSize={12}
+                            fontWeight="normal"
+                          >
+                            {nodeDatum.name}
+                          </text>
+                        </g>
+                      );
+                    }}
+                  />
+                </div>
+              </>
+            ) : (
+              <p className="text-sm text-red-500">
+                Tidak ada recipe yang bisa dibentuk.
+              </p>
+            )}
           </div>
         );
       })}
