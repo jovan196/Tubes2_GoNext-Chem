@@ -53,6 +53,8 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		if req.Mode == "multiple" {
 			root := MultiBFS_Trace(req.Target, req.Max)
 			visitedCount := countOutputNodes(root)
+			// Uji waktu
+			// time.Sleep(1 * time.Second)
 			result := SearchResponse{
 				Result:       req.Target,
 				Tree:         root,
@@ -67,19 +69,16 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 		node := BFS(req.Target)
 		var tree *OutputNode
 		var visitCount int
-		visitCount = LastBFSVisited
 		if node == nil {
-			// tree = MultiBFS_Trace(req.Target, 1)
-			// if tree == nil {
-			http.Error(w, createError("Element "+req.Target+" not reachable", http.StatusNotFound), http.StatusNotFound)
-			return
-			//}
+			tree = nil
+			visitCount = 0
 
 		} else {
 			tree = toOutputTree(node)
-
+			visitCount = LastBFSVisited
 		}
-
+		// Uji waktu
+		// time.Sleep(1 * time.Second)
 		resp := SearchResponse{
 			Result:       req.Target,
 			Tree:         tree,
@@ -94,14 +93,17 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 	case "dfs":
 		if req.Mode == "multiple" {
 			results := MultiDFS_Trace(req.Target, req.Max)
+			var output *OutputNode
+			var visitedCount int
 			if len(results) == 0 {
-				http.Error(w, createError("Element "+req.Target+" not reachable", http.StatusNotFound), http.StatusNotFound)
-				return
+				output = nil
+				visitedCount = 0
+			} else {
+				output = mergeTraceTrees(results)
+				visitedCount = countOutputNodes(output)
 			}
-
-			// Create response with merged trees
-			output := mergeTraceTrees(results)
-			visitedCount := countOutputNodes(output)
+			// Uji waktu
+			// time.Sleep(1 * time.Second)
 			result := SearchResponse{
 				Result:       req.Target,
 				Tree:         output,
@@ -114,18 +116,19 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		node := DFS(req.Target)
+		node := DFS(req.Target) // Ensure this is inside the DFS case block
 		var tree *OutputNode
-		var visitCount int
-		visitCount = LastDFSVisited
+		var visitCount int // Ensure this is inside the DFS case block
 
 		if node == nil {
-			http.Error(w, createError("Element "+req.Target+" not reachable", http.StatusNotFound), http.StatusNotFound)
-			return
+			tree = nil
+			visitCount = 0
 		} else {
 			tree = toOutputTree(node)
+			visitCount = LastDFSVisited
 		}
-
+		// Uji waktu
+		// time.Sleep(1 * time.Second)
 		resp := SearchResponse{
 			Result:       req.Target,
 			Tree:         tree,
