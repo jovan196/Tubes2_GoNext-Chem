@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SearchForm from "./components/SearchForm";
-import RecipeTree from "./components/RecipeTree"; // pastikan ini ditambahkan
+import RecipeTree from "./components/RecipeTree"; 
 
 function App() {
   const [result, setResult] = useState(null);
