@@ -45,25 +45,25 @@ func convertTraceToOutputRecursive(n *TraceNode) *OutputNode {
 	return node
 }
 
-func mergeTraceTrees(roots []*TraceNode) *OutputNode {
-	if len(roots) == 0 {
-		return nil
-	}
-	output := &OutputNode{Name: roots[0].Product}
-	seen := make(map[string]bool)
+// func mergeTraceTrees(roots []*TraceNode) *OutputNode {
+// 	if len(roots) == 0 {
+// 		return nil
+// 	}
+// 	output := &OutputNode{Name: roots[0].Product}
+// 	seen := make(map[string]bool)
 
-	for i, root := range roots {
-		hash := hashSubtree(root)
-		if !seen[hash] {
-			output.Children = append(output.Children, &OutputNode{
-				Name:     fmt.Sprintf("#%d", i+1),
-				Children: []*OutputNode{convertTraceToOutputRecursive(root)},
-			})
-			seen[hash] = true
-		}
-	}
-	return output
-}
+// 	for i, root := range roots {
+// 		hash := hashSubtree(root)
+// 		if !seen[hash] {
+// 			output.Children = append(output.Children, &OutputNode{
+// 				Name:     fmt.Sprintf("#%d", i+1),
+// 				Children: []*OutputNode{convertTraceToOutputRecursive(root)},
+// 			})
+// 			seen[hash] = true
+// 		}
+// 	}
+// 	return output
+// }
 
 func mergeTraceTreesDFS(roots []*TraceNode) *OutputNode {
 	if len(roots) == 0 {

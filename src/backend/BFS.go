@@ -15,21 +15,21 @@ type TraceNode struct {
 	Depth   int
 }
 
-func convertTraceToOutput(n *TraceNode) *OutputNode {
-	if n == nil {
-		return nil
-	}
-	node := &OutputNode{Name: n.Product}
+// func convertTraceToOutput(n *TraceNode) *OutputNode {
+// 	if n == nil {
+// 		return nil
+// 	}
+// 	node := &OutputNode{Name: n.Product}
 
-	if n.Parent[0] != nil && n.Parent[1] != nil {
-		node.Children = []*OutputNode{
-			convertTraceToOutput(n.Parent[0]),
-			convertTraceToOutput(n.Parent[1]),
-		}
-	}
+// 	if n.Parent[0] != nil && n.Parent[1] != nil {
+// 		node.Children = []*OutputNode{
+// 			convertTraceToOutput(n.Parent[0]),
+// 			convertTraceToOutput(n.Parent[1]),
+// 		}
+// 	}
 
-	return node
-}
+// 	return node
+// }
 
 func BFS(target string) *TraceNode {
 	LastBFSVisited = 0
@@ -160,10 +160,10 @@ func copyMap(original map[string]bool) map[string]bool {
 	return copy
 }
 
-func exists(m map[string]struct{}, key string) bool {
-	_, ok := m[key]
-	return ok
-}
+// func exists(m map[string]struct{}, key string) bool {
+// 	_, ok := m[key]
+// 	return ok
+// }
 
 func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 	LastBFSVisited = 0
@@ -172,9 +172,9 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 		return &OutputNode{Name: target}
 	}
 
-	type Work struct {
-		Node *TraceNodeMulti
-	}
+	// type Work struct {
+	// 	Node *TraceNodeMulti
+	// }
 
 	var (
 		queue      = []*TraceNodeMulti{{Product: target}}
@@ -188,7 +188,6 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 	for len(queue) > 0 && len(roots) < maxResults {
 		curr := queue[0]
 		queue = queue[1:]
-		LastBFSVisited++
 
 		if Tier[curr.Product] == 1 {
 			continue
@@ -196,6 +195,7 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 
 		for _, pair := range Graph[curr.Product] {
 			a, b := pair[0], pair[1]
+			LastBFSVisited++
 			if Tier[a] >= Tier[curr.Product] || Tier[b] >= Tier[curr.Product] {
 				continue
 			}
@@ -296,16 +296,16 @@ func hashSubtreeMulti(n *TraceNodeMulti) string {
 	return fmt.Sprintf("%s(%s+%s)", n.Product, l, r)
 }
 
-func containProduct(n *TraceNode, prod string) bool {
-	if n == nil {
-		return false
-	}
-	if n.Product == prod {
-		return true
-	}
-	return containProduct(n.Parent[0], prod) ||
-		containProduct(n.Parent[1], prod)
-}
+// func containProduct(n *TraceNode, prod string) bool {
+// 	if n == nil {
+// 		return false
+// 	}
+// 	if n.Product == prod {
+// 		return true
+// 	}
+// 	return containProduct(n.Parent[0], prod) ||
+// 		containProduct(n.Parent[1], prod)
+// }
 
 func max(a, b int) int {
 	if a > b {
