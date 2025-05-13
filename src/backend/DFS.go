@@ -50,7 +50,7 @@ func DFS(target string) *TraceNode {
 				}
 				for _, r := range recs {
 					a, b := r[0], r[1]
-					if Tier[a] >= Tier[goal] && Tier[b] >= Tier[goal] {
+					if Tier[a] >= Tier[goal] || Tier[b] >= Tier[goal] {
 						continue
 					}
 					if visited[a] && visited[b] {
@@ -98,6 +98,10 @@ func DFS(target string) *TraceNode {
 		for _, r := range Graph[prod] {
 			a, b := r[0], r[1]
 			if a == prod || b == prod {
+				continue
+			}
+			// skip if child tier is not lower than parent
+			if Tier[a] >= Tier[prod] || Tier[b] >= Tier[prod] {
 				continue
 			}
 			// expand child a
@@ -150,10 +154,15 @@ func MultiDFS_Trace(target string, maxResults int) []*TraceNode {
 	sem := make(chan struct{}, runtime.NumCPU())
 	var wg sync.WaitGroup
 
+	// helper DFS multi satu level
 	for _, rec := range Graph[target] {
 		a, b := rec[0], rec[1]
-		// skip invalid or duplicate recipes
-		if a == target || b == target || (Tier[a] >= Tier[target] && Tier[b] >= Tier[target]) {
+		// skip if rec mentions target itself
+		if a == target || b == target {
+			continue
+		}
+		// skip if child tier is not lower than parent
+		if Tier[a] >= Tier[target] || Tier[b] >= Tier[target] {
 			continue
 		}
 
