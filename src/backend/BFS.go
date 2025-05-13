@@ -177,8 +177,8 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 	// }
 
 	var (
-		queue      = []*TraceNodeMulti{{Product: target}}
-		roots      []*TraceNodeMulti
+		queue      = []*TraceNode{{Product: target}}
+		roots      []*TraceNode
 		seenHashes = make(map[string]bool)
 		mu         sync.Mutex
 		wg         sync.WaitGroup
@@ -205,23 +205,23 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 
 			sem <- struct{}{}
 			wg.Add(1)
-			go func(a, b string, curr *TraceNodeMulti) {
+			go func(a, b string, curr *TraceNode) {
 				defer wg.Done()
 				defer func() { <-sem }()
 
-				left := &TraceNodeMulti{Product: a}
-				right := &TraceNodeMulti{Product: b}
-				node := &TraceNodeMulti{
+				left := &TraceNode{Product: a}
+				right := &TraceNode{Product: b}
+				node := &TraceNode{
 					Product: curr.Product,
 					From:    [2]string{a, b},
-					Parent:  [2]*TraceNodeMulti{left, right},
+					Parent:  [2]*TraceNode{left, right},
 					Depth:   1 + max(left.Depth, right.Depth),
 				}
 
 				expand(left)
 				expand(right)
 
-				h := hashSubtreeMulti(node)
+				h := hashSubtree(node)
 
 				mu.Lock()
 				if !seenHashes[h] && len(roots) < maxResults {
@@ -239,10 +239,10 @@ func MultiBFS_Trace(target string, maxResults int) *OutputNode {
 		}
 	}
 
-	return mergeTraceTreesMulti(roots)
+	return mergeTraceTrees(roots)
 }
 
-func expand(n *TraceNodeMulti) {
+func expand(n *TraceNode) {
 	if n == nil || (n.Parent[0] != nil && n.Parent[1] != nil) || Tier[n.Product] == 1 {
 		return
 	}
@@ -254,10 +254,10 @@ func expand(n *TraceNodeMulti) {
 		if !canBuild(a, Tier[a]) || !canBuild(b, Tier[b]) {
 			continue
 		}
-		left := &TraceNodeMulti{Product: a}
-		right := &TraceNodeMulti{Product: b}
+		left := &TraceNode{Product: a}
+		right := &TraceNode{Product: b}
 		n.From = [2]string{a, b}
-		n.Parent = [2]*TraceNodeMulti{left, right}
+		n.Parent = [2]*TraceNode{left, right}
 		n.Depth = 1 + max(left.Depth, right.Depth)
 
 		expand(left)
@@ -275,21 +275,6 @@ func hashSubtree(n *TraceNode) string {
 	}
 	l := hashSubtree(n.Parent[0])
 	r := hashSubtree(n.Parent[1])
-	if l > r {
-		l, r = r, l
-	}
-	return fmt.Sprintf("%s(%s+%s)", n.Product, l, r)
-}
-
-func hashSubtreeMulti(n *TraceNodeMulti) string {
-	if n == nil {
-		return ""
-	}
-	if n.Parent[0] == nil && n.Parent[1] == nil {
-		return n.Product
-	}
-	l := hashSubtreeMulti(n.Parent[0])
-	r := hashSubtreeMulti(n.Parent[1])
 	if l > r {
 		l, r = r, l
 	}

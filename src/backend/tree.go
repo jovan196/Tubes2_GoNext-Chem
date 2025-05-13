@@ -7,13 +7,6 @@ type OutputNode struct {
 	Children []*OutputNode `json:"children,omitempty"`
 }
 
-type TraceNodeMulti struct {
-	Product string
-	From    [2]string
-	Parent  [2]*TraceNodeMulti
-	Depth   int
-}
-
 func toOutputTree(n *TraceNode) *OutputNode {
 	if n == nil {
 		return nil
@@ -30,6 +23,27 @@ func toOutputTree(n *TraceNode) *OutputNode {
 	}
 }
 
+func mergeTraceTrees(roots []*TraceNode) *OutputNode {
+	if len(roots) == 0 {
+		return nil
+	}
+	output := &OutputNode{Name: roots[0].Product}
+	seen := make(map[string]bool)
+
+	for i, root := range roots {
+		hash := hashSubtree(root)
+		if !seen[hash] {
+			output.Children = append(output.Children, &OutputNode{
+				Name: fmt.Sprintf("#%d", i+1),
+				Children: []*OutputNode{convertTraceToOutputRecursive(root.Parent[0]),
+					convertTraceToOutputRecursive(root.Parent[1])},
+			})
+			seen[hash] = true
+		}
+	}
+	return output
+}
+
 func convertTraceToOutputRecursive(n *TraceNode) *OutputNode {
 	if n == nil {
 		return nil
@@ -40,88 +54,6 @@ func convertTraceToOutputRecursive(n *TraceNode) *OutputNode {
 		node.Children = []*OutputNode{
 			convertTraceToOutputRecursive(n.Parent[0]),
 			convertTraceToOutputRecursive(n.Parent[1]),
-		}
-	}
-	return node
-}
-
-// func mergeTraceTrees(roots []*TraceNode) *OutputNode {
-// 	if len(roots) == 0 {
-// 		return nil
-// 	}
-// 	output := &OutputNode{Name: roots[0].Product}
-// 	seen := make(map[string]bool)
-
-// 	for i, root := range roots {
-// 		hash := hashSubtree(root)
-// 		if !seen[hash] {
-// 			output.Children = append(output.Children, &OutputNode{
-// 				Name:     fmt.Sprintf("#%d", i+1),
-// 				Children: []*OutputNode{convertTraceToOutputRecursive(root)},
-// 			})
-// 			seen[hash] = true
-// 		}
-// 	}
-// 	return output
-// }
-
-func mergeTraceTreesDFS(roots []*TraceNode) *OutputNode {
-	if len(roots) == 0 {
-		return nil
-	}
-	output := &OutputNode{Name: roots[0].Product}
-	seen := make(map[string]bool)
-
-	for i, root := range roots {
-		hash := hashSubtree(root)
-		if !seen[hash] {
-			// build children from each direct parent ingredient
-			var children []*OutputNode
-			if root.Parent[0] != nil && root.Parent[1] != nil {
-				children = []*OutputNode{
-					convertTraceToOutputRecursive(root.Parent[0]),
-					convertTraceToOutputRecursive(root.Parent[1]),
-				}
-			}
-			output.Children = append(output.Children, &OutputNode{
-				Name:     fmt.Sprintf("#%d", i+1),
-				Children: children,
-			})
-			seen[hash] = true
-		}
-	}
-	return output
-}
-
-func mergeTraceTreesMulti(roots []*TraceNodeMulti) *OutputNode {
-	if len(roots) == 0 {
-		return nil
-	}
-	output := &OutputNode{Name: roots[0].Product}
-	seen := make(map[string]bool)
-
-	for i, root := range roots {
-		hash := hashSubtreeMulti(root)
-		if !seen[hash] {
-			output.Children = append(output.Children, &OutputNode{
-				Name:     fmt.Sprintf("#%d", i+1),
-				Children: []*OutputNode{convertTraceToOutputRecursiveMulti(root)},
-			})
-			seen[hash] = true
-		}
-	}
-	return output
-}
-
-func convertTraceToOutputRecursiveMulti(n *TraceNodeMulti) *OutputNode {
-	if n == nil {
-		return nil
-	}
-	node := &OutputNode{Name: n.Product}
-	if n.Parent[0] != nil && n.Parent[1] != nil {
-		node.Children = []*OutputNode{
-			convertTraceToOutputRecursiveMulti(n.Parent[0]),
-			convertTraceToOutputRecursiveMulti(n.Parent[1]),
 		}
 	}
 	return node

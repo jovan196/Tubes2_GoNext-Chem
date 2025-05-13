@@ -87,7 +87,7 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 			}
 
 			// Create response with merged trees
-			output := mergeTraceTreesDFS(results)
+			output := mergeTraceTrees(results)
 			result := SearchResponse{
 				Result:       req.Target,
 				Tree:         output,
