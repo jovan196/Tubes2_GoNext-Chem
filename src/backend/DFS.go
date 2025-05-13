@@ -12,67 +12,6 @@ func DFS(target string) *TraceNode {
 	basic := map[string]struct{}{"Air": {}, "Earth": {}, "Fire": {}, "Water": {}, "Time": {}}
 	cache := make(map[string]*TraceNode)
 
-	// inline BFS fallback: cari satu trace via BFS jika DFS gagal
-	bfsFallback := func(goal string) *TraceNode {
-		// node struct for queue
-		// type node struct{ trace *TraceNode }
-
-		// init basic elements
-		tqueue := []*TraceNode{}
-		for b := range basic {
-			tqueue = append(tqueue, &TraceNode{Product: b})
-		}
-		visited := map[string]bool{}
-		for b := range basic {
-			visited[b] = true
-		}
-
-		// memo for created nodes
-		nodes := map[string]*TraceNode{}
-		for _, n := range tqueue {
-			nodes[n.Product] = n
-		}
-
-		// BFS
-		for len(tqueue) > 0 {
-			curr := tqueue[0]
-			tqueue = tqueue[1:]
-			prod := curr.Product
-
-			if prod == goal {
-				return curr
-			}
-
-			// explore all products that can be made
-			for p, recs := range Graph {
-				if visited[p] {
-					continue
-				}
-				for _, r := range recs {
-					a, b := r[0], r[1]
-					if Tier[a] >= Tier[goal] || Tier[b] >= Tier[goal] {
-						continue
-					}
-					if visited[a] && visited[b] {
-						left, lok := nodes[a]
-						right, rok := nodes[b]
-						if lok && rok {
-							newN := &TraceNode{Product: p, From: [2]string{a, b}, Parent: [2]*TraceNode{left, right}}
-							visited[p] = true
-							nodes[p] = newN
-							tqueue = append(tqueue, newN)
-							if p == goal {
-								return newN
-							}
-							break
-						}
-					}
-				}
-			}
-		}
-		return nil
-	}
-
 	var dfsRec func(prod string, path map[string]bool) *TraceNode
 	dfsRec = func(prod string, path map[string]bool) *TraceNode {
 		LastDFSVisited++
@@ -104,21 +43,21 @@ func DFS(target string) *TraceNode {
 			if Tier[a] >= Tier[prod] || Tier[b] >= Tier[prod] {
 				continue
 			}
-			// expand child a
+			// expand child a via DFS
 			left := dfsRec(a, path)
 			if left == nil {
-				left = bfsFallback(a)
+				continue
 			}
-			if left == nil || containsProduct(left, prod) {
+			if containsProduct(left, prod) {
 				continue
 			}
 
-			// expand child b
+			// expand child b via DFS
 			right := dfsRec(b, path)
 			if right == nil {
-				right = bfsFallback(b)
+				continue
 			}
-			if right == nil || containsProduct(right, prod) {
+			if containsProduct(right, prod) {
 				continue
 			}
 
